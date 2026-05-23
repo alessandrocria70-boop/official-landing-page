@@ -1,0 +1,26 @@
+{
+  "name": "official-landing-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+    "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alessandrocria70-boop/official-brasil-vibe.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/alessandrocria70-boop/official-brasil-vibe/issues"
+  },
+  "homepage": "https://github.com/alessandrocria70-boop/official-brasil-vibe#readme",
+  "devDependencies": {
+    "vite": "^8.0.14"
+  }
+}

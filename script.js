@@ -222,3 +222,103 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// ==================== Chat widget (simple rule-based assistant) ====================
+(function () {
+    const chatToggle = document.getElementById('chat-toggle');
+    const chatWindow = document.getElementById('chat-window');
+    const chatClose = document.getElementById('chat-close');
+    const chatForm = document.getElementById('chat-form');
+    const chatInput = document.getElementById('chat-input');
+    const chatMessages = document.getElementById('chat-messages');
+
+    if (!chatToggle || !chatWindow) return;
+
+    function appendMessage(text, from = 'bot') {
+        const el = document.createElement('div');
+        el.className = 'chat-msg ' + (from === 'bot' ? 'bot' : 'user');
+        el.innerText = text;
+        chatMessages.appendChild(el);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    // Basic knowledge base from the site content
+    const knowledge = [
+        { q: ['horário', 'horarios', 'hours'], a: 'Atendemos em horário comercial. Para agendar, fale conosco via WhatsApp.' },
+        { q: ['local', 'onde', 'sede'], a: 'Sede comercial em Guarulhos - SP; espaço fabril em Arujá - SP.' },
+        { q: ['projeto', 'projetos'], a: 'Oferecemos projeto de stands, montagem e locação de equipamentos.' },
+        { q: ['preço', 'investimento', 'valor'], a: 'Temos pacotes flexíveis. Clique em "Vamos conversar" ou envie mensagem por WhatsApp para receber proposta.' },
+        { q: ['contato', 'telefone', 'whatsapp'], a: 'Você pode falar conosco pelo WhatsApp: use o botão de contato no site ou envie email para contato@officialbrasil.com.br.' },
+        { q: ['video', 'vídeo', 'exposi', 'expo'], a: 'Temos vídeos das exposições na seção principal. Quer que eu abra o vídeo para você?' },
+        { q: ['portfolio', 'portfólio', 'clientes'], a: 'Veja nossos clientes na seção "Clientes" e o portfólio nas exposições.' }
+    ];
+
+    function botReply(text) {
+        const lower = text.toLowerCase();
+        for (const item of knowledge) {
+            for (const key of item.q) {
+                if (lower.includes(key)) return item.a;
+            }
+        }
+        // fallback suggestions
+        return 'Desculpe, não entendi completamente — posso encaminhar você para nosso time via WhatsApp. Deseja isso?';
+    }
+
+    chatToggle.addEventListener('click', () => {
+        chatWindow.classList.toggle('open');
+        if (chatWindow.classList.contains('open')) {
+            chatInput.focus();
+            if (chatMessages.children.length === 0) appendMessage('Olá! Eu sou o assistente da Official Brasil. Como posso ajudar?');
+        }
+    });
+
+    chatClose.addEventListener('click', () => {
+        chatWindow.classList.remove('open');
+    });
+
+    chatForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const value = chatInput.value.trim();
+        if (!value) return;
+        appendMessage(value, 'user');
+        chatInput.value = '';
+        // simulate thinking
+        setTimeout(() => {
+            const reply = botReply(value);
+            appendMessage(reply, 'bot');
+        }, 600);
+    });
+
+    // quick keyboard open (shift + /)
+    window.addEventListener('keydown', (e) => {
+        if (e.shiftKey && e.key === '?') {
+            chatWindow.classList.add('open');
+            chatInput.focus();
+        }
+    });
+})();
+
+// ==================== Gallery lightbox (for images in .gallery-grid) ====================
+(function () {
+    const gallery = document.querySelector('.gallery-grid');
+    if (!gallery) return;
+
+    const lightbox = document.createElement('div');
+    lightbox.className = 'lightbox';
+    lightbox.innerHTML = '<div class="lightbox-inner"><img src="" alt=""/><button class="lightbox-close">✕</button></div>';
+    document.body.appendChild(lightbox);
+
+    gallery.querySelectorAll('img').forEach(img => {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', () => {
+            lightbox.querySelector('img').src = img.src;
+            lightbox.classList.add('open');
+        });
+    });
+
+    lightbox.addEventListener('click', (e) => {
+        if (e.target.classList.contains('lightbox') || e.target.classList.contains('lightbox-close')) {
+            lightbox.classList.remove('open');
+        }
+    });
+})();
