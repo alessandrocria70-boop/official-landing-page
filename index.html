@@ -16,15 +16,16 @@
 </head>
 <body>
     <div class="grid-overlay"></div>
+    <div class="mobile-overlay"></div>
 
     <!-- Header / Navbar -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="logo">
             <span class="logo-official">OFFICIAL</span>
             <span class="logo-divider">×</span>
             <span class="logo-gabucria">GABUCRIA</span>
         </div>
-        <nav class="nav">
+        <nav class="nav" id="main-nav">
             <a href="#diagnostico" class="nav-link">DIAGNÓSTICO</a>
             <a href="#pacotes" class="nav-link">PACOTES</a>
             <a href="#execucao" class="nav-link">EXECUÇÃO</a>
@@ -32,6 +33,11 @@
             <a href="#faq" class="nav-link">FAQ</a>
         </nav>
         <a href="#diagnostico" class="header-cta">QUERO COMEÇAR &rarr;</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
 
     <!-- Hero Section -->
@@ -77,7 +83,7 @@
 
     <!-- Diagnosis / Section 2 -->
     <section id="diagnostico" class="diagnostico">
-        <div class="section-header">
+        <div class="section-header reveal">
             <span class="section-tag">ANÁLISE DIGITAL</span>
             <h2 class="section-title">O QUE ESTÁ <span class="text-blue">TRAVANDO</span> O CRESCIMENTO</h2>
             <p class="section-subtitle">Official Brasil tem produto excepcional. O que falta é o digital trabalhando junto.</p>
@@ -86,7 +92,7 @@
         <div class="diagnostico-content">
             <div class="cards-grid">
                 <!-- Card 1 -->
-                <div class="diag-card">
+                <div class="diag-card reveal reveal-delay-1">
                     <div class="diag-card-icon">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
@@ -101,7 +107,7 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="diag-card">
+                <div class="diag-card reveal reveal-delay-2">
                     <div class="diag-card-icon">
                         <i class="fa-solid fa-mobile-screen-button"></i>
                     </div>
@@ -116,7 +122,7 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="diag-card">
+                <div class="diag-card reveal reveal-delay-3">
                     <div class="diag-card-icon">
                         <i class="fa-solid fa-globe"></i>
                     </div>
@@ -131,7 +137,7 @@
                 </div>
 
                 <!-- Card 4 -->
-                <div class="diag-card">
+                <div class="diag-card reveal reveal-delay-4">
                     <div class="diag-card-icon">
                         <i class="fa-solid fa-arrows-spin"></i>
                     </div>
@@ -147,7 +153,7 @@
             </div>
 
             <!-- Side Mockups -->
-            <div class="mockups-container">
+            <div class="mockups-container reveal">
                 <div class="mockup-phone">
                     <div class="phone-screen">
                         <img src="phone_mockup_instagram.png" alt="Instagram Mockup" class="mockup-img">
@@ -160,15 +166,117 @@
         </div>
     </section>
 
+    <!-- Pacotes / Section 2.5 -->
+    <section id="pacotes" class="pacotes">
+        <div class="section-header reveal">
+            <span class="section-tag">INVESTIMENTO</span>
+            <h2 class="section-title">ESCOLHA O <span class="text-blue">PACOTE</span> IDEAL</h2>
+            <p class="section-subtitle">Três opções pensadas para diferentes momentos da Official Brasil no digital.</p>
+        </div>
+
+        <div class="roi-grid">
+            <!-- Pacote Ignição -->
+            <div class="roi-card reveal reveal-delay-1">
+                <div class="roi-card-header">
+                    <span class="roi-percent" style="font-size: 2rem;">IGNIÇÃO</span>
+                    <span class="roi-time">Setup Inicial</span>
+                </div>
+                <div class="roi-card-details">
+                    <div class="roi-detail-row">
+                        <span class="detail-label">Landing Page</span>
+                        <span class="detail-val"><i class="fa-solid fa-check" style="color: var(--color-green);"></i></span>
+                    </div>
+                    <div class="roi-detail-row">
+                        <span class="detail-label">SEO Básico (5 págs)</span>
+                        <span class="detail-val"><i class="fa-solid fa-check" style="color: var(--color-green);"></i></span>
+                    </div>
+                    <div class="roi-detail-row">
+                        <span class="detail-label">Google Meu Negócio</span>
+                        <span class="detail-val"><i class="fa-solid fa-check" style="color: var(--color-green);"></i></span>
+                    </div>
+                    <div class="roi-detail-row">
+                        <span class="detail-label">Instagram Bio + 8 Posts</span>
+                        <span class="detail-val"><i class="fa-solid fa-check" style="color: var(--color-green);"></i></span>
+                    </div>
+                    <div class="roi-detail-row border-top">
+                        <span class="detail-label">Investimento</span>
+                        <span class="detail-val text-green">R$ 2.400</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pacote Aceleração (Featured) -->
+            <div class="roi-card featured reveal reveal-delay-2">
+                <div class="roi-badge-pop">RECOMENDADO</div>
+                <div class="roi-card-header">
+                    <span class="roi-percent" style="font-size: 2rem;">ACELERAÇÃO</span>
+                    <span class="roi-time">Tráfego + Automação</span>
+                </div>
+                <div class="roi-card-details">
+                    <div class="roi-detail-row">
+                        <span class="detail-label">Tudo do Ignição</span>
+                        <span class="detail-val"><i class="fa-solid fa-check" style="color: var(--color-green);"></i></span>
+                    </div>
+                    <div class="roi-detail-row">
+                        <span class="detail-label">Google Ads (gestão)</span>
+                        <span class="detail-val"><i class="fa-solid fa-check" style="color: var(--color-green);"></i></span>
+                    </div>
+                    <div class="roi-detail-row">
+                        <span class="detail-label">CRM + Automação WhatsApp</span>
+                        <span class="detail-val"><i class="fa-solid fa-check" style="color: var(--color-green);"></i></span>
+                    </div>
+                    <div class="roi-detail-row">
+                        <span class="detail-label">Retargeting Instagram</span>
+                        <span class="detail-val"><i class="fa-solid fa-check" style="color: var(--color-green);"></i></span>
+                    </div>
+                    <div class="roi-detail-row border-top">
+                        <span class="detail-label">Investimento/mês</span>
+                        <span class="detail-val text-green">R$ 3.200</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pacote Escala -->
+            <div class="roi-card reveal reveal-delay-3">
+                <div class="roi-card-header">
+                    <span class="roi-percent" style="font-size: 2rem;">ESCALA</span>
+                    <span class="roi-time">Crescimento Total</span>
+                </div>
+                <div class="roi-card-details">
+                    <div class="roi-detail-row">
+                        <span class="detail-label">Tudo do Aceleração</span>
+                        <span class="detail-val"><i class="fa-solid fa-check" style="color: var(--color-green);"></i></span>
+                    </div>
+                    <div class="roi-detail-row">
+                        <span class="detail-label">Portfólio Premium (PDF)</span>
+                        <span class="detail-val"><i class="fa-solid fa-check" style="color: var(--color-green);"></i></span>
+                    </div>
+                    <div class="roi-detail-row">
+                        <span class="detail-label">Expansão Nacional</span>
+                        <span class="detail-val"><i class="fa-solid fa-check" style="color: var(--color-green);"></i></span>
+                    </div>
+                    <div class="roi-detail-row">
+                        <span class="detail-label">Relatório + Handover</span>
+                        <span class="detail-val"><i class="fa-solid fa-check" style="color: var(--color-green);"></i></span>
+                    </div>
+                    <div class="roi-detail-row border-top">
+                        <span class="detail-label">Investimento/mês</span>
+                        <span class="detail-val text-green">R$ 4.800</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Chronogram / Section 3 -->
     <section id="execucao" class="execucao">
-        <div class="section-header">
+        <div class="section-header reveal">
             <span class="section-tag">CRONOGRAMA</span>
             <h2 class="section-title">COMO ACONTECE NA <span class="text-blue">PRÁTICA</span></h2>
             <p class="section-subtitle">Passo a passo do que entregamos em cada fase, do dia 1 ao mês 3.</p>
         </div>
 
-        <div class="tabs-container">
+        <div class="tabs-container reveal">
             <div class="tabs-header">
                 <button class="tab-btn active" data-tab="semana12">Semana 1-2</button>
                 <button class="tab-btn" data-tab="semana34">Semana 3-4</button>
@@ -317,7 +425,7 @@
 
     <!-- Financial Projection / ROI Section -->
     <section id="roi" class="roi">
-        <div class="section-header">
+        <div class="section-header reveal">
             <span class="section-tag">PROJEÇÃO FINANCEIRA</span>
             <h2 class="section-title">QUANTO VOCÊ PODE <span class="text-blue">GERAR</span></h2>
             <p class="section-subtitle">Projeção conservadora baseada em 10% de conversão e ticket médio de R$ 15.000/stand.</p>
@@ -325,7 +433,7 @@
 
         <div class="roi-grid">
             <!-- ROI Card 1 -->
-            <div class="roi-card">
+            <div class="roi-card reveal reveal-delay-1">
                 <div class="roi-card-header">
                     <span class="roi-percent">837%</span>
                     <span class="roi-time">ROI Mês 1</span>
@@ -351,7 +459,7 @@
             </div>
 
             <!-- ROI Card 2 (Featured) -->
-            <div class="roi-card featured">
+            <div class="roi-card featured reveal reveal-delay-2">
                 <div class="roi-badge-pop">RECOMENDADO</div>
                 <div class="roi-card-header">
                     <span class="roi-percent">2.4K%</span>
@@ -378,7 +486,7 @@
             </div>
 
             <!-- ROI Card 3 -->
-            <div class="roi-card">
+            <div class="roi-card reveal reveal-delay-3">
                 <div class="roi-card-header">
                     <span class="roi-percent">1.9K%</span>
                     <span class="roi-time">ROI Anual</span>
@@ -407,12 +515,12 @@
 
     <!-- FAQ Section -->
     <section id="faq" class="faq">
-        <div class="section-header">
+        <div class="section-header reveal">
             <span class="section-tag">DETALHAMENTO</span>
             <h2 class="section-title">PERGUNTAS <span class="text-blue">FREQUENTES</span></h2>
         </div>
 
-        <div class="faq-container">
+        <div class="faq-container reveal">
             <!-- FAQ Item 1 -->
             <div class="faq-item">
                 <button class="faq-question">
