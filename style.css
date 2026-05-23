@@ -1,6 +1,60 @@
 ﻿/* DESIGN AUTORAL - OFFICIAL BRASIL DE LUXO */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
 
+:root {
+    --ink: #060608; /* Deep black */
+    --ink-rgb: 6,6,8;
+    --gold: #C9A84C; /* Metallic gold */
+    --gold-rgb: 201,168,76;
+    --gold-shine: #E2C06A; /* Shine gold for highlights */
+    --text: #F2EFE8; /* Grayish white for long reads */
+    --muted: #86868B;
+    --card-bg: rgba(255,255,255,0.02);
+    --border-weak: rgba(255,255,255,0.08);
+    --radius-lg: 28px;
+    --radius-sm: 8px;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        radial-gradient(circle at 12% 18%, rgba(255,255,255,0.08), transparent 20%),
+        radial-gradient(circle at 88% 12%, rgba(255,255,255,0.06), transparent 15%),
+        radial-gradient(circle at 55% 80%, rgba(var(--gold-rgb), 0.1), transparent 16%);
+    opacity: 0.22;
+    mix-blend-mode: screen;
+    z-index: -1;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        linear-gradient(0deg, rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 180px 180px;
+    opacity: 0.08;
+    z-index: -1;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translate3d(0, 32px, 0);
+    will-change: opacity, transform;
+    transition: opacity 0.9s ease, transform 0.9s ease;
+    transition-delay: var(--reveal-delay, 0s);
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -12,8 +66,8 @@ html {
 }
 
 body {
-    background-color: #060608;
-    color: #F2EFE8;
+    background-color: var(--ink);
+    color: var(--text);
     font-family: 'Plus Jakarta Sans', sans-serif;
     letter-spacing: -0.01em;
     -webkit-font-smoothing: antialiased;
@@ -63,7 +117,7 @@ button {
 }
 
 .header.scrolled {
-    background: rgba(6, 6, 8, 0.85);
+    background: rgba(var(--ink-rgb), 0.85);
     backdrop-filter: blur(10px);
 }
 
@@ -78,7 +132,7 @@ button {
     font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.3em;
-    color: #C9A84C;
+    color: var(--gold);
     text-transform: uppercase;
 }
 
@@ -87,11 +141,11 @@ button {
 }
 
 .logo-text strong {
-    color: #C9A84C;
+    color: var(--gold);
 }
 
 .brand p {
-    color: #86868B;
+    color: var(--muted);
     font-size: 0.75rem;
     letter-spacing: 0.15em;
     font-weight: 400;
@@ -109,13 +163,13 @@ button {
     font-weight: 500;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: #86868B;
+    color: var(--muted);
     transition: color 0.3s ease;
 }
 
 .nav-link:hover,
 .nav-link.active {
-    color: #C9A84C;
+    color: var(--gold);
 }
 
 .header-actions {
@@ -168,8 +222,35 @@ button {
     display: flex;
     align-items: center;
     padding: 12% 8% 6% 8%;
-    background: linear-gradient(180deg, #000000 0%, #060608 100%);
+    background: linear-gradient(180deg, #000000 0%, var(--ink) 100%);
     position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        radial-gradient(circle at 18% 22%, rgba(var(--gold-rgb), 0.18), transparent 18%),
+        radial-gradient(circle at 76% 14%, rgba(255,255,255,0.08), transparent 12%);
+    opacity: 0.88;
+    z-index: 1;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(255,255,255,0.06) 0%, transparent 35%, rgba(255,255,255,0.04) 100%);
+    z-index: 1;
+}
+
+.hero > * {
+    position: relative;
+    z-index: 2;
 }
 
 .hero-copy {
@@ -182,7 +263,7 @@ button {
     font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 0.3em;
-    color: #C9A84C;
+    color: var(--gold);
     text-transform: uppercase;
     display: block;
     margin-bottom: 1.5rem;
@@ -194,18 +275,18 @@ button {
     font-weight: 400;
     line-height: 1.15;
     letter-spacing: -0.02em;
-    color: #F2EFE8;
+    color: var(--text);
     margin-bottom: 2rem;
 }
 
 .hero p {
     font-size: 1.1rem;
     font-weight: 300;
-    color: #86868B;
+    color: var(--muted);
     line-height: 1.7;
     max-width: 580px;
     margin-bottom: 3.5rem;
-    border-left: 1px solid rgba(201, 168, 76, 0.4);
+    border-left: 1px solid rgba(var(--gold-rgb), 0.4);
     padding-left: 1.5rem;
 }
 
@@ -240,7 +321,7 @@ main {
     font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 0.3em;
-    color: #C9A84C;
+    color: var(--gold);
     text-transform: uppercase;
     display: block;
     margin-bottom: 1.5rem;
@@ -251,7 +332,7 @@ main {
     font-size: clamp(2.2rem, 3vw, 3.2rem);
     font-weight: 400;
     line-height: 1.15;
-    color: #F2EFE8;
+    color: var(--text);
 }
 
 .about,
@@ -271,7 +352,7 @@ main {
 }
 
 .about-copy p {
-    color: #86868B;
+    color: var(--muted);
     margin-bottom: 1.5rem;
     line-height: 1.8;
     font-size: 1rem;
@@ -287,7 +368,7 @@ main {
 .about-copy li {
     position: relative;
     padding-left: 1.5rem;
-    color: #86868B;
+    color: var(--muted);
     font-size: 0.95rem;
 }
 
@@ -298,7 +379,7 @@ main {
     top: 0.6rem;
     width: 6px;
     height: 6px;
-    background: #C9A84C;
+    background: var(--gold);
     border-radius: 50%;
 }
 
@@ -309,8 +390,8 @@ main {
 
 .feature-card {
     padding: 2.5rem;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(201, 168, 76, 0.12);
+    background: var(--card-bg);
+    border: 1px solid rgba(var(--gold-rgb), 0.12);
     border-radius: 8px;
 }
 
@@ -318,7 +399,7 @@ main {
     font-family: 'Cinzel', serif;
     font-size: 1.1rem;
     margin-bottom: 1rem;
-    color: #C9A84C;
+    color: var(--gold);
     font-weight: 500;
 }
 
@@ -338,8 +419,8 @@ main {
 
 .service-card {
     padding: 3rem;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(201, 168, 76, 0.12);
+    background: var(--card-bg);
+    border: 1px solid rgba(var(--gold-rgb), 0.12);
     border-radius: 8px;
 }
 
@@ -350,9 +431,9 @@ main {
     align-items: center;
     justify-content: center;
     margin-bottom: 1.5rem;
-    background: rgba(201, 168, 76, 0.15);
+    background: rgba(var(--gold-rgb), 0.15);
     border-radius: 8px;
-    color: #C9A84C;
+    color: var(--gold);
     font-size: 1.5rem;
 }
 
@@ -360,7 +441,7 @@ main {
     font-family: 'Cinzel', serif;
     font-size: 1.2rem;
     margin-bottom: 1rem;
-    color: #F2EFE8;
+    color: var(--text);
     font-weight: 500;
 }
 
@@ -381,7 +462,7 @@ main {
 .gallery-card {
     overflow: hidden;
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.02);
+    background: var(--card-bg);
     border: 1px solid rgba(255, 255, 255, 0.08);
     aspect-ratio: 1;
 }
@@ -397,6 +478,22 @@ main {
     transform: scale(1.05);
 }
 
+.feature-card,
+.service-card,
+.gallery-card,
+.client-logo {
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.feature-card:hover,
+.service-card:hover,
+.gallery-card:hover,
+.client-logo:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
+    border-color: rgba(var(--gold-rgb), 0.22);
+}
+
 .client-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -409,7 +506,7 @@ main {
 
 .client-logo {
     padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.02);
+    background: var(--card-bg);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 8px;
     min-height: 80px;
@@ -426,7 +523,7 @@ main {
 
 .contact {
     padding: 6rem 8%;
-    background: linear-gradient(180deg, #000000 0%, #060608 100%);
+    background: linear-gradient(180deg, #000000 0%, var(--ink) 100%);
 }
 
 .contact-grid {
@@ -439,14 +536,14 @@ main {
 }
 
 .contact-copy p {
-    color: #86868B;
+    color: var(--muted);
     margin-bottom: 1.5rem;
     line-height: 1.8;
     font-size: 1rem;
 }
 
 .contact-copy strong {
-    color: #F2EFE8;
+    color: var(--text);
 }
 
 .contact-actions {
@@ -456,7 +553,7 @@ main {
 
 .btn {
     background: transparent;
-    color: #F2EFE8;
+    color: var(--text);
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 1.2rem 3rem;
     font-size: 0.85rem;
@@ -467,6 +564,7 @@ main {
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     display: inline-block;
     text-decoration: none;
+    transform: translateZ(0);
 }
 
 .btn:hover {
@@ -474,29 +572,30 @@ main {
     color: #000000;
     border-color: #FFFFFF;
     box-shadow: 0 20px 40px rgba(255, 255, 255, 0.05);
+    transform: translateY(-2px);
 }
 
 .btn.btn-primary {
-    background: #C9A84C;
+    background: var(--gold);
     color: #000000;
     border: none;
 }
 
 .btn.btn-primary:hover {
     background: #FFFFFF;
-    box-shadow: 0 20px 40px rgba(201, 168, 76, 0.2);
+    box-shadow: 0 20px 40px rgba(var(--gold-rgb), 0.2);
 }
 
 .btn.btn-secondary {
     background: transparent;
-    color: #F2EFE8;
+    color: var(--text);
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .footer {
     padding: 3rem 8%;
     text-align: center;
-    color: #86868B;
+    color: var(--muted);
     font-size: 0.9rem;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -511,7 +610,7 @@ main {
 }
 
 .chat-toggle {
-    background: #C9A84C;
+    background: var(--gold);
     color: #000000;
     border: none;
     padding: 1rem 1.5rem;
@@ -520,14 +619,15 @@ main {
     font-size: 0.85rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    box-shadow: 0 15px 30px rgba(201, 168, 76, 0.2);
+    box-shadow: 0 15px 30px rgba(var(--gold-rgb), 0.2);
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
 .chat-toggle:hover {
     background: #FFFFFF;
-    box-shadow: 0 20px 40px rgba(201, 168, 76, 0.25);
+    box-shadow: 0 20px 40px rgba(var(--gold-rgb), 0.25);
+    transform: translateY(-2px);
 }
 
 .chat-window {
@@ -550,7 +650,7 @@ main {
 
 .chat-header {
     padding: 1.5rem;
-    background: rgba(201, 168, 76, 0.08);
+    background: rgba(var(--gold-rgb), 0.08);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     display: flex;
     justify-content: space-between;
@@ -560,13 +660,13 @@ main {
 .chat-header strong {
     font-family: 'Cinzel', serif;
     font-size: 0.95rem;
-    color: #F2EFE8;
+    color: var(--text);
 }
 
 .chat-close {
     background: transparent;
     border: none;
-    color: #86868B;
+    color: var(--muted);
     font-size: 1.2rem;
     cursor: pointer;
 }
@@ -590,13 +690,13 @@ main {
 
 .chat-msg.bot {
     background: rgba(255, 255, 255, 0.06);
-    color: #F2EFE8;
+    color: var(--text);
     align-self: flex-start;
 }
 
 .chat-msg.user {
-    background: rgba(201, 168, 76, 0.18);
-    color: #F2EFE8;
+    background: rgba(var(--gold-rgb), 0.18);
+    color: var(--text);
     align-self: flex-end;
 }
 
@@ -613,17 +713,17 @@ main {
     background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 6px;
-    color: #F2EFE8;
+    color: var(--text);
     font-family: inherit;
     font-size: 0.9rem;
 }
 
 .chat-form input::placeholder {
-    color: #86868B;
+    color: var(--muted);
 }
 
 .chat-form button {
-    background: #C9A84C;
+    background: var(--gold);
     border: none;
     color: #000000;
     padding: 0.8rem 1.2rem;
@@ -670,7 +770,7 @@ main {
     position: absolute;
     top: -40px;
     right: 0;
-    background: #C9A84C;
+    background: var(--gold);
     border: none;
     color: #000000;
     width: 40px;

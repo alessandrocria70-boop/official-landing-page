@@ -246,22 +246,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const knowledge = [
         { q: ['horário', 'horarios', 'hours'], a: 'Atendemos em horário comercial. Para agendar, fale conosco via WhatsApp.' },
         { q: ['local', 'onde', 'sede'], a: 'Sede comercial em Guarulhos - SP; espaço fabril em Arujá - SP.' },
-        { q: ['projeto', 'projetos'], a: 'Oferecemos projeto de stands, montagem e locação de equipamentos.' },
-        { q: ['preço', 'investimento', 'valor'], a: 'Temos pacotes flexíveis. Clique em "Vamos conversar" ou envie mensagem por WhatsApp para receber proposta.' },
-        { q: ['contato', 'telefone', 'whatsapp'], a: 'Você pode falar conosco pelo WhatsApp: use o botão de contato no site ou envie email para contato@officialbrasil.com.br.' },
-        { q: ['video', 'vídeo', 'exposi', 'expo'], a: 'Temos vídeos das exposições na seção principal. Quer que eu abra o vídeo para você?' },
-        { q: ['portfolio', 'portfólio', 'clientes'], a: 'Veja nossos clientes na seção "Clientes" e o portfólio nas exposições.' }
+        { q: ['projeto', 'projetos'], a: 'Criamos projetos de stands, fazemos a montagem e oferecemos locação de equipamentos.' },
+        { q: ['preço', 'investimento', 'valor'], a: 'Temos pacotes flexíveis. Use o WhatsApp para pedir sua proposta.' },
+        { q: ['contato', 'telefone', 'whatsapp'], a: 'Fale com a equipe pelo WhatsApp ou envie email para contato@officialbrasil.com.br.' },
+        { q: ['video', 'vídeo', 'exposi', 'expo'], a: 'Veja o vídeo das exposições no topo da página. Precisa de ajuda para encontrar?' },
+        { q: ['portfolio', 'portfólio', 'clientes'], a: 'Confira a seção Clientes e as exposições para ver trabalhos entregues.' }
     ];
+
+    function humanizeText(text) {
+        return text
+            .replace(/Desculpe,?\s*/i, '')
+            .replace(/posso encaminhar você para nosso time via WhatsApp\. Deseja isso\?/i, 'quer que eu conecte você direto pelo WhatsApp?')
+            .replace(/Temos pacotes flexíveis\.\s*Use o WhatsApp para pedir sua proposta\./i, 'Temos pacotes flexíveis. É só mandar uma mensagem no WhatsApp para receber a proposta.')
+            .replace(/Atendemos em horário comercial\. Para agendar, fale conosco via WhatsApp\./i, 'Atendemos em horário comercial. Agende pelo WhatsApp.')
+            .replace(/Fale com a equipe pelo WhatsApp ou envie email para contato@officialbrasil\.com\.br\./i, 'Fale com a equipe pelo WhatsApp ou pelo email contato@officialbrasil.com.br.')
+            .replace(/Veja o vídeo das exposições no topo da página\. Precisa de ajuda para encontrar\?/i, 'Veja o vídeo das exposições no topo da página. Posso ajudar você a encontrar.')
+            .replace(/Confira a seção Clientes e as exposições para ver trabalhos entregues\./i, 'Confira a seção Clientes e as exposições para ver trabalhos já entregues.')
+            .replace(/Não entendi bem\. Quer que eu conecte você direto pelo WhatsApp\?/i, 'Não entendi bem. Quer que eu conecte você direto pelo WhatsApp?');
+    }
 
     function botReply(text) {
         const lower = text.toLowerCase();
         for (const item of knowledge) {
             for (const key of item.q) {
-                if (lower.includes(key)) return item.a;
+                if (lower.includes(key)) return humanizeText(item.a);
             }
         }
         // fallback suggestions
-        return 'Desculpe, não entendi completamente — posso encaminhar você para nosso time via WhatsApp. Deseja isso?';
+        return 'Não entendi bem. Quer que eu conecte você direto pelo WhatsApp?';
     }
 
     chatToggle.addEventListener('click', () => {
