@@ -12,8 +12,8 @@ html {
 }
 
 body {
-    background-color: #050505;
-    color: #F5F5F7;
+    background-color: #060608;
+    color: #F2EFE8;
     font-family: 'Plus Jakarta Sans', sans-serif;
     letter-spacing: -0.01em;
     -webkit-font-smoothing: antialiased;
@@ -63,7 +63,7 @@ button {
 }
 
 .header.scrolled {
-    background: rgba(5, 5, 5, 0.85);
+    background: rgba(6, 6, 8, 0.85);
     backdrop-filter: blur(10px);
 }
 
@@ -78,7 +78,7 @@ button {
     font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.3em;
-    color: #D4AF37;
+    color: #C9A84C;
     text-transform: uppercase;
 }
 
@@ -87,7 +87,7 @@ button {
 }
 
 .logo-text strong {
-    color: #D4AF37;
+    color: #C9A84C;
 }
 
 .brand p {
@@ -115,7 +115,7 @@ button {
 
 .nav-link:hover,
 .nav-link.active {
-    color: #D4AF37;
+    color: #C9A84C;
 }
 
 .header-actions {
@@ -168,7 +168,7 @@ button {
     display: flex;
     align-items: center;
     padding: 12% 8% 6% 8%;
-    background: linear-gradient(180deg, #000000 0%, #050505 100%);
+    background: linear-gradient(180deg, #000000 0%, #060608 100%);
     position: relative;
 }
 
@@ -182,7 +182,7 @@ button {
     font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 0.3em;
-    color: #D4AF37;
+    color: #C9A84C;
     text-transform: uppercase;
     display: block;
     margin-bottom: 1.5rem;
@@ -194,7 +194,7 @@ button {
     font-weight: 400;
     line-height: 1.15;
     letter-spacing: -0.02em;
-    color: #FFFFFF;
+    color: #F2EFE8;
     margin-bottom: 2rem;
 }
 
@@ -205,7 +205,7 @@ button {
     line-height: 1.7;
     max-width: 580px;
     margin-bottom: 3.5rem;
-    border-left: 1px solid rgba(214, 175, 55, 0.4);
+    border-left: 1px solid rgba(201, 168, 76, 0.4);
     padding-left: 1.5rem;
 }
 
@@ -240,7 +240,7 @@ main {
     font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 0.3em;
-    color: #D4AF37;
+    color: #C9A84C;
     text-transform: uppercase;
     display: block;
     margin-bottom: 1.5rem;
@@ -251,7 +251,7 @@ main {
     font-size: clamp(2.2rem, 3vw, 3.2rem);
     font-weight: 400;
     line-height: 1.15;
-    color: #FFFFFF;
+    color: #F2EFE8;
 }
 
 .about,
@@ -298,7 +298,7 @@ main {
     top: 0.6rem;
     width: 6px;
     height: 6px;
-    background: #D4AF37;
+    background: #C9A84C;
     border-radius: 50%;
 }
 
@@ -310,7 +310,7 @@ main {
 .feature-card {
     padding: 2.5rem;
     background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(214, 175, 55, 0.12);
+    border: 1px solid rgba(201, 168, 76, 0.12);
     border-radius: 8px;
 }
 
@@ -318,7 +318,7 @@ main {
     font-family: 'Cinzel', serif;
     font-size: 1.1rem;
     margin-bottom: 1rem;
-    color: #D4AF37;
+    color: #C9A84C;
     font-weight: 500;
 }
 
@@ -339,7 +339,7 @@ main {
 .service-card {
     padding: 3rem;
     background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(214, 175, 55, 0.12);
+    border: 1px solid rgba(201, 168, 76, 0.12);
     border-radius: 8px;
 }
 
@@ -350,9 +350,9 @@ main {
     align-items: center;
     justify-content: center;
     margin-bottom: 1.5rem;
-    background: rgba(212, 175, 55, 0.15);
+    background: rgba(201, 168, 76, 0.15);
     border-radius: 8px;
-    color: #D4AF37;
+    color: #C9A84C;
     font-size: 1.5rem;
 }
 
@@ -360,7 +360,7 @@ main {
     font-family: 'Cinzel', serif;
     font-size: 1.2rem;
     margin-bottom: 1rem;
-    color: #FFFFFF;
+    color: #F2EFE8;
     font-weight: 500;
 }
 
@@ -426,7 +426,7 @@ main {
 
 .contact {
     padding: 6rem 8%;
-    background: linear-gradient(180deg, #000000 0%, #050505 100%);
+    background: linear-gradient(180deg, #000000 0%, #060608 100%);
 }
 
 .contact-grid {
@@ -446,7 +446,7 @@ main {
 }
 
 .contact-copy strong {
-    color: #FFFFFF;
+    color: #F2EFE8;
 }
 
 .contact-actions {
@@ -456,7 +456,7 @@ main {
 
 .btn {
     background: transparent;
-    color: #FFFFFF;
+    color: #F2EFE8;
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 1.2rem 3rem;
     font-size: 0.85rem;
@@ -477,19 +477,19 @@ main {
 }
 
 .btn.btn-primary {
-    background: #D4AF37;
+    background: #C9A84C;
     color: #000000;
     border: none;
 }
 
 .btn.btn-primary:hover {
     background: #FFFFFF;
-    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
+    box-shadow: 0 20px 40px rgba(201, 168, 76, 0.2);
 }
 
 .btn.btn-secondary {
     background: transparent;
-    color: #FFFFFF;
+    color: #F2EFE8;
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -511,7 +511,7 @@ main {
 }
 
 .chat-toggle {
-    background: #D4AF37;
+    background: #C9A84C;
     color: #000000;
     border: none;
     padding: 1rem 1.5rem;
@@ -520,14 +520,14 @@ main {
     font-size: 0.85rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.2);
+    box-shadow: 0 15px 30px rgba(201, 168, 76, 0.2);
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
 .chat-toggle:hover {
     background: #FFFFFF;
-    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.25);
+    box-shadow: 0 20px 40px rgba(201, 168, 76, 0.25);
 }
 
 .chat-window {
@@ -550,7 +550,7 @@ main {
 
 .chat-header {
     padding: 1.5rem;
-    background: rgba(212, 175, 55, 0.1);
+    background: rgba(201, 168, 76, 0.08);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     display: flex;
     justify-content: space-between;
@@ -560,7 +560,7 @@ main {
 .chat-header strong {
     font-family: 'Cinzel', serif;
     font-size: 0.95rem;
-    color: #FFFFFF;
+    color: #F2EFE8;
 }
 
 .chat-close {
@@ -590,13 +590,13 @@ main {
 
 .chat-msg.bot {
     background: rgba(255, 255, 255, 0.06);
-    color: #F5F5F7;
+    color: #F2EFE8;
     align-self: flex-start;
 }
 
 .chat-msg.user {
-    background: rgba(212, 175, 55, 0.2);
-    color: #FFFFFF;
+    background: rgba(201, 168, 76, 0.18);
+    color: #F2EFE8;
     align-self: flex-end;
 }
 
@@ -613,7 +613,7 @@ main {
     background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 6px;
-    color: #FFFFFF;
+    color: #F2EFE8;
     font-family: inherit;
     font-size: 0.9rem;
 }
@@ -623,7 +623,7 @@ main {
 }
 
 .chat-form button {
-    background: #D4AF37;
+    background: #C9A84C;
     border: none;
     color: #000000;
     padding: 0.8rem 1.2rem;
@@ -670,7 +670,7 @@ main {
     position: absolute;
     top: -40px;
     right: 0;
-    background: #D4AF37;
+    background: #C9A84C;
     border: none;
     color: #000000;
     width: 40px;
