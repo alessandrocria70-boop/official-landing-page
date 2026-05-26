@@ -17,31 +17,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // =========================================================
     const hamburger = document.querySelector('.hamburger');
     const nav = document.querySelector('.nav');
-    const overlay = document.querySelector('.mobile-overlay');
     const navLinks = document.querySelectorAll('.nav-link');
 
     if (hamburger) {
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             nav.classList.toggle('mobile-open');
-            if (overlay) overlay.classList.toggle('active');
             document.body.style.overflow = nav.classList.contains('mobile-open') ? 'hidden' : '';
         });
-
-        if (overlay) {
-            overlay.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                nav.classList.remove('mobile-open');
-                overlay.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        }
 
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
                 nav.classList.remove('mobile-open');
-                if (overlay) overlay.classList.remove('active');
                 document.body.style.overflow = '';
             });
         });
@@ -207,23 +195,25 @@ document.addEventListener('DOMContentLoaded', () => {
     highlightNavigation();
 
     // =========================================================
-    // 8. Smooth scroll for anchor links
+    // 8. Smooth scroll for anchor links (with header offset)
     // =========================================================
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+                const offset = 80;
+                const targetPos = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                window.scrollTo({
+                    top: targetPos,
+                    behavior: 'smooth'
                 });
             }
         });
     });
 });
 
-// ==================== Chat widget (simple rule-based assistant) ====================
+// ==================== Chat humanizado (estilo WhatsApp / iMessage) ====================
 (function () {
     const chatToggle = document.getElementById('chat-toggle');
     const chatWindow = document.getElementById('chat-window');
@@ -231,56 +221,109 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatForm = document.getElementById('chat-form');
     const chatInput = document.getElementById('chat-input');
     const chatMessages = document.getElementById('chat-messages');
+    const chatTyping = document.getElementById('chat-typing');
+    const quickReply = document.getElementById('chat-quick-reply');
 
     if (!chatToggle || !chatWindow) return;
 
-    function appendMessage(text, from = 'bot') {
-        const el = document.createElement('div');
-        el.className = 'chat-msg ' + (from === 'bot' ? 'bot' : 'user');
-        el.innerText = text;
-        chatMessages.appendChild(el);
+    let conversationStep = 0;
+    let isProcessing = false;
+
+    function formatTime() {
+        const d = new Date();
+        return String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0');
+    }
+
+    function addMessage(text, from = 'bot') {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'chat-msg chat-msg--' + from;
+
+        const bubble = document.createElement('div');
+        bubble.className = 'msg-content';
+        bubble.textContent = text;
+
+        const time = document.createElement('div');
+        time.className = 'msg-time';
+        time.textContent = formatTime();
+
+        wrapper.appendChild(bubble);
+        wrapper.appendChild(time);
+        chatMessages.appendChild(wrapper);
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }
 
-    // Basic knowledge base from the site content
-    const knowledge = [
-        { q: ['horário', 'horarios', 'hours'], a: 'Atendemos em horário comercial. Para agendar, fale conosco via WhatsApp.' },
-        { q: ['local', 'onde', 'sede'], a: 'Sede comercial em Guarulhos - SP; espaço fabril em Arujá - SP.' },
-        { q: ['projeto', 'projetos'], a: 'Criamos projetos de stands, fazemos a montagem e oferecemos locação de equipamentos.' },
-        { q: ['preço', 'investimento', 'valor'], a: 'Temos pacotes flexíveis. Use o WhatsApp para pedir sua proposta.' },
-        { q: ['contato', 'telefone', 'whatsapp'], a: 'Fale com a equipe pelo WhatsApp ou envie email para contato@officialbrasil.com.br.' },
-        { q: ['video', 'vídeo', 'exposi', 'expo'], a: 'Veja o vídeo das exposições no topo da página. Precisa de ajuda para encontrar?' },
-        { q: ['portfolio', 'portfólio', 'clientes'], a: 'Confira a seção Clientes e as exposições para ver trabalhos entregues.' }
-    ];
-
-    function humanizeText(text) {
-        return text
-            .replace(/Desculpe,?\s*/i, '')
-            .replace(/posso encaminhar você para nosso time via WhatsApp\. Deseja isso\?/i, 'quer que eu conecte você direto pelo WhatsApp?')
-            .replace(/Temos pacotes flexíveis\.\s*Use o WhatsApp para pedir sua proposta\./i, 'Temos pacotes flexíveis. É só mandar uma mensagem no WhatsApp para receber a proposta.')
-            .replace(/Atendemos em horário comercial\. Para agendar, fale conosco via WhatsApp\./i, 'Atendemos em horário comercial. Agende pelo WhatsApp.')
-            .replace(/Fale com a equipe pelo WhatsApp ou envie email para contato@officialbrasil\.com\.br\./i, 'Fale com a equipe pelo WhatsApp ou pelo email contato@officialbrasil.com.br.')
-            .replace(/Veja o vídeo das exposições no topo da página\. Precisa de ajuda para encontrar\?/i, 'Veja o vídeo das exposições no topo da página. Posso ajudar você a encontrar.')
-            .replace(/Confira a seção Clientes e as exposições para ver trabalhos entregues\./i, 'Confira a seção Clientes e as exposições para ver trabalhos já entregues.')
-            .replace(/Não entendi bem\. Quer que eu conecte você direto pelo WhatsApp\?/i, 'Não entendi bem. Quer que eu conecte você direto pelo WhatsApp?');
+    function showTyping(show) {
+        chatTyping.classList.toggle('active', show);
+        if (show) chatMessages.scrollTop = chatMessages.scrollHeight;
     }
 
-    function botReply(text) {
-        const lower = text.toLowerCase();
-        for (const item of knowledge) {
-            for (const key of item.q) {
-                if (lower.includes(key)) return humanizeText(item.a);
-            }
+    function botReply(userText) {
+        const lower = userText.toLowerCase();
+
+        if (lower.includes('show') || lower.includes('palco') || lower.includes('iluminação') || lower.includes('iluminacao')) {
+            return 'Trabalhamos com shows completos: montagem de palcos, estruturas metálicas, iluminação cênica, grades, bastidores, tendas, banheiros químicos e containers. Qual a data do seu evento?';
         }
-        // fallback suggestions
-        return 'Não entendi bem. Quer que eu conecte você direto pelo WhatsApp?';
+        if (lower.includes('projeto') || lower.includes('personalizado') || lower.includes('stand') || lower.includes('3d') || lower.includes('gratuito')) {
+            return 'Somos a única empresa que entrega projetos em 3 dias e alterações em 1 dia útil! E mais: projetos de stands são GRATUITOS para contratos de montagem. Quer solicitar o seu?';
+        }
+        if (lower.includes('feira') || lower.includes('evento') || lower.includes('congresso') || lower.includes('exposição') || lower.includes('exposicao')) {
+            return 'Fazemos montagem de stands, cenários, showrooms, congressos, displays e quiosques de fábrica para todo o Brasil. Me conte mais sobre o seu evento!';
+        }
+        if (lower.includes('buffet') || lower.includes('comida') || lower.includes('finger') || lower.includes('coffee') || lower.includes('bebida') || lower.includes('gastronomia')) {
+            return 'Oferecemos buffet completo: finger foods, menus personalizados, bebidas e staff especializado. Tudo para seu evento corporativo ou festa!';
+        }
+        if (lower.includes('mobiliário') || lower.includes('movel') || lower.includes('cadeira') || lower.includes('mesa') || lower.includes('frigobar') || lower.includes('ar condicionado') || lower.includes('locação') || lower.includes('aluguel')) {
+            return 'Locamos mesas, cadeiras, sofás, frigobar, ar condicionado, bistrôs, lounges e equipamentos de áudio e vídeo. Temos estoque para eventos de todos os portes!';
+        }
+        if (lower.includes('orçamento') || lower.includes('orcamento') || lower.includes('quero') || lower.includes('contratar')) {
+            return 'Ótimo! Vou conectar você com nosso time comercial. Nosso prazo de resposta é de até 24 horas. Enquanto isso, qual o tipo de evento que você precisa?';
+        }
+        if (lower.includes('prazo') || lower.includes('entrega') || lower.includes('tempo')) {
+            return 'Projetos em 3 dias e alterações em 1 dia útil — somos os mais rápidos do mercado! A montagem depende do porte, mas fazemos urgências. Qual a data do seu evento?';
+        }
+        if (lower.includes('consultor') || lower.includes('falar') || lower.includes('humano') || lower.includes('telefone') || lower.includes('whatsapp')) {
+            return 'Claro! Me liga no (+55 11) 93439-3753 ou envia um email para vendas@officialbrasil.com.br. O Emerson ou alguém da equipe vai atender você hoje!';
+        }
+        if (lower.includes('contato') || lower.includes('email') || lower.includes('endereço') || lower.includes('endereco') || lower.includes('guarulhos') || lower.includes('aruja')) {
+            return 'Sede comercial: Guarulhos-SP. Espaço fabril: Arujá-SP. Email: vendas@officialbrasil.com.br | atendimento@officialbrasil.com.br. WhatsApp: (+55 11) 93439-3753.';
+        }
+
+        const fallbacks = [
+            'Entendi! Pode me contar mais sobre o que você precisa? Shows, stands, cenografia, buffet, mobiliário ou promoção de eventos?',
+            'Boa pergunta! Vou passar para o time comercial responder com detalhes. Pode deixar seu WhatsApp?',
+            'Trabalhamos com 6 áreas principais: Shows, Projetos Personalizados, Feiras e Eventos, Buffet, Mobiliário e Promoção de Eventos. Qual te interessa?',
+        ];
+        return fallbacks[Math.floor(Math.random() * fallbacks.length)];
+    }
+
+    function simulateResponse(userText) {
+        isProcessing = true;
+        showTyping(true);
+        quickReply.style.display = 'none';
+
+        setTimeout(() => {
+            showTyping(false);
+            const reply = botReply(userText);
+            addMessage(reply, 'bot');
+            isProcessing = false;
+            conversationStep++;
+            quickReply.style.display = 'flex';
+        }, 1200 + Math.random() * 800);
+    }
+
+    function sendMessage(text) {
+        if (isProcessing || !text.trim()) return;
+        addMessage(text.trim(), 'user');
+        chatInput.value = '';
+        quickReply.style.display = 'none';
+        simulateResponse(text.trim());
     }
 
     chatToggle.addEventListener('click', () => {
         chatWindow.classList.toggle('open');
         if (chatWindow.classList.contains('open')) {
             chatInput.focus();
-            if (chatMessages.children.length === 0) appendMessage('Olá! Eu sou o assistente da Official Brasil. Como posso ajudar?');
+            quickReply.style.display = 'flex';
         }
     });
 
@@ -290,18 +333,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     chatForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        const value = chatInput.value.trim();
-        if (!value) return;
-        appendMessage(value, 'user');
-        chatInput.value = '';
-        // simulate thinking
-        setTimeout(() => {
-            const reply = botReply(value);
-            appendMessage(reply, 'bot');
-        }, 600);
+        sendMessage(chatInput.value);
     });
 
-    // quick keyboard open (shift + /)
+    quickReply.addEventListener('click', (e) => {
+        const btn = e.target.closest('.quick-btn');
+        if (!btn) return;
+        sendMessage(btn.getAttribute('data-msg'));
+    });
+
     window.addEventListener('keydown', (e) => {
         if (e.shiftKey && e.key === '?') {
             chatWindow.classList.add('open');
@@ -310,20 +350,59 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 })();
 
-// ==================== Gallery lightbox (for images in .gallery-grid) ====================
+// ==================== Scroll indicator hide ====================
 (function () {
-    const gallery = document.querySelector('.gallery-grid');
-    if (!gallery) return;
+    const indicator = document.querySelector('.scroll-indicator');
+    if (!indicator) return;
+    let lastScrollY = window.scrollY;
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 120) {
+            indicator.style.opacity = '0';
+            indicator.style.pointerEvents = 'none';
+        } else {
+            indicator.style.opacity = '';
+            indicator.style.pointerEvents = '';
+        }
+    });
+})();
 
-    const lightbox = document.createElement('div');
-    lightbox.className = 'lightbox';
-    lightbox.innerHTML = '<div class="lightbox-inner"><img src="" alt=""/><button class="lightbox-close">✕</button></div>';
-    document.body.appendChild(lightbox);
+// ==================== Parallax tilt on service cards ====================
+(function () {
+    const cards = document.querySelectorAll('.service-card');
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const rotateX = (y - centerY) / centerY * -4;
+            const rotateY = (x - centerX) / centerX * 4;
+            card.style.transform =
+                `translateY(-8px) perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+        });
+    });
+})();
 
-    gallery.querySelectorAll('img').forEach(img => {
-        img.style.cursor = 'zoom-in';
-        img.addEventListener('click', () => {
-            lightbox.querySelector('img').src = img.src;
+// ==================== Gallery lightbox (for real images) ====================
+(function () {
+    const gallery = document.querySelector('.bento-grid');
+    const lightbox = document.querySelector('.lightbox');
+    const lbImg = lightbox ? lightbox.querySelector('.lightbox-image') : null;
+    if (!gallery || !lightbox || !lbImg) return;
+
+    gallery.querySelectorAll('.bento-item').forEach(card => {
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', () => {
+            const img = card.querySelector('.bento-image');
+            if (img) {
+                lbImg.src = img.src;
+                lbImg.alt = img.alt;
+                lbImg.style.display = 'block';
+            }
             lightbox.classList.add('open');
         });
     });

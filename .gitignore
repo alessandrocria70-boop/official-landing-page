@@ -1,0 +1,9 @@
+# Exclude large video files
+*.mov
+*.mov.mov
+*.mp4
+*.MOV
+*.mp4.mp4
+*.mp4.MOV
+tunnel.txt
+node_modules/
