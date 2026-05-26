@@ -7,3 +7,4 @@
 *.mp4.MOV
 tunnel.txt
 node_modules/
+dist/
