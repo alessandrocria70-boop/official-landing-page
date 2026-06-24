@@ -1,415 +1,543 @@
-document.addEventListener('DOMContentLoaded', () => {
-    
-    // =========================================================
-    // 1. Header scroll effect
-    // =========================================================
-    const header = document.querySelector('.header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
+let contentData = null;
 
-    // =========================================================
-    // 2. Mobile hamburger menu
-    // =========================================================
-    const hamburger = document.querySelector('.hamburger');
-    const nav = document.querySelector('.nav');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    if (hamburger) {
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            nav.classList.toggle('mobile-open');
-            document.body.style.overflow = nav.classList.contains('mobile-open') ? 'hidden' : '';
-        });
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                nav.classList.remove('mobile-open');
-                document.body.style.overflow = '';
-            });
-        });
-    }
-
-    // =========================================================
-    // 3. Chronogram Tabs
-    // =========================================================
-    const tabButtons = document.querySelectorAll('.tab-btn');
-    const tabPanes = document.querySelectorAll('.tab-pane');
-
-    tabButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            tabButtons.forEach(btn => btn.classList.remove('active'));
-            tabPanes.forEach(pane => pane.classList.remove('active'));
-
-            button.classList.add('active');
-
-            const tabId = button.getAttribute('data-tab');
-            const targetPane = document.getElementById(tabId);
-            if (targetPane) {
-                targetPane.classList.add('active');
-            }
-        });
-    });
-
-    // =========================================================
-    // 4. FAQ Accordion
-    // =========================================================
-    const faqQuestions = document.querySelectorAll('.faq-question');
-
-    faqQuestions.forEach(question => {
-        question.addEventListener('click', () => {
-            const answer = question.nextElementSibling;
-            const isActive = question.classList.contains('active');
-
-            // Close all other FAQ items
-            faqQuestions.forEach(q => {
-                if (q !== question) {
-                    q.classList.remove('active');
-                    q.nextElementSibling.style.maxHeight = null;
-                }
-            });
-
-            // Toggle current FAQ item
-            if (isActive) {
-                question.classList.remove('active');
-                answer.style.maxHeight = null;
-            } else {
-                question.classList.add('active');
-                answer.style.maxHeight = answer.scrollHeight + 'px';
-            }
-        });
-    });
-
-    // =========================================================
-    // 5. Scroll Reveal (IntersectionObserver)
-    // =========================================================
-    const revealElements = document.querySelectorAll('.reveal');
-
-    if ('IntersectionObserver' in window) {
-        const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    revealObserver.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.12,
-            rootMargin: '0px 0px -40px 0px'
-        });
-
-        revealElements.forEach(el => revealObserver.observe(el));
-    } else {
-        // Fallback: show all immediately
-        revealElements.forEach(el => el.classList.add('visible'));
-    }
-
-    // =========================================================
-    // 6. Stat counter animation
-    // =========================================================
-    const statValues = document.querySelectorAll('.stat-value');
-    let statsAnimated = false;
-
-    function animateCounters() {
-        if (statsAnimated) return;
-        statsAnimated = true;
-
-        statValues.forEach(stat => {
-            const text = stat.textContent;
-            const hasPlus = text.includes('+');
-            const hasK = text.includes('K');
-            let target;
-
-            if (hasK) {
-                target = parseInt(text.replace('K', '').replace('+', ''));
-            } else {
-                target = parseInt(text.replace('+', ''));
-            }
-
-            if (isNaN(target)) return;
-
-            let current = 0;
-            const increment = Math.max(1, Math.floor(target / 50));
-            const duration = 1500;
-            const stepTime = duration / (target / increment);
-
-            const counter = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    current = target;
-                    clearInterval(counter);
-                }
-                
-                let display = current.toString();
-                if (hasK) display += 'K';
-                if (hasPlus) display += '+';
-                stat.textContent = display;
-            }, stepTime);
-        });
-    }
-
-    const statsGrid = document.querySelector('.stats-grid');
-    if (statsGrid && 'IntersectionObserver' in window) {
-        const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounters();
-                    statsObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        statsObserver.observe(statsGrid);
-    }
-
-    // =========================================================
-    // 7. Scrollspy — Active nav highlighting
-    // =========================================================
-    const sections = document.querySelectorAll('section[id]');
-
-    function highlightNavigation() {
-        const scrollY = window.pageYOffset;
-
-        sections.forEach(current => {
-            const sectionHeight = current.offsetHeight;
-            const sectionTop = current.offsetTop - 120;
-            const sectionId = current.getAttribute('id');
-
-            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${sectionId}`) {
-                        link.classList.add('active');
-                    }
-                });
-            }
-        });
-    }
-
-    window.addEventListener('scroll', highlightNavigation);
-    highlightNavigation();
-
-    // =========================================================
-    // 8. Smooth scroll for anchor links (with header offset)
-    // =========================================================
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                const offset = 80;
-                const targetPos = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                window.scrollTo({
-                    top: targetPos,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
+document.addEventListener('content:ready', (e) => {
+  contentData = e.detail;
+  initApp();
 });
 
-// ==================== Chat humanizado (estilo WhatsApp / iMessage) ====================
-(function () {
-    const chatToggle = document.getElementById('chat-toggle');
-    const chatWindow = document.getElementById('chat-window');
-    const chatClose = document.getElementById('chat-close');
-    const chatForm = document.getElementById('chat-form');
-    const chatInput = document.getElementById('chat-input');
-    const chatMessages = document.getElementById('chat-messages');
-    const chatTyping = document.getElementById('chat-typing');
-    const quickReply = document.getElementById('chat-quick-reply');
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+  setTimeout(() => {
+    if (!contentData) initApp();
+  }, 2000);
+}
 
-    if (!chatToggle || !chatWindow) return;
+function initApp() {
+  initHeader();
+  initMobileMenu();
+  initReveal();
+  initCounters();
+  initScrollspy();
+  initSmoothScroll();
+  initScrollIndicator();
+  initTestimonialsAutoplay();
+  initChat();
+  initLightbox();
+  initExitPopup();
+}
 
-    let conversationStep = 0;
-    let isProcessing = false;
+function initHeader() {
+  const header = document.querySelector('.header');
+  if (!header) return;
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 50);
+  });
+}
 
-    function formatTime() {
-        const d = new Date();
-        return String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0');
-    }
-
-    function addMessage(text, from = 'bot') {
-        const wrapper = document.createElement('div');
-        wrapper.className = 'chat-msg chat-msg--' + from;
-
-        const bubble = document.createElement('div');
-        bubble.className = 'msg-content';
-        bubble.textContent = text;
-
-        const time = document.createElement('div');
-        time.className = 'msg-time';
-        time.textContent = formatTime();
-
-        wrapper.appendChild(bubble);
-        wrapper.appendChild(time);
-        chatMessages.appendChild(wrapper);
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-    }
-
-    function showTyping(show) {
-        chatTyping.classList.toggle('active', show);
-        if (show) chatMessages.scrollTop = chatMessages.scrollHeight;
-    }
-
-    function botReply(userText) {
-        const lower = userText.toLowerCase();
-
-        if (lower.includes('show') || lower.includes('palco') || lower.includes('iluminação') || lower.includes('iluminacao')) {
-            return 'Trabalhamos com shows completos: montagem de palcos, estruturas metálicas, iluminação cênica, grades, bastidores, tendas, banheiros químicos e containers. Qual a data do seu evento?';
-        }
-        if (lower.includes('projeto') || lower.includes('personalizado') || lower.includes('stand') || lower.includes('3d') || lower.includes('gratuito')) {
-            return 'Somos a única empresa que entrega projetos em 3 dias e alterações em 1 dia útil! E mais: projetos de stands são GRATUITOS para contratos de montagem. Quer solicitar o seu?';
-        }
-        if (lower.includes('feira') || lower.includes('evento') || lower.includes('congresso') || lower.includes('exposição') || lower.includes('exposicao')) {
-            return 'Fazemos montagem de stands, cenários, showrooms, congressos, displays e quiosques de fábrica para todo o Brasil. Me conte mais sobre o seu evento!';
-        }
-        if (lower.includes('buffet') || lower.includes('comida') || lower.includes('finger') || lower.includes('coffee') || lower.includes('bebida') || lower.includes('gastronomia')) {
-            return 'Oferecemos buffet completo: finger foods, menus personalizados, bebidas e staff especializado. Tudo para seu evento corporativo ou festa!';
-        }
-        if (lower.includes('mobiliário') || lower.includes('movel') || lower.includes('cadeira') || lower.includes('mesa') || lower.includes('frigobar') || lower.includes('ar condicionado') || lower.includes('locação') || lower.includes('aluguel')) {
-            return 'Locamos mesas, cadeiras, sofás, frigobar, ar condicionado, bistrôs, lounges e equipamentos de áudio e vídeo. Temos estoque para eventos de todos os portes!';
-        }
-        if (lower.includes('orçamento') || lower.includes('orcamento') || lower.includes('quero') || lower.includes('contratar')) {
-            return 'Ótimo! Vou conectar você com nosso time comercial. Nosso prazo de resposta é de até 24 horas. Enquanto isso, qual o tipo de evento que você precisa?';
-        }
-        if (lower.includes('prazo') || lower.includes('entrega') || lower.includes('tempo')) {
-            return 'Projetos em 3 dias e alterações em 1 dia útil — somos os mais rápidos do mercado! A montagem depende do porte, mas fazemos urgências. Qual a data do seu evento?';
-        }
-        if (lower.includes('consultor') || lower.includes('falar') || lower.includes('humano') || lower.includes('telefone') || lower.includes('whatsapp')) {
-            return 'Claro! Me liga no (+55 11) 93439-3753 ou envia um email para vendas@officialbrasil.com.br. O Emerson ou alguém da equipe vai atender você hoje!';
-        }
-        if (lower.includes('contato') || lower.includes('email') || lower.includes('endereço') || lower.includes('endereco') || lower.includes('guarulhos') || lower.includes('aruja')) {
-            return 'Sede comercial: Guarulhos-SP. Espaço fabril: Arujá-SP. Email: vendas@officialbrasil.com.br | atendimento@officialbrasil.com.br. WhatsApp: (+55 11) 93439-3753.';
-        }
-
-        const fallbacks = [
-            'Entendi! Pode me contar mais sobre o que você precisa? Shows, stands, cenografia, buffet, mobiliário ou promoção de eventos?',
-            'Boa pergunta! Vou passar para o time comercial responder com detalhes. Pode deixar seu WhatsApp?',
-            'Trabalhamos com 6 áreas principais: Shows, Projetos Personalizados, Feiras e Eventos, Buffet, Mobiliário e Promoção de Eventos. Qual te interessa?',
-        ];
-        return fallbacks[Math.floor(Math.random() * fallbacks.length)];
-    }
-
-    function simulateResponse(userText) {
-        isProcessing = true;
-        showTyping(true);
-        quickReply.style.display = 'none';
-
-        setTimeout(() => {
-            showTyping(false);
-            const reply = botReply(userText);
-            addMessage(reply, 'bot');
-            isProcessing = false;
-            conversationStep++;
-            quickReply.style.display = 'flex';
-        }, 1200 + Math.random() * 800);
-    }
-
-    function sendMessage(text) {
-        if (isProcessing || !text.trim()) return;
-        addMessage(text.trim(), 'user');
-        chatInput.value = '';
-        quickReply.style.display = 'none';
-        simulateResponse(text.trim());
-    }
-
-    chatToggle.addEventListener('click', () => {
-        chatWindow.classList.toggle('open');
-        if (chatWindow.classList.contains('open')) {
-            chatInput.focus();
-            quickReply.style.display = 'flex';
-        }
+function initMobileMenu() {
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('.nav');
+  if (!hamburger || !nav) return;
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    nav.classList.toggle('mobile-open');
+    document.body.style.overflow = nav.classList.contains('mobile-open') ? 'hidden' : '';
+  });
+  nav.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      nav.classList.remove('mobile-open');
+      document.body.style.overflow = '';
     });
+  });
+}
 
-    chatClose.addEventListener('click', () => {
-        chatWindow.classList.remove('open');
+function initReveal() {
+  const els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(el => { el.classList.add('visible');
+    staggerChildren(el); });
+    return;
+  }
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        staggerChildren(entry.target);
+        obs.unobserve(entry.target);
+      }
     });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  els.forEach(el => obs.observe(el));
+}
 
-    chatForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        sendMessage(chatInput.value);
+function staggerChildren(container) {
+  const items = container.querySelectorAll('.service-card, .step-card, .bento-item, .testimonial-card, .feature-card');
+  items.forEach((el, i) => {
+    const delay = el.classList.contains('service-card--featured') ? 0 : i * 0.1;
+    el.style.setProperty('--stagger-delay', `${delay}s`);
+  });
+}
+
+function initCounters() {
+  const statValues = document.querySelectorAll('.stat-value');
+  if (!statValues.length) return;
+  let animated = false;
+
+  function animate() {
+    if (animated) return;
+    animated = true;
+    statValues.forEach(stat => {
+      const target = parseInt(stat.getAttribute('data-target'));
+      if (isNaN(target)) return;
+      const text = stat.textContent;
+      const suffix = text.replace(/[\d]/g, '');
+      const duration = 1800;
+      const startTime = performance.now();
+
+      function easeOutExpo(t) {
+        return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+      }
+
+      function step(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const current = Math.round(easeOutExpo(progress) * target);
+        stat.textContent = current + suffix;
+        if (progress < 1) requestAnimationFrame(step);
+      }
+
+      requestAnimationFrame(step);
     });
+  }
 
-    quickReply.addEventListener('click', (e) => {
-        const btn = e.target.closest('.quick-btn');
-        if (!btn) return;
-        sendMessage(btn.getAttribute('data-msg'));
+  const hero = document.querySelector('.hero');
+  if (!hero) { animate(); return; }
+  if ('IntersectionObserver' in window) {
+    const obs = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) { animate(); obs.unobserve(entries[0].target); }
+    }, { threshold: 0.5 });
+    obs.observe(hero);
+  } else { animate(); }
+}
+
+function initScrollspy() {
+  const navLinks = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll('section[id]');
+  if (!sections.length) return;
+
+  function highlight() {
+    const scrollY = window.pageYOffset;
+    sections.forEach(section => {
+      const top = section.offsetTop - 120;
+      const height = section.offsetHeight;
+      const id = section.getAttribute('id');
+      if (scrollY > top && scrollY <= top + height) {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${id}`) link.classList.add('active');
+        });
+      }
     });
+  }
+  window.addEventListener('scroll', highlight);
+  highlight();
+}
 
-    window.addEventListener('keydown', (e) => {
-        if (e.shiftKey && e.key === '?') {
-            chatWindow.classList.add('open');
-            chatInput.focus();
-        }
+function initSmoothScroll() {
+  const DURATION = 900;
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (!target) return;
+      const targetY = target.getBoundingClientRect().top + window.pageYOffset - 80;
+      const startY = window.pageYOffset;
+      const startTime = performance.now();
+
+      function easeInOutCubic(t) {
+        return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+      }
+
+      function step(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / DURATION, 1);
+        window.scrollTo(0, startY + (targetY - startY) * easeInOutCubic(progress));
+        if (progress < 1) requestAnimationFrame(step);
+      }
+
+      requestAnimationFrame(step);
     });
-})();
+  });
+}
 
-// ==================== Scroll indicator hide ====================
-(function () {
-    const indicator = document.querySelector('.scroll-indicator');
-    if (!indicator) return;
-    let lastScrollY = window.scrollY;
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 120) {
-            indicator.style.opacity = '0';
-            indicator.style.pointerEvents = 'none';
+function initScrollIndicator() {
+  const indicator = document.querySelector('.scroll-indicator');
+  if (!indicator) return;
+  window.addEventListener('scroll', () => {
+    indicator.style.opacity = window.scrollY > 120 ? '0' : '';
+    indicator.style.pointerEvents = window.scrollY > 120 ? 'none' : '';
+  });
+}
+
+function initTestimonialsAutoplay() {
+  if (!('IntersectionObserver' in window)) return;
+  const videos = document.querySelectorAll('.testimonial-video');
+  if (!videos.length) {
+    document.addEventListener('content:ready', () => {
+      const els = document.querySelectorAll('.testimonial-video');
+      if (els.length) observeAll(els);
+    });
+    return;
+  }
+  observeAll(videos);
+
+  function observeAll(els) {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.play().catch(() => {});
         } else {
-            indicator.style.opacity = '';
-            indicator.style.pointerEvents = '';
+          entry.target.pause();
         }
+      });
+    }, { threshold: 0.5 });
+    els.forEach(v => obs.observe(v));
+  }
+}
+
+function initChat() {
+  const chatToggle = document.getElementById('chat-toggle');
+  const chatWindow = document.getElementById('chat-window');
+  const chatClose = document.getElementById('chat-close');
+  const chatForm = document.getElementById('chat-form');
+  const chatInput = document.getElementById('chat-input');
+  const chatMessages = document.getElementById('chat-messages');
+  const chatTyping = document.getElementById('chat-typing');
+  const quickReply = document.getElementById('chat-quick-reply');
+
+  if (!chatToggle || !chatWindow) return;
+
+  let isProcessing = false;
+
+  function formatTime() {
+    const d = new Date();
+    return String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0');
+  }
+
+  function addMessage(text, from = 'bot') {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'chat-msg chat-msg--' + from;
+    const bubble = document.createElement('div');
+    bubble.className = 'msg-content';
+    bubble.textContent = text;
+    const time = document.createElement('div');
+    time.className = 'msg-time';
+    time.textContent = formatTime();
+    wrapper.appendChild(bubble);
+    wrapper.appendChild(time);
+    chatMessages.appendChild(wrapper);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
+  function showTyping(show) {
+    chatTyping.classList.toggle('active', show);
+    if (show) chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
+  function redirectToWhatsApp(msg) {
+    const phone = '5511934393753';
+    const text = encodeURIComponent(msg);
+    window.open(`https://api.whatsapp.com/send?phone=${phone}&text=${text}`, '_blank');
+  }
+
+  function botReply(userText) {
+    const lower = userText.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+    if (lower.includes('show') || lower.includes('palco') || lower.includes('ilumina')) {
+      return 'Fechou! Montamos palco, iluminacao, estrutura e tenda. Qual a data do evento?';
+    }
+    if (lower.includes('projeto') || lower.includes('stand') || lower.includes('3d')) {
+      return 'Projeto em 3 dias e alteracao em 1 dia util. E de graca se voce fechar a montagem com a gente. Quer solicitar?';
+    }
+    if (lower.includes('feira') || lower.includes('evento') || lower.includes('congresso')) {
+      return 'Fazemos stands completos para feiras no Brasil todo. Me conta mais sobre o seu evento!';
+    }
+    if (lower.includes('buffet') || lower.includes('comida') || lower.includes('coffee')) {
+      return 'Temos buffet completo: finger food, menu personalizado, coffee break e staff. Corporativo ou festa?';
+    }
+    if (lower.includes('mobiliario') || lower.includes('movel') || lower.includes('cadeira') || lower.includes('aluguel') || lower.includes('locacao')) {
+      return 'Locamos mesas, cadeiras, sofa, frigobar, ar condicionado, lounge. Temos estoque pra tudo.';
+    }
+    if (lower.includes('orcamento') || lower.includes('quero') || lower.includes('contratar')) {
+      return 'Bora! Qual o tipo de evento que voce precisa? A gente responde em ate 24h.';
+    }
+    if (lower.includes('whatsapp') || lower.includes('telefone') || lower.includes('falar') || lower.includes('humano')) {
+      const msg = 'Ola Lucas! Quero falar com um consultor da Official Brasil sobre meu evento.';
+      redirectToWhatsApp(msg);
+      return 'Vou te redirecionar pro WhatsApp agora!';
+    }
+    if (lower.includes('obrigado') || lower.includes('valeu')) {
+      return 'Por nada! Se precisar, so chamar. Quer falar com a gente no WhatsApp?';
+    }
+
+    const fallbacks = [
+      'Pode me contar mais? Show, stand, buffet, mobiliario... o que voce precisa?',
+      'Trabalhamos com 6 areas: Shows, Projetos, Feiras, Buffet, Mobiliario e Promocao. Qual te interessa?',
+      'Pode deixar seu contato que o time comercial liga hoje ainda?',
+    ];
+    return fallbacks[Math.floor(Math.random() * fallbacks.length)];
+  }
+
+  function simulateResponse(userText) {
+    isProcessing = true;
+    showTyping(true);
+    if (quickReply) quickReply.style.display = 'none';
+
+    setTimeout(() => {
+      showTyping(false);
+      const reply = botReply(userText);
+      addMessage(reply, 'bot');
+
+      const lower = userText.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      const wantsRedirect = lower.includes('whatsapp') || lower.includes('telefone') || lower.includes('sim') || lower.includes('quero falar');
+
+      if (wantsRedirect) {
+        setTimeout(() => {
+          const msg = `Ola Lucas! Quero falar com um consultor da Official Brasil sobre meu evento. Conversamos pelo site.`;
+          redirectToWhatsApp(msg);
+          addMessage('Redirecionando pro WhatsApp...', 'bot');
+        }, 1000);
+      } else {
+        setTimeout(() => {
+          addMessage('Quer que eu te passe pro WhatsApp pra falar com o time comercial? E rapidinho.', 'bot');
+          if (quickReply) {
+            quickReply.innerHTML = `
+              <button class="quick-btn" data-msg="Sim, quero falar no WhatsApp">Sim, quero!</button>
+              <button class="quick-btn" data-msg="Ainda estou pesquisando">Ainda to vendo</button>
+            `;
+            quickReply.style.display = 'flex';
+          }
+        }, 1500);
+      }
+      isProcessing = false;
+    }, 800 + Math.random() * 600);
+  }
+
+  function sendMessage(text) {
+    if (isProcessing || !text.trim()) return;
+    addMessage(text.trim(), 'user');
+    chatInput.value = '';
+    if (quickReply) quickReply.style.display = 'none';
+    simulateResponse(text.trim());
+  }
+
+  chatToggle.addEventListener('click', () => {
+    chatWindow.classList.toggle('open');
+    if (chatWindow.classList.contains('open')) {
+      chatInput.focus();
+      if (quickReply) quickReply.style.display = 'flex';
+    }
+  });
+
+  if (chatClose) {
+    chatClose.addEventListener('click', () => chatWindow.classList.remove('open'));
+  }
+
+  chatForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    sendMessage(chatInput.value);
+  });
+
+  if (quickReply) {
+    quickReply.addEventListener('click', (e) => {
+      const btn = e.target.closest('.quick-btn');
+      if (!btn) return;
+      sendMessage(btn.getAttribute('data-msg'));
     });
-})();
+  }
 
-// ==================== Parallax tilt on service cards ====================
-(function () {
-    const cards = document.querySelectorAll('.service-card');
-    cards.forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            const rotateX = (y - centerY) / centerY * -4;
-            const rotateY = (x - centerX) / centerX * 4;
-            card.style.transform =
-                `translateY(-8px) perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-        });
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = '';
-        });
+  window.addEventListener('keydown', (e) => {
+    if (e.shiftKey && e.key === '?') {
+      chatWindow.classList.add('open');
+      chatInput.focus();
+    }
+  });
+}
+
+function initLightbox() {
+  const lightbox = document.querySelector('.lightbox');
+  if (!lightbox) return;
+  const lbImg = lightbox.querySelector('.lightbox-image');
+  const prevBtn = lightbox.querySelector('.lightbox-prev');
+  const nextBtn = lightbox.querySelector('.lightbox-next');
+  let galleryItems = [];
+  let currentIndex = -1;
+
+  function openAtIndex(index) {
+    const items = galleryItems.filter(item => !item.closest('.bento-item--hidden'));
+    if (!items.length) return;
+    currentIndex = Math.max(0, Math.min(index, items.length - 1));
+    const card = items[currentIndex];
+    const img = card.querySelector('.bento-image');
+    if (img && lbImg) {
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+      lbImg.style.display = 'block';
+    }
+    lightbox.classList.add('open');
+  }
+
+  function navigate(direction) {
+    const items = galleryItems.filter(item => !item.closest('.bento-item--hidden'));
+    if (!items.length) return;
+    const filteredIndex = items.indexOf(galleryItems[currentIndex]);
+    if (filteredIndex < 0) { openAtIndex(0); return; }
+    const newFilteredIndex = (filteredIndex + direction + items.length) % items.length;
+    const newGlobalIndex = galleryItems.indexOf(items[newFilteredIndex]);
+    if (newGlobalIndex >= 0) openAtIndex(newGlobalIndex);
+  }
+
+  function bindGallery() {
+    const grid = document.querySelector('.bento-grid');
+    if (!grid) return;
+    galleryItems = [...grid.querySelectorAll('.bento-item')];
+    galleryItems.forEach((card, i) => {
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', () => openAtIndex(i));
     });
-})();
-
-// ==================== Gallery lightbox (for real images) ====================
-(function () {
-    const gallery = document.querySelector('.bento-grid');
-    const lightbox = document.querySelector('.lightbox');
-    const lbImg = lightbox ? lightbox.querySelector('.lightbox-image') : null;
-    if (!gallery || !lightbox || !lbImg) return;
-
-    gallery.querySelectorAll('.bento-item').forEach(card => {
-        card.style.cursor = 'pointer';
-        card.addEventListener('click', () => {
-            const img = card.querySelector('.bento-image');
-            if (img) {
-                lbImg.src = img.src;
-                lbImg.alt = img.alt;
-                lbImg.style.display = 'block';
-            }
-            lightbox.classList.add('open');
-        });
-    });
-
     lightbox.addEventListener('click', (e) => {
-        if (e.target.classList.contains('lightbox') || e.target.classList.contains('lightbox-close')) {
-            lightbox.classList.remove('open');
-        }
+      if (e.target.classList.contains('lightbox') || e.target.classList.contains('lightbox-close')) {
+        lightbox.classList.remove('open');
+      }
     });
-})();
+    if (prevBtn) prevBtn.addEventListener('click', (e) => { e.stopPropagation(); navigate(-1); });
+    if (nextBtn) nextBtn.addEventListener('click', (e) => { e.stopPropagation(); navigate(1); });
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('open')) return;
+      if (e.key === 'Escape') lightbox.classList.remove('open');
+      if (e.key === 'ArrowLeft') navigate(-1);
+      if (e.key === 'ArrowRight') navigate(1);
+    });
+  }
+
+  if (document.querySelector('.bento-grid')) {
+    bindGallery();
+  } else {
+    document.addEventListener('content:ready', bindGallery);
+  }
+}
+
+function initExitPopup() {
+  const popup = document.getElementById('exit-popup');
+  if (!popup) return;
+
+  const closeBtn = popup.querySelector('.exit-popup-close');
+  const overlay = popup.querySelector('.exit-popup-overlay');
+
+  function showPopup() {
+    if (sessionStorage.getItem('exitPopupShown')) return;
+    sessionStorage.setItem('exitPopupShown', 'true');
+    popup.classList.add('open');
+  }
+
+  function hidePopup() {
+    popup.classList.remove('open');
+  }
+
+  if (closeBtn) closeBtn.addEventListener('click', hidePopup);
+  if (overlay) overlay.addEventListener('click', hidePopup);
+
+  let exitTriggered = false;
+  document.addEventListener('mouseleave', (e) => {
+    if (exitTriggered) return;
+    if (e.clientY > 0) return;
+    exitTriggered = true;
+    setTimeout(showPopup, 300);
+  });
+}
+
+function initGalleryFilters() {
+  const grid = document.querySelector('.bento-grid');
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  if (!grid || !filterBtns.length) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+
+      filterBtns.forEach(b => b.classList.remove('filter-btn--active'));
+      btn.classList.add('filter-btn--active');
+
+      const items = grid.querySelectorAll('.bento-item');
+      items.forEach(item => {
+        if (filter === 'all' || item.dataset.category === filter) {
+          item.classList.remove('bento-item--hidden');
+        } else {
+          item.classList.add('bento-item--hidden');
+        }
+      });
+    });
+  });
+}
+
+document.addEventListener('content:ready', initGalleryFilters);
+
+function initDynamicWhatsApp() {
+  const waLinks = document.querySelectorAll('a[href*="api.whatsapp.com"]');
+  if (!waLinks.length) return;
+
+  const sections = [
+    { id: 'home', msg: 'Olá Official Brasil, quero saber mais sobre seus serviços' },
+    { id: 'servicos', msg: 'Olá Official Brasil, quero um orçamento para meu evento' },
+    { id: 'como-funciona', msg: 'Olá Official Brasil, quero entender como funciona o processo' },
+    { id: 'galeria', msg: 'Olá Official Brasil, quero ver mais projetos no portfólio' },
+    { id: 'contato', msg: 'Olá Official Brasil, quero uma proposta personalizada' },
+  ];
+
+  const lang = document.documentElement.lang || 'pt-BR';
+  const enMsgs = {
+    'home': 'Hello Official Brasil, I want to know more about your services',
+    'servicos': 'Hello Official Brasil, I would like a quote for my event',
+    'como-funciona': 'Hello Official Brasil, I want to understand how the process works',
+    'galeria': 'Hello Official Brasil, I want to see more portfolio projects',
+    'contato': 'Hello Official Brasil, I would like a personalized proposal',
+  };
+  const esMsgs = {
+    'home': 'Hola Official Brasil, quiero saber más sobre sus servicios',
+    'servicos': 'Hola Official Brasil, quiero un presupuesto para mi evento',
+    'como-funciona': 'Hola Official Brasil, quiero entender cómo funciona el proceso',
+    'galeria': 'Hola Official Brasil, quiero ver más proyectos en el portafolio',
+    'contato': 'Hola Official Brasil, quiero una propuesta personalizada',
+  };
+
+  const isEN = lang.startsWith('en');
+  const isES = lang.startsWith('es');
+
+  function getMsg(sectionId) {
+    if (isEN) return enMsgs[sectionId] || enMsgs.home;
+    if (isES) return esMsgs[sectionId] || esMsgs.home;
+    const found = sections.find(s => s.id === sectionId);
+    return found ? found.msg : sections[0].msg;
+  }
+
+  const obs = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        const msg = getMsg(id);
+        waLinks.forEach(link => {
+          const base = link.href.split('&text=')[0];
+          link.href = `${base}&text=${encodeURIComponent(msg)}`;
+        });
+        break;
+      }
+    }
+  }, { threshold: 0.3 });
+
+  sections.forEach(s => {
+    const el = document.getElementById(s.id);
+    if (el) obs.observe(el);
+  });
+}
+
+initDynamicWhatsApp();

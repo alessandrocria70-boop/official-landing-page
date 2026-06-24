@@ -1,0 +1,1562 @@
+{
+  "pt": {
+    "meta": {
+      "title": "Official Brasil | Stands, Feiras e Eventos desde 1998",
+      "description": "Official Brasil: montagem de stands, palcos, feiras, buffet e mobiliário para eventos. Projetos em 3 dias. Desde 1998."
+    },
+    "hero": {
+      "overline": "Official Brasil — desde 1998",
+      "title": "Projetamos seu stand em 3 dias. Montamos em 2. Você vende no evento.",
+      "subtitle": "Palcos, stands, feiras, buffet, mobiliário e promoção. 54 mil m² montados em 3 países. Projeto gratuito para contratos de montagem.",
+      "bgImage": "assets/images/stand1.jpg",
+      "bgVideo": "assets/images/hitel.mp4",
+      "buttons": [
+        {
+          "label": "Ver Serviços",
+          "href": "#servicos",
+          "style": "primary"
+        },
+        {
+          "label": "Como Trabalhamos",
+          "href": "#como-funciona",
+          "style": "secondary"
+        }
+      ],
+      "stats": [
+        {
+          "target": 25,
+          "suffix": "+",
+          "label": "Anos de Mercado"
+        },
+        {
+          "target": 54,
+          "suffix": "K",
+          "label": "m² Montados"
+        },
+        {
+          "target": 3,
+          "suffix": "",
+          "label": "Países Atendidos"
+        }
+      ],
+      "scrollText": "Role para conhecer"
+    },
+    "about": {
+      "tag": "Sobre Nós",
+      "title": "Começamos em 1998 em Guarulhos. Hoje atendemos 3 países.",
+      "paragraphs": [
+        "Fundada em <strong>1998</strong>, a <strong>Official Brasil</strong> nasceu em Guarulhos-SP. Hoje temos sede comercial lá e espaço fabril em <strong>Arujá-SP</strong>. Já montamos mais de 54 mil m² — o equivalente a 7 campos de futebol. E cada metro quadrado teve suor de verdade.",
+        "Nosso time entrega soluções completas:"
+      ],
+      "bullets": [
+        "Shows — palcos, iluminação, estrutura e tendas.",
+        "Projetos personalizados em 3 dias e alterações em 1 dia útil.",
+        "Feiras, stands, cenografia e montagem de exposições.",
+        "Buffet, mobiliário, equipamentos e promoção de eventos."
+      ],
+      "cards": [
+        {
+          "title": "Fundada em 1998",
+          "text": "Mais de 25 anos de mercado com projetos entregues em todo o Brasil e exterior."
+        },
+        {
+          "title": "Guarulhos-SP / Arujá-SP",
+          "text": "Sede comercial em Guarulhos e espaço fabril em Arujá — estrutura completa para atender todo o país."
+        }
+      ]
+    },
+    "services": {
+      "tag": "Serviços",
+      "title": "Estrutura metálica, drywall, palcos, buffet, iluminação. Fazemos tudo.",
+      "subtitle": "Montamos, operamos e desmontamos. Você só aparece no evento e vende.",
+      "items": [
+        {
+          "category": "Shows",
+          "icon": "fa-solid fa-music",
+          "title": "Palcos, Estrutura & Iluminação",
+          "text": "Montagem de palcos profissionais, estruturas metálicas, iluminação cênica, grades de proteção, bastidores, praticáveis, tendas, banheiros químicos e containers. Tudo para seu show ou festival.",
+          "tags": [
+            "Palcos",
+            "Iluminação",
+            "Estruturas",
+            "Tendas"
+          ],
+          "poster": "assets/images/stand1.jpg",
+          "video": "assets/images/hitel.mp4",
+          "featured": false,
+          "badge": null,
+          "highlight": null
+        },
+        {
+          "category": "Projetos e Personalizados",
+          "icon": "fa-solid fa-pen-ruler",
+          "title": "Projetos Gráficos & Arquitetônicos",
+          "text": null,
+          "tags": [
+            "Projeto 3D",
+            "Arquitetura",
+            "Design",
+            "Grátis"
+          ],
+          "poster": "assets/images/stand5.jpg",
+          "video": "assets/images/stand-desematec-h264.mp4",
+          "featured": true,
+          "badge": "Destaque",
+          "highlight": "Única empresa a entregar projetos em 3 dias e alterações em 1 dia útil. <strong>Projetos de Stands GRATUITOS</strong> para contratos de montagem."
+        },
+        {
+          "category": "Feiras e Eventos",
+          "icon": "fa-solid fa-people-group",
+          "title": "Montagem de Stands & Cenários",
+          "text": "Montagem completa de stands, cenários para feiras, showrooms corporativos, congressos, displays promocionais, quiosques de fábrica e exposições de grande porte.",
+          "tags": [
+            "Stands",
+            "Feiras",
+            "Congressos"
+          ],
+          "poster": "assets/images/STAND GCP CONCRETESHOW 2022.JPG",
+          "video": "assets/images/florio.mp4",
+          "featured": false,
+          "badge": null,
+          "highlight": null
+        },
+        {
+          "category": "Buffet",
+          "icon": "fa-solid fa-utensils",
+          "title": "Gastronomia & Coffee Break",
+          "text": "Finger Foods, menus personalizados, bebidas, coffee break completo e staff especializado para eventos corporativos, festas e recepções de alto padrão.",
+          "tags": [
+            "Finger Food",
+            "Bebidas",
+            "Staff"
+          ],
+          "poster": "assets/images/prato fnio 1.jpg",
+          "video": "assets/images/stand-expo.mp4",
+          "featured": false,
+          "badge": null,
+          "highlight": null
+        },
+        {
+          "category": "Mobiliários e Equipamentos",
+          "icon": "fa-solid fa-couch",
+          "title": "Locação de Móveis & Eletro",
+          "text": "Locação de mesas, cadeiras, sofás, poltronas, frigobar, ar condicionado, bistrôs, lounges e equipamentos de áudio e vídeo para eventos de todos os portes.",
+          "tags": [
+            "Móveis",
+            "Ar Condicionado",
+            "Áudio"
+          ],
+          "poster": "assets/images/POLTRONA FK.jpg",
+          "video": "assets/images/stand-mbl.mp4",
+          "featured": false,
+          "badge": null,
+          "highlight": null
+        },
+        {
+          "category": "Promoção de Eventos",
+          "icon": "fa-solid fa-bullhorn",
+          "title": "Criação & Divulgação Nacional",
+          "text": "Criação e promoção de eventos em todo o Brasil. Estratégias de divulgação, marketing presencial e digital para atrair público e gerar resultados reais para sua marca.",
+          "tags": [
+            "Criação",
+            "Divulgação",
+            "Nacional"
+          ],
+          "poster": "assets/images/stand2.jpg",
+          "video": "assets/images/stand-periso.mp4",
+          "featured": false,
+          "badge": null,
+          "highlight": null
+        }
+      ]
+    },
+    "steps": {
+      "tag": "Como funciona",
+      "title": "Briefing. Projeto. Montagem. Simples assim.",
+      "items": [
+        {
+          "number": "01",
+          "icon": "fa-solid fa-ear-listen",
+          "title": "Você conta o que precisa",
+          "text": "Briefing rápido e sem burocracia. A gente entende seu evento, seu orçamento e o resultado que você espera.",
+          "result": "Prazo: 24h para orçamento"
+        },
+        {
+          "number": "02",
+          "icon": "fa-solid fa-pen-fancy",
+          "title": "Projetamos e ajustamos",
+          "text": "Criamos o layout, escolhemos materiais e validamos cada detalhe com você até ficar perfeito.",
+          "result": "Prazo: 48h para prévia 3D"
+        },
+        {
+          "number": "03",
+          "icon": "fa-solid fa-thumbs-up",
+          "title": "Entregamos e ativamos",
+          "text": "Montagem no prazo, suporte durante o evento e desmontagem. Você só precisa aparecer e vender.",
+          "result": "Prazo: 100% no combinado"
+        }
+      ]
+    },
+    "galleryCta": {
+      "tag": "Galeria de Projetos",
+      "title": "Veja os stands que já entregamos.",
+      "text": "Cada projeto é um caso real. Marcas que confiaram na gente e resultados que entregamos.",
+      "buttonLabel": "Ver Portfólio Completo",
+      "buttonHref": "galeria.html"
+    },
+    "gallery": {
+      "pageTitle": "Galeria de Projetos",
+      "pageSubtitle": "Cada stand, feira e cenografia que construímos conta a história de uma marca que confia na Official Brasil.",
+      "tag": "Nossos Trabalhos",
+      "title": "Projetos reais em stands, feiras e cenografia.",
+      "items": [
+        {
+          "image": "assets/images/stand1.jpg",
+          "alt": "Stand GCP Concrete Show",
+          "label": "Concrete Show 2022",
+          "size": "wide",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/stand2.jpg",
+          "alt": "Stand GCP",
+          "label": "GCP",
+          "size": "tall",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/stand3.jpg",
+          "alt": "Moerman Higiexpo",
+          "label": "Moerman Higiexpo",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/stand4.jpg",
+          "alt": "Refrinox Fipan",
+          "label": "Refrinox Fipan",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/RENDER0014.jpg",
+          "alt": "Render Projeto",
+          "label": "Projeto Arquitetônico",
+          "size": "wide",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/stand5.jpg",
+          "alt": "Stand Oficial",
+          "label": "Stand Official",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/stand6.jpg",
+          "alt": "Evento Corporativo",
+          "label": "Evento Corporativo",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/STAND GCP CONCRETESHOW 2022.JPG",
+          "alt": "Stand GCP Concrete Show",
+          "label": "GCP Concrete Show",
+          "size": "tall",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/stand7.jpg",
+          "alt": "Stand Design",
+          "label": "Design de Stand",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/stand8.jpg",
+          "alt": "Feira",
+          "label": "Feiras e Exposições",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/REFRINOXS FIPAN 20221.JPG",
+          "alt": "Refrinox Fipan",
+          "label": "Refrinox Fipan",
+          "size": "wide",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/STAND MOERMAN HIGIEXPO 2022.JPG",
+          "alt": "Moerman Higiexpo",
+          "label": "Moerman Higiexpo",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/REFRINOX FIPAN 2022..JPG",
+          "alt": "Refrinox Fipan 2022",
+          "label": "Refrinox 2022",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/RENDER0000.jpg",
+          "alt": "Render 3D",
+          "label": "Render 3D",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/RENDER0001.jpg",
+          "alt": "Render Projeto",
+          "label": "Projeto Render",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/RENDER0016.jpg",
+          "alt": "Render Detalhado",
+          "label": "Render Detalhado",
+          "size": "tall",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/RENDER0019.jpg",
+          "alt": "Render Fachada",
+          "label": "Render Fachada",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/DIGIS 0204.JPG",
+          "alt": "DIGIS Evento",
+          "label": "DIGIS Evento",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/DIGIS 0205.JPG",
+          "alt": "DIGIS Exposição",
+          "label": "DIGIS Exposição",
+          "size": "wide",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/DIGIS 0208.JPG",
+          "alt": "DIGIS Stand",
+          "label": "DIGIS Stand",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/DIGIS 0449.JPG",
+          "alt": "DIGIS Corporativo",
+          "label": "DIGIS Corporativo",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/DIGIS 0451.JPG",
+          "alt": "DIGIS Montagem",
+          "label": "DIGIS Montagem",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/DIGIS 0452.JPG",
+          "alt": "DIGIS Finalização",
+          "label": "DIGIS Finalização",
+          "size": "tall",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/UNIFILA.jpg",
+          "alt": "Unifila",
+          "label": "Unifila",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/RIOLAX.jpg",
+          "alt": "Riolax",
+          "label": "Riolax",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/RIOLAX1.jpg",
+          "alt": "Riolax Detalhe",
+          "label": "Riolax Detalhe",
+          "size": "wide",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/DIGIS 0802.jpg",
+          "alt": "DIGIS Evento",
+          "label": "DIGIS Evento 2",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/DIGIS 0809.jpg",
+          "alt": "DIGIS Exposição",
+          "label": "DIGIS Exposição 2",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/DIGIS 0817.jpg",
+          "alt": "DIGIS Stand",
+          "label": "DIGIS Stand 2",
+          "size": "tall",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/DIGIS 5048.jpg",
+          "alt": "DIGIS Montagem",
+          "label": "DIGIS Montagem 2",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/DIGIS 5054.jpg",
+          "alt": "DIGIS Corporativo",
+          "label": "DIGIS Corporativo 2",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/DIGIS 5056.jpg",
+          "alt": "DIGIS Finalização",
+          "label": "DIGIS Finalização 2",
+          "size": "wide",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/XXX0000.jpg",
+          "alt": "Render Projeto",
+          "label": "Render Arquitetônico",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/XXX0004.jpg",
+          "alt": "Render Stand",
+          "label": "Render Stand Premium",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/XXX0015.jpg",
+          "alt": "Render Detalhado",
+          "label": "Render Detalhado 3D",
+          "size": "tall",
+          "category": "renders"
+        }
+      ]
+    },
+    "testimonials": {
+      "tag": "Quem já trabalhou com a gente",
+      "title": "Clientes que confiam na Official Brasil.",
+      "items": [
+        {
+          "video": "assets/images/DEPIM MAQMUNDI.mp4",
+          "name": "Maqmunda",
+          "role": "Parceira Official Brasil"
+        },
+        {
+          "video": "assets/images/MAQMU INST.mp4",
+          "name": "Maqmunda Instalação",
+          "role": "Case de Sucesso"
+        }
+      ]
+    },
+    "partners": {
+      "tag": "Parceiros",
+      "title": "Empresas que confiam na Official Brasil.",
+      "items": [
+        {
+          "logo": "assets/clients/maq.png",
+          "alt": "Maqmundi"
+        },
+        {
+          "logo": "assets/clients/desema.png",
+          "alt": "Desematec"
+        },
+        {
+          "logo": "assets/clients/ambfle.png",
+          "alt": "Ambflex"
+        },
+        {
+          "logo": "assets/clients/mene.png",
+          "alt": "Mene"
+        },
+        {
+          "logo": "assets/clients/hit.png",
+          "alt": "Hit"
+        },
+        {
+          "logo": "assets/clients/albrecth.png",
+          "alt": "Albrecth"
+        }
+      ]
+    },
+    "contact": {
+      "tag": "Contato",
+      "title": "Quer um orçamento? A gente responde em até 24h.",
+      "intro": "Conte o que você precisa. A gente faz o projeto, o orçamento e a montagem. Sem enrolação.",
+      "officeAddress": "Guarulhos - SP",
+      "factoryAddress": "Arujá - SP",
+      "whatsapp": "5511934393753",
+      "whatsappDisplay": "(+55 11) 93439-3753",
+      "salesEmail": "vendas@officialbrasil.com.br",
+      "supportEmail": "atendimento@officialbrasil.com.br"
+    },
+    "footer": {
+      "text": "Official Brasil desde 1998 · Guarulhos/SP · Arujá/SP · Brasil e América do Sul",
+      "contactLine": "vendas@officialbrasil.com.br | (+55 11) 93439-3753"
+    }
+  },
+  "en": {
+    "meta": {
+      "title": "Official Brasil | Stands, Fairs & Events since 1998",
+      "description": "Official Brasil: stand assembly, stages, fairs, catering and furniture for events. Designs in 3 days. Since 1998."
+    },
+    "hero": {
+      "overline": "Official Brasil — since 1998",
+      "title": "We design your stand in 3 days. Assemble in 2. You sell at the event.",
+      "subtitle": "Stages, stands, fairs, catering, furniture and promotion. 54K m² assembled in 3 countries. Free project for assembly contracts.",
+      "bgImage": "assets/images/stand1.jpg",
+      "bgVideo": "assets/images/hitel.mp4",
+      "buttons": [
+        {
+          "label": "See Services",
+          "href": "#servicos",
+          "style": "primary"
+        },
+        {
+          "label": "How We Work",
+          "href": "#como-funciona",
+          "style": "secondary"
+        }
+      ],
+      "stats": [
+        {
+          "target": 25,
+          "suffix": "+",
+          "label": "Years in Market"
+        },
+        {
+          "target": 54,
+          "suffix": "K",
+          "label": "m² Assembled"
+        },
+        {
+          "target": 3,
+          "suffix": "",
+          "label": "Countries Served"
+        }
+      ],
+      "scrollText": "Scroll to discover"
+    },
+    "about": {
+      "tag": "About Us",
+      "title": "Started in 1998 in Guarulhos. Today we serve 3 countries.",
+      "paragraphs": [
+        "Founded in <strong>1998</strong>, <strong>Official Brasil</strong> was born in Guarulhos-SP. Today we have our commercial headquarters there and a production facility in <strong>Arujá-SP</strong>. We've assembled over 54K m² — the equivalent of 7 football fields. And every square meter had real sweat in it.",
+        "Our team delivers complete solutions:"
+      ],
+      "bullets": [
+        "Shows — stages, lighting, structure and tents.",
+        "Customized projects in 3 days and edits in 1 business day.",
+        "Tradeshows, stands, scenography and exhibition assembly.",
+        "Catering, furniture, equipment and event promotion."
+      ],
+      "cards": [
+        {
+          "title": "Founded in 1998",
+          "text": "Over 25 years in the market with projects delivered across Brazil and abroad."
+        },
+        {
+          "title": "Guarulhos-SP / Arujá-SP",
+          "text": "Commercial headquarters in Guarulhos and a production facility in Arujá — complete infrastructure to serve the whole country."
+        }
+      ]
+    },
+    "services": {
+      "tag": "Services",
+      "title": "Metal structure, drywall, stages, catering, lighting. We do it all.",
+      "subtitle": "We assemble, operate and dismantle. You just show up at the event and sell.",
+      "items": [
+        {
+          "category": "Shows",
+          "icon": "fa-solid fa-music",
+          "title": "Stages, Structure & Lighting",
+          "text": "Assembly of professional stages, metal structures, scenic lighting, barriers, backstage, platforms, tents, portable restrooms and containers. Everything for your show or festival.",
+          "tags": [
+            "Stages",
+            "Lighting",
+            "Structures",
+            "Tents"
+          ],
+          "poster": "assets/images/stand1.jpg",
+          "video": "assets/images/hitel.mp4",
+          "featured": false,
+          "badge": null,
+          "highlight": null
+        },
+        {
+          "category": "Custom Projects",
+          "icon": "fa-solid fa-pen-ruler",
+          "title": "Graphic & Architectural Design",
+          "text": null,
+          "tags": [
+            "3D Design",
+            "Architecture",
+            "Design",
+            "Free"
+          ],
+          "poster": "assets/images/stand5.jpg",
+          "video": "assets/images/stand-desematec-h264.mp4",
+          "featured": true,
+          "badge": "Featured",
+          "highlight": "The only company to deliver projects within 3 days and revisions in 1 business day. <strong>FREE Stand Designs</strong> for assembly contracts."
+        },
+        {
+          "category": "Trade Shows & Events",
+          "icon": "fa-solid fa-people-group",
+          "title": "Stand Assembly & Scenery",
+          "text": "Full stand assembly, expositional scenery, corporate showrooms, congresses, promotional displays, factory kiosks and large-scale exhibitions.",
+          "tags": [
+            "Stands",
+            "Trade Shows",
+            "Congress"
+          ],
+          "poster": "assets/images/STAND GCP CONCRETESHOW 2022.JPG",
+          "video": "assets/images/florio.mp4",
+          "featured": false,
+          "badge": null,
+          "highlight": null
+        },
+        {
+          "category": "Catering",
+          "icon": "fa-solid fa-utensils",
+          "title": "Gastronomy & Coffee Break",
+          "text": "Finger foods, customized menus, beverages, complete coffee breaks and specialized staff for corporate events, parties and high-end receptions.",
+          "tags": [
+            "Finger Food",
+            "Beverages",
+            "Staff"
+          ],
+          "poster": "assets/images/prato fnio 1.jpg",
+          "video": "assets/images/stand-expo.mp4",
+          "featured": false,
+          "badge": null,
+          "highlight": null
+        },
+        {
+          "category": "Furniture & Equipment",
+          "icon": "fa-solid fa-couch",
+          "title": "Rental of Furniture & Appliances",
+          "text": "Rental of tables, chairs, sofas, armchairs, minibars, air conditioning, bistros, lounges and audio/video equipment for events of all sizes.",
+          "tags": [
+            "Furniture",
+            "Air Conditioning",
+            "Audio"
+          ],
+          "poster": "assets/images/POLTRONA FK.jpg",
+          "video": "assets/images/stand-mbl.mp4",
+          "featured": false,
+          "badge": null,
+          "highlight": null
+        },
+        {
+          "category": "Event Promotion",
+          "icon": "fa-solid fa-bullhorn",
+          "title": "Creative & National Promotion",
+          "text": "Event creation and promotion throughout Brazil. Marketing strategies for attracting audiences and generating real results for your brand.",
+          "tags": [
+            "Creative",
+            "Promotion",
+            "National"
+          ],
+          "poster": "assets/images/stand2.jpg",
+          "video": "assets/images/stand-periso.mp4",
+          "featured": false,
+          "badge": null,
+          "highlight": null
+        }
+      ]
+    },
+    "steps": {
+      "tag": "How it Works",
+      "title": "Briefing. Design. Assembly. Simple as that.",
+      "items": [
+        {
+          "number": "01",
+          "icon": "fa-solid fa-ear-listen",
+          "title": "You tell us what you need",
+          "text": "Quick briefing without bureaucracy. We understand your event, budget and expected result.",
+          "result": "Deadline: 24h for quote"
+        },
+        {
+          "number": "02",
+          "icon": "fa-solid fa-pen-fancy",
+          "title": "We design and refine",
+          "text": "We create the layout, choose materials and validate every detail with you until it is perfect.",
+          "result": "Deadline: 48h for 3D preview"
+        },
+        {
+          "number": "03",
+          "icon": "fa-solid fa-thumbs-up",
+          "title": "We deliver and activate",
+          "text": "On-time assembly, support during the event and disassembly. You only need to show up and sell.",
+          "result": "Deadline: 100% on schedule"
+        }
+      ]
+    },
+    "galleryCta": {
+      "tag": "Project Gallery",
+      "title": "See the stands we've delivered.",
+      "text": "Each project is a real case. Brands that trusted us and results we delivered.",
+      "buttonLabel": "View Full Portfolio",
+      "buttonHref": "galeria.html"
+    },
+    "gallery": {
+      "pageTitle": "Project Gallery",
+      "pageSubtitle": "Every stand, fair and scenography we build tells the story of a brand that trusts Official Brasil.",
+      "tag": "Our Work",
+      "title": "Real projects in stands, fairs and scenography.",
+      "items": [
+        {
+          "image": "assets/images/stand1.jpg",
+          "alt": "Stand GCP Concrete Show",
+          "label": "Concrete Show 2022",
+          "size": "wide",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/stand2.jpg",
+          "alt": "Stand GCP",
+          "label": "GCP",
+          "size": "tall",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/stand3.jpg",
+          "alt": "Moerman Higiexpo",
+          "label": "Moerman Higiexpo",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/stand4.jpg",
+          "alt": "Refrinox Fipan",
+          "label": "Refrinox Fipan",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/RENDER0014.jpg",
+          "alt": "Render Project",
+          "label": "Architectural Project",
+          "size": "wide",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/stand5.jpg",
+          "alt": "Official Stand",
+          "label": "Official Stand",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/stand6.jpg",
+          "alt": "Corporate Event",
+          "label": "Corporate Event",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/STAND GCP CONCRETESHOW 2022.JPG",
+          "alt": "Stand GCP Concrete Show",
+          "label": "GCP Concrete Show",
+          "size": "tall",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/stand7.jpg",
+          "alt": "Stand Design",
+          "label": "Stand Design",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/stand8.jpg",
+          "alt": "Fair",
+          "label": "Fairs & Exhibitions",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/REFRINOXS FIPAN 20221.JPG",
+          "alt": "Refrinox Fipan",
+          "label": "Refrinox Fipan",
+          "size": "wide",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/STAND MOERMAN HIGIEXPO 2022.JPG",
+          "alt": "Moerman Higiexpo",
+          "label": "Moerman Higiexpo",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/REFRINOX FIPAN 2022..JPG",
+          "alt": "Refrinox Fipan 2022",
+          "label": "Refrinox 2022",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/RENDER0000.jpg",
+          "alt": "3D Rendering",
+          "label": "3D Render",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/RENDER0001.jpg",
+          "alt": "Project Render",
+          "label": "Render Project",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/RENDER0016.jpg",
+          "alt": "Detailed render",
+          "label": "Detailed Render",
+          "size": "tall",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/RENDER0019.jpg",
+          "alt": "Facade render",
+          "label": "Facade Render",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/DIGIS 0204.JPG",
+          "alt": "DIGIS Event",
+          "label": "DIGIS Event",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/DIGIS 0205.JPG",
+          "alt": "DIGIS Exhibition",
+          "label": "DIGIS Exhibition",
+          "size": "wide",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/DIGIS 0208.JPG",
+          "alt": "DIGIS Stand",
+          "label": "DIGIS Stand",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/DIGIS 0449.JPG",
+          "alt": "DIGIS Corporate",
+          "label": "DIGIS Corporate",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/DIGIS 0451.JPG",
+          "alt": "DIGIS Assembly",
+          "label": "DIGIS Assembly",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/DIGIS 0452.JPG",
+          "alt": "DIGIS Finalization",
+          "label": "DIGIS Finalization",
+          "size": "tall",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/UNIFILA.jpg",
+          "alt": "Unifila",
+          "label": "Unifila",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/RIOLAX.jpg",
+          "alt": "Riolax",
+          "label": "Riolax",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/RIOLAX1.jpg",
+          "alt": "Riolax Detail",
+          "label": "Riolax Detail",
+          "size": "wide",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/DIGIS 0802.jpg",
+          "alt": "DIGIS Event",
+          "label": "DIGIS Event 2",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/DIGIS 0809.jpg",
+          "alt": "DIGIS Exhibition",
+          "label": "DIGIS Exhibition 2",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/DIGIS 0817.jpg",
+          "alt": "DIGIS Stand",
+          "label": "DIGIS Stand 2",
+          "size": "tall",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/DIGIS 5048.jpg",
+          "alt": "DIGIS Assembly",
+          "label": "DIGIS Assembly 2",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/DIGIS 5054.jpg",
+          "alt": "DIGIS Corporate",
+          "label": "DIGIS Corporate 2",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/DIGIS 5056.jpg",
+          "alt": "DIGIS Finalization",
+          "label": "DIGIS Finalization 2",
+          "size": "wide",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/XXX0000.jpg",
+          "alt": "Render Project",
+          "label": "Architectural Render",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/XXX0004.jpg",
+          "alt": "Render Stand",
+          "label": "Premium Stand Render",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/XXX0015.jpg",
+          "alt": "Detailed Render",
+          "label": "Detailed 3D Render",
+          "size": "tall",
+          "category": "renders"
+        }
+      ]
+    },
+    "testimonials": {
+      "tag": "Who has worked with us",
+      "title": "Clients who trust Official Brasil.",
+      "items": [
+        {
+          "video": "assets/images/DEPIM MAQMUNDI.mp4",
+          "name": "Maqmunda",
+          "role": "Official Brasil Partner"
+        },
+        {
+          "video": "assets/images/MAQMU INST.mp4",
+          "name": "Maqmunda Installation",
+          "role": "Success Case"
+        }
+      ]
+    },
+    "partners": {
+      "tag": "Partners",
+      "title": "Companies that trust Official Brasil.",
+      "items": [
+        {
+          "logo": "assets/clients/maq.png",
+          "alt": "Maqmundi"
+        },
+        {
+          "logo": "assets/clients/desema.png",
+          "alt": "Desematec"
+        },
+        {
+          "logo": "assets/clients/ambfle.png",
+          "alt": "Ambflex"
+        },
+        {
+          "logo": "assets/clients/mene.png",
+          "alt": "Mene"
+        },
+        {
+          "logo": "assets/clients/hit.png",
+          "alt": "Hit"
+        },
+        {
+          "logo": "assets/clients/albrecth.png",
+          "alt": "Albrecth"
+        }
+      ]
+    },
+    "contact": {
+      "tag": "Contact",
+      "title": "Need a quote? We reply within 24h.",
+      "intro": "Tell us what you need. We handle the project, the budget and the assembly. No fuss.",
+      "officeAddress": "Guarulhos - SP",
+      "factoryAddress": "Arujá - SP",
+      "whatsapp": "5511934393753",
+      "whatsappDisplay": "(+55 11) 93439-3753",
+      "salesEmail": "vendas@officialbrasil.com.br",
+      "supportEmail": "atendimento@officialbrasil.com.br"
+    },
+    "footer": {
+      "text": "Official Brasil since 1998 · Guarulhos/SP · Arujá/SP · Brazil and South America",
+      "contactLine": "vendas@officialbrasil.com.br | (+55 11) 93439-3753"
+    }
+  },
+  "es": {
+    "meta": {
+      "title": "Official Brasil | Stands, Ferias y Eventos desde 1998",
+      "description": "Official Brasil: montaje de stands, escenarios, ferias, buffet y mobiliario para eventos. Proyectos en 3 días. Desde 1998."
+    },
+    "hero": {
+      "overline": "Official Brasil — desde 1998",
+      "title": "Proyectamos tu stand en 3 días. Montamos en 2. Vendes en el evento.",
+      "subtitle": "Escenarios, stands, ferias, buffet, mobiliario y promoción. 54K m² montados en 3 países. Proyecto gratuito para contratos de montaje.",
+      "bgImage": "assets/images/stand1.jpg",
+      "bgVideo": "assets/images/hitel.mp4",
+      "buttons": [
+        {
+          "label": "Ver Servicios",
+          "href": "#servicos",
+          "style": "primary"
+        },
+        {
+          "label": "Cómo Trabajamos",
+          "href": "#como-funciona",
+          "style": "secondary"
+        }
+      ],
+      "stats": [
+        {
+          "target": 25,
+          "suffix": "+",
+          "label": "Años en el Mercado"
+        },
+        {
+          "target": 54,
+          "suffix": "K",
+          "label": "m² Montados"
+        },
+        {
+          "target": 3,
+          "suffix": "",
+          "label": "Países Atendidos"
+        }
+      ],
+      "scrollText": "Desplázate para conocer"
+    },
+    "about": {
+      "tag": "Sobre Nosotros",
+      "title": "Empezamos en 1998 en Guarulhos. Hoy atendemos 3 países.",
+      "paragraphs": [
+        "Fundada en <strong>1998</strong>, <strong>Official Brasil</strong> nació en Guarulhos-SP. Hoy tenemos sede comercial allí y espacio fabril en <strong>Arujá-SP</strong>. Hemos montado más de 54 mil m² — el equivalente a 7 campos de fútbol. Y cada metro cuadrado tuvo sudor de verdad.",
+        "Nuestro equipo ofrece soluciones completas:"
+      ],
+      "bullets": [
+        "Shows — escenarios, iluminación, estructura y carpas.",
+        "Proyectos personalizados en 3 días y cambios en 1 día hábil.",
+        "Ferias, stands, escenografía y montaje de exposiciones.",
+        "Buffet, mobiliario, equipos y promoción de eventos."
+      ],
+      "cards": [
+        {
+          "title": "Fundada en 1998",
+          "text": "Más de 25 años en el mercado con proyectos entregados en todo Brasil y el exterior."
+        },
+        {
+          "title": "Guarulhos-SP / Arujá-SP",
+          "text": "Sede comercial en Guarulhos y espacio fabril en Arujá — estructura completa para atender todo el país."
+        }
+      ]
+    },
+    "services": {
+      "tag": "Servicios",
+      "title": "Estructura metálica, drywall, escenarios, buffet, iluminación. Lo hacemos todo.",
+      "subtitle": "Montamos, operamos y desmontamos. Tú solo apareces en el evento y vendes.",
+      "items": [
+        {
+          "category": "Shows",
+          "icon": "fa-solid fa-music",
+          "title": "Escenarios, Estructura e Iluminación",
+          "text": "Montaje de escenarios profesionales, estructuras metálicas, iluminación escénica, barreras, backstage, plataformas, carpas, baños químicos y contenedores. Todo para tu show o festival.",
+          "tags": [
+            "Escenarios",
+            "Iluminación",
+            "Estructuras",
+            "Carpas"
+          ],
+          "poster": "assets/images/stand1.jpg",
+          "video": "assets/images/hitel.mp4",
+          "featured": false,
+          "badge": null,
+          "highlight": null
+        },
+        {
+          "category": "Proyectos Personalizados",
+          "icon": "fa-solid fa-pen-ruler",
+          "title": "Diseño Gráfico y Arquitectónico",
+          "text": null,
+          "tags": [
+            "Diseño 3D",
+            "Arquitectura",
+            "Diseño",
+            "Gratis"
+          ],
+          "poster": "assets/images/stand5.jpg",
+          "video": "assets/images/stand-desematec-h264.mp4",
+          "featured": true,
+          "badge": "Destacado",
+          "highlight": "Única empresa que entrega proyectos en 3 días y cambios en 1 día hábil. <strong>Proyectos de Stands GRATUITOS</strong> para contratos de montaje."
+        },
+        {
+          "category": "Ferias y Eventos",
+          "icon": "fa-solid fa-people-group",
+          "title": "Montaje de Stands y Escenografía",
+          "text": "Montaje completo de stands, escenarios para ferias, showrooms corporativos, congresos, displays promocionales, quioscos de fábrica y exposiciones de gran porte.",
+          "tags": [
+            "Stands",
+            "Ferias",
+            "Congresos"
+          ],
+          "poster": "assets/images/STAND GCP CONCRETESHOW 2022.JPG",
+          "video": "assets/images/florio.mp4",
+          "featured": false,
+          "badge": null,
+          "highlight": null
+        },
+        {
+          "category": "Buffet",
+          "icon": "fa-solid fa-utensils",
+          "title": "Gastronomía y Coffee Break",
+          "text": "Finger Foods, menús personalizados, bebidas, coffee break completo y staff especializado para eventos corporativos, fiestas y recepciones de alto nivel.",
+          "tags": [
+            "Finger Food",
+            "Bebidas",
+            "Staff"
+          ],
+          "poster": "assets/images/prato fnio 1.jpg",
+          "video": "assets/images/stand-expo.mp4",
+          "featured": false,
+          "badge": null,
+          "highlight": null
+        },
+        {
+          "category": "Mobiliario y Equipos",
+          "icon": "fa-solid fa-couch",
+          "title": "Alquiler de Muebles y Electro",
+          "text": "Alquiler de mesas, sillas, sofás, sillones, frigobar, aire acondicionado, bistrós, lounges y equipos de audio y vídeo para eventos de todos los tamaños.",
+          "tags": [
+            "Muebles",
+            "Aire Acondicionado",
+            "Audio"
+          ],
+          "poster": "assets/images/POLTRONA FK.jpg",
+          "video": "assets/images/stand-mbl.mp4",
+          "featured": false,
+          "badge": null,
+          "highlight": null
+        },
+        {
+          "category": "Promoción de Eventos",
+          "icon": "fa-solid fa-bullhorn",
+          "title": "Creación y Promoción Nacional",
+          "text": "Creación y promoción de eventos en todo Brasil. Estrategias de divulgación, marketing presencial y digital para atraer público y generar resultados reales para tu marca.",
+          "tags": [
+            "Creación",
+            "Promoción",
+            "Nacional"
+          ],
+          "poster": "assets/images/stand2.jpg",
+          "video": "assets/images/stand-periso.mp4",
+          "featured": false,
+          "badge": null,
+          "highlight": null
+        }
+      ]
+    },
+    "steps": {
+      "tag": "Cómo funciona",
+      "title": "Briefing. Proyecto. Montaje. Así de simple.",
+      "items": [
+        {
+          "number": "01",
+          "icon": "fa-solid fa-ear-listen",
+          "title": "Nos cuentas lo que necesitas",
+          "text": "Briefing rápido y sin burocracia. Entendemos tu evento, presupuesto y el resultado que esperas.",
+          "result": "Plazo: 24h para presupuesto"
+        },
+        {
+          "number": "02",
+          "icon": "fa-solid fa-pen-fancy",
+          "title": "Diseñamos y ajustamos",
+          "text": "Creamos el layout, elegimos materiales y validamos cada detalle contigo hasta que esté perfecto.",
+          "result": "Plazo: 48h para previa 3D"
+        },
+        {
+          "number": "03",
+          "icon": "fa-solid fa-thumbs-up",
+          "title": "Entregamos y activamos",
+          "text": "Montaje a tiempo, soporte durante el evento y desmontaje. Solo necesitas aparecer y vender.",
+          "result": "Plazo: 100% en lo acordado"
+        }
+      ]
+    },
+    "galleryCta": {
+      "tag": "Galería de Proyectos",
+      "title": "Ve los stands que hemos entregado.",
+      "text": "Cada proyecto es un caso real. Marcas que confiaron en nosotros y resultados que entregamos.",
+      "buttonLabel": "Ver Portafolio Completo",
+      "buttonHref": "galeria.html"
+    },
+    "gallery": {
+      "pageTitle": "Galería de Proyectos",
+      "pageSubtitle": "Cada stand, feria y escenografía que construimos cuenta la historia de una marca que confía en Official Brasil.",
+      "tag": "Nuestros Trabajos",
+      "title": "Proyectos reales en stands, ferias y escenografía.",
+      "items": [
+        {
+          "image": "assets/images/stand1.jpg",
+          "alt": "Stand GCP Concrete Show",
+          "label": "Concrete Show 2022",
+          "size": "wide",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/stand2.jpg",
+          "alt": "Stand GCP",
+          "label": "GCP",
+          "size": "tall",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/stand3.jpg",
+          "alt": "Moerman Higiexpo",
+          "label": "Moerman Higiexpo",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/stand4.jpg",
+          "alt": "Refrinox Fipan",
+          "label": "Refrinox Fipan",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/RENDER0014.jpg",
+          "alt": "Render Proyecto",
+          "label": "Proyecto Arquitectónico",
+          "size": "wide",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/stand5.jpg",
+          "alt": "Stand Oficial",
+          "label": "Stand Official",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/stand6.jpg",
+          "alt": "Evento Corporativo",
+          "label": "Evento Corporativo",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/STAND GCP CONCRETESHOW 2022.JPG",
+          "alt": "Stand GCP Concrete Show",
+          "label": "GCP Concrete Show",
+          "size": "tall",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/stand7.jpg",
+          "alt": "Stand Design",
+          "label": "Diseño de Stand",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/stand8.jpg",
+          "alt": "Feria",
+          "label": "Ferias y Exposiciones",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/REFRINOXS FIPAN 20221.JPG",
+          "alt": "Refrinox Fipan",
+          "label": "Refrinox Fipan",
+          "size": "wide",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/STAND MOERMAN HIGIEXPO 2022.JPG",
+          "alt": "Moerman Higiexpo",
+          "label": "Moerman Higiexpo",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/REFRINOX FIPAN 2022..JPG",
+          "alt": "Refrinox Fipan 2022",
+          "label": "Refrinox 2022",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/RENDER0000.jpg",
+          "alt": "Render 3D",
+          "label": "Render 3D",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/RENDER0001.jpg",
+          "alt": "Render Proyecto",
+          "label": "Render Proyecto",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/RENDER0016.jpg",
+          "alt": "Render Detallado",
+          "label": "Render Detallado",
+          "size": "tall",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/RENDER0019.jpg",
+          "alt": "Render Fachada",
+          "label": "Render Fachada",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/DIGIS 0204.JPG",
+          "alt": "DIGIS Evento",
+          "label": "DIGIS Evento",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/DIGIS 0205.JPG",
+          "alt": "DIGIS Exposición",
+          "label": "DIGIS Exposición",
+          "size": "wide",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/DIGIS 0208.JPG",
+          "alt": "DIGIS Stand",
+          "label": "DIGIS Stand",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/DIGIS 0449.JPG",
+          "alt": "DIGIS Corporativo",
+          "label": "DIGIS Corporativo",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/DIGIS 0451.JPG",
+          "alt": "DIGIS Montaje",
+          "label": "DIGIS Montaje",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/DIGIS 0452.JPG",
+          "alt": "DIGIS Finalización",
+          "label": "DIGIS Finalización",
+          "size": "tall",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/UNIFILA.jpg",
+          "alt": "Unifila",
+          "label": "Unifila",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/RIOLAX.jpg",
+          "alt": "Riolax",
+          "label": "Riolax",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/RIOLAX1.jpg",
+          "alt": "Riolax Detalle",
+          "label": "Riolax Detalle",
+          "size": "wide",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/DIGIS 0802.jpg",
+          "alt": "DIGIS Evento",
+          "label": "DIGIS Evento 2",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/DIGIS 0809.jpg",
+          "alt": "DIGIS Exposición",
+          "label": "DIGIS Exposición 2",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/DIGIS 0817.jpg",
+          "alt": "DIGIS Stand",
+          "label": "DIGIS Stand 2",
+          "size": "tall",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/DIGIS 5048.jpg",
+          "alt": "DIGIS Montaje",
+          "label": "DIGIS Montaje 2",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/DIGIS 5054.jpg",
+          "alt": "DIGIS Corporativo",
+          "label": "DIGIS Corporativo 2",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/DIGIS 5056.jpg",
+          "alt": "DIGIS Finalización",
+          "label": "DIGIS Finalización 2",
+          "size": "wide",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/XXX0000.jpg",
+          "alt": "Render Proyecto",
+          "label": "Render Arquitectónico",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/XXX0004.jpg",
+          "alt": "Render Stand",
+          "label": "Render Stand Premium",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/XXX0015.jpg",
+          "alt": "Render Detallado",
+          "label": "Render Detallado 3D",
+          "size": "tall",
+          "category": "renders"
+        }
+      ]
+    },
+    "testimonials": {
+      "tag": "Quienes ya trabajaron con nosotros",
+      "title": "Clientes que confían en Official Brasil.",
+      "items": [
+        {
+          "video": "assets/images/DEPIM MAQMUNDI.mp4",
+          "name": "Maqmunda",
+          "role": "Socia Official Brasil"
+        },
+        {
+          "video": "assets/images/MAQMU INST.mp4",
+          "name": "Maqmunda Instalación",
+          "role": "Caso de Éxito"
+        }
+      ]
+    },
+    "partners": {
+      "tag": "Socios",
+      "title": "Empresas que confían en Official Brasil.",
+      "items": [
+        {
+          "logo": "assets/clients/maq.png",
+          "alt": "Maqmundi"
+        },
+        {
+          "logo": "assets/clients/desema.png",
+          "alt": "Desematec"
+        },
+        {
+          "logo": "assets/clients/ambfle.png",
+          "alt": "Ambflex"
+        },
+        {
+          "logo": "assets/clients/mene.png",
+          "alt": "Mene"
+        },
+        {
+          "logo": "assets/clients/hit.png",
+          "alt": "Hit"
+        },
+        {
+          "logo": "assets/clients/albrecth.png",
+          "alt": "Albrecth"
+        }
+      ]
+    },
+    "contact": {
+      "tag": "Contacto",
+      "title": "¿Necesitas un presupuesto? Respondemos en 24h.",
+      "intro": "Cuéntanos lo que necesitas. Nosotros hacemos el proyecto, el presupuesto y el montaje. Sin vueltas.",
+      "officeAddress": "Guarulhos - SP",
+      "factoryAddress": "Arujá - SP",
+      "whatsapp": "5511934393753",
+      "whatsappDisplay": "(+55 11) 93439-3753",
+      "salesEmail": "vendas@officialbrasil.com.br",
+      "supportEmail": "atendimento@officialbrasil.com.br"
+    },
+    "footer": {
+      "text": "Official Brasil desde 1998 · Guarulhos/SP · Arujá/SP · Brasil y América del Sur",
+      "contactLine": "vendas@officialbrasil.com.br | (+55 11) 93439-3753"
+    }
+  }
+}
