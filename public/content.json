@@ -6,20 +6,41 @@
     },
     "hero": {
       "overline": "Official Brasil — desde 1998",
-      "title": "Projetamos seu stand em 3 dias. Montamos em 2. Você vende no evento.",
-      "subtitle": "Palcos, stands, feiras, buffet, mobiliário e promoção. 54 mil m² montados em 3 países. Projeto gratuito para contratos de montagem.",
+      "title": "SEU STAND MONTADO EM 5 DIAS. VOCÊ IMAGINA, NÓS REALIZAMOS!",
+      "subtitle": "",
       "bgImage": "assets/images/stand1.jpg",
-      "bgVideo": "assets/images/hitel.mp4",
+      "bgVideo": "assets/images/MKT FEICON.mp4",
       "buttons": [
         {
           "label": "Ver Serviços",
           "href": "#servicos",
           "style": "primary"
+        }
+      ],
+      "stats": [],
+      "scrollText": ""
+    },
+    "about": {
+      "tag": "Sobre Nós",
+      "title": "Fundada em 1998 com uma pequena fábrica de produção. Hoje montamos mais de 6000 metros por ano em 3 países.",
+      "paragraphs": [
+        "A <strong>Official Brasil</strong> começou em Guarulhos com muito trabalho e poucos recursos. Hoje, temos dois parques fabris — um em <strong>Poá/SP</strong> e outro em <strong>Guarulhos/SP</strong>, com filiais no Rio de Janeiro e Belo Horizonte. Já somamos mais de 54 mil m² montados — experiência de campo pra saber o que funciona de verdade num pavilhão de feira.",
+        "Cuidamos de cada detalhe. Você foca no que importa: vender."
+      ],
+      "bullets": [
+        "Shows — palcos, iluminação, estrutura e tendas.",
+        "Projetos personalizados em 3 dias e alterações em 1 dia útil.",
+        "Feiras, stands, cenografia e montagem de exposições.",
+        "Buffet, mobiliário, equipamentos e promoção de eventos."
+      ],
+      "cards": [
+        {
+          "title": "Fundada em 1998",
+          "text": "Mais de 25 anos de mercado com projetos entregues em todo o Brasil e exterior."
         },
         {
-          "label": "Como Trabalhamos",
-          "href": "#como-funciona",
-          "style": "secondary"
+          "title": "Guarulhos-SP / Poá-SP",
+          "text": "Sede comercial em Guarulhos, espaços fabris em Poá e Guarulhos — estrutura completa com filiais no Rio de Janeiro e Belo Horizonte para atender todo o país."
         }
       ],
       "stats": [
@@ -38,31 +59,6 @@
           "suffix": "",
           "label": "Países Atendidos"
         }
-      ],
-      "scrollText": "Role para conhecer"
-    },
-    "about": {
-      "tag": "Sobre Nós",
-      "title": "Começamos em 1998 em Guarulhos. Hoje atendemos 3 países.",
-      "paragraphs": [
-        "Fundada em <strong>1998</strong>, a <strong>Official Brasil</strong> nasceu em Guarulhos-SP. Hoje temos sede comercial lá e espaço fabril em <strong>Arujá-SP</strong>. Já montamos mais de 54 mil m² — o equivalente a 7 campos de futebol. E cada metro quadrado teve suor de verdade.",
-        "Nosso time entrega soluções completas:"
-      ],
-      "bullets": [
-        "Shows — palcos, iluminação, estrutura e tendas.",
-        "Projetos personalizados em 3 dias e alterações em 1 dia útil.",
-        "Feiras, stands, cenografia e montagem de exposições.",
-        "Buffet, mobiliário, equipamentos e promoção de eventos."
-      ],
-      "cards": [
-        {
-          "title": "Fundada em 1998",
-          "text": "Mais de 25 anos de mercado com projetos entregues em todo o Brasil e exterior."
-        },
-        {
-          "title": "Guarulhos-SP / Arujá-SP",
-          "text": "Sede comercial em Guarulhos e espaço fabril em Arujá — estrutura completa para atender todo o país."
-        }
       ]
     },
     "services": {
@@ -73,8 +69,8 @@
         {
           "category": "Shows",
           "icon": "fa-solid fa-music",
-          "title": "Palcos, Estrutura & Iluminação",
-          "text": "Montagem de palcos profissionais, estruturas metálicas, iluminação cênica, grades de proteção, bastidores, praticáveis, tendas, banheiros químicos e containers. Tudo para seu show ou festival.",
+          "title": "Palcos, Som e Luz para Grandes Shows",
+          "text": "Montagem de palcos, iluminação cênica, som profissional, grades, camarins e containers. Estrutura completa com segurança certificada.",
           "tags": [
             "Palcos",
             "Iluminação",
@@ -82,7 +78,7 @@
             "Tendas"
           ],
           "poster": "assets/images/stand1.jpg",
-          "video": "assets/images/hitel.mp4",
+          "video": "assets/images/inst off.mp4",
           "featured": false,
           "badge": null,
           "highlight": null
@@ -90,7 +86,7 @@
         {
           "category": "Projetos e Personalizados",
           "icon": "fa-solid fa-pen-ruler",
-          "title": "Projetos Gráficos & Arquitetônicos",
+          "title": "Projetos 3D e Cenografia Exclusiva",
           "text": null,
           "tags": [
             "Projeto 3D",
@@ -102,20 +98,20 @@
           "video": "assets/images/stand-desematec-h264.mp4",
           "featured": true,
           "badge": "Destaque",
-          "highlight": "Única empresa a entregar projetos em 3 dias e alterações em 1 dia útil. <strong>Projetos de Stands GRATUITOS</strong> para contratos de montagem."
+          "highlight": "Entregamos seu projeto em 3D em até 3 dias e fazemos alterações em até 24 horas. <strong>O projeto é 100% grátis</strong> ao fechar a montagem com a gente."
         },
         {
           "category": "Feiras e Eventos",
           "icon": "fa-solid fa-people-group",
-          "title": "Montagem de Stands & Cenários",
-          "text": "Montagem completa de stands, cenários para feiras, showrooms corporativos, congressos, displays promocionais, quiosques de fábrica e exposições de grande porte.",
+          "title": "Stands Personalizados e Cenários para Feiras",
+          "text": "Projetamos e montamos stands, do design básico à cenografia completa para congressos, showrooms e exposições.",
           "tags": [
             "Stands",
             "Feiras",
             "Congressos"
           ],
           "poster": "assets/images/STAND GCP CONCRETESHOW 2022.JPG",
-          "video": "assets/images/florio.mp4",
+          "video": "assets/images/MKT FEICON.mp4",
           "featured": false,
           "badge": null,
           "highlight": null
@@ -123,8 +119,8 @@
         {
           "category": "Buffet",
           "icon": "fa-solid fa-utensils",
-          "title": "Gastronomia & Coffee Break",
-          "text": "Finger Foods, menus personalizados, bebidas, coffee break completo e staff especializado para eventos corporativos, festas e recepções de alto padrão.",
+          "title": "Buffet Completo e Gastronomia para Eventos",
+          "text": "Finger foods, coquetéis de negócios, coffee breaks e equipe de garçons pronta para atender seus convidados.",
           "tags": [
             "Finger Food",
             "Bebidas",
@@ -139,8 +135,8 @@
         {
           "category": "Mobiliários e Equipamentos",
           "icon": "fa-solid fa-couch",
-          "title": "Locação de Móveis & Eletro",
-          "text": "Locação de mesas, cadeiras, sofás, poltronas, frigobar, ar condicionado, bistrôs, lounges e equipamentos de áudio e vídeo para eventos de todos os portes.",
+          "title": "Locação de Móveis e Climatização",
+          "text": "Sofás, mesas, cadeiras, bistrôs, frigobares, ar-condicionado e painéis de LED para deixar seu stand pronto.",
           "tags": [
             "Móveis",
             "Ar Condicionado",
@@ -155,15 +151,15 @@
         {
           "category": "Promoção de Eventos",
           "icon": "fa-solid fa-bullhorn",
-          "title": "Criação & Divulgação Nacional",
-          "text": "Criação e promoção de eventos em todo o Brasil. Estratégias de divulgação, marketing presencial e digital para atrair público e gerar resultados reais para sua marca.",
+          "title": "Ações Promocionais e Marketing ao Vivo",
+          "text": "Criamos e executamos ativações de marca para engajar seu público e gerar leads durante a feira. Atendemos o país todo.",
           "tags": [
             "Criação",
             "Divulgação",
             "Nacional"
           ],
           "poster": "assets/images/stand2.jpg",
-          "video": "assets/images/stand-periso.mp4",
+          "video": "assets/images/MKT PLASTICO BRASIL.mp4",
           "featured": false,
           "badge": null,
           "highlight": null
@@ -200,15 +196,15 @@
     "galleryCta": {
       "tag": "Galeria de Projetos",
       "title": "Veja os stands que já entregamos.",
-      "text": "Cada projeto é um caso real. Marcas que confiaram na gente e resultados que entregamos.",
+      "text": "Cada projeto é um caso real. Marcas que confiaram na gente.",
       "buttonLabel": "Ver Portfólio Completo",
       "buttonHref": "galeria.html"
     },
     "gallery": {
       "pageTitle": "Galeria de Projetos",
-      "pageSubtitle": "Cada stand, feira e cenografia que construímos conta a história de uma marca que confia na Official Brasil.",
+      "pageSubtitle": "Cada stand, feira e cenografia que construímos conta a história de uma marca que confiou na gente.",
       "tag": "Nossos Trabalhos",
-      "title": "Projetos reais em stands, feiras e cenografia.",
+      "title": "Projetos reais em stands, feiras e eventos.",
       "items": [
         {
           "image": "assets/images/stand1.jpg",
@@ -454,21 +450,237 @@
           "label": "Render Detalhado 3D",
           "size": "tall",
           "category": "renders"
+        },
+        {
+          "image": "assets/images/0.jpg",
+          "alt": "Projeto 0",
+          "label": "Projeto Arquitetônico",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/00.jpg",
+          "alt": "Projeto 00",
+          "label": "Design de Stand",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/000.jpg",
+          "alt": "Projeto 000",
+          "label": "Render Exclusivo",
+          "size": "tall",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/0302.jpg",
+          "alt": "Projeto 0302",
+          "label": "Projeto 3D",
+          "size": "wide",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/0302010504.jpg",
+          "alt": "Projeto Detalhado",
+          "label": "Projeto Detalhado",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/030205.jpg",
+          "alt": "Render 030205",
+          "label": "Render Premium",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/1.jpg",
+          "alt": "Projeto 1",
+          "label": "Stand Conceito",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/2.jpg",
+          "alt": "Projeto 2",
+          "label": "Projeto Executivo",
+          "size": "wide",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/3.jpg",
+          "alt": "Projeto 3",
+          "label": "Render Corporativo",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/A.jpg",
+          "alt": "Projeto A",
+          "label": "Projeto Albrecth",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/B.jpg",
+          "alt": "Projeto B",
+          "label": "Projeto Elvi",
+          "size": "tall",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/CXZ.jpg",
+          "alt": "Projeto CXZ",
+          "label": "Stand CXZ",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/FD.jpg",
+          "alt": "Projeto FD",
+          "label": "Feira FD",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/FS.jpg",
+          "alt": "Projeto FS",
+          "label": "Evento FS",
+          "size": "wide",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/RENDER0004.jpg",
+          "alt": "Render 0004",
+          "label": "Render Arquitetônico",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/RENDER0007.jpg",
+          "alt": "Render 0007",
+          "label": "Render Detalhado 3D",
+          "size": "tall",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/S.jpg",
+          "alt": "Projeto S",
+          "label": "Stand S",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/SS.jpg",
+          "alt": "Projeto SS",
+          "label": "Exposição SS",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/WDD.jpg",
+          "alt": "Projeto WDD",
+          "label": "Stand WDD",
+          "size": "wide",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/WW.jpg",
+          "alt": "Projeto WW",
+          "label": "Evento WW",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/WWW.jpg",
+          "alt": "Projeto WWW",
+          "label": "Stand WWW",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/WWWW.jpg",
+          "alt": "Projeto WWWW",
+          "label": "Stand WWWW",
+          "size": "tall",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/WWWWWW.jpg",
+          "alt": "Projeto WWWWWW",
+          "label": "Feira WWWWWW",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/XXX0001.jpg",
+          "alt": "Render XXX0001",
+          "label": "Render Exclusivo",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/XXX0002.jpg",
+          "alt": "Render XXX0002",
+          "label": "Render Premium 3D",
+          "size": "wide",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/XXX0007.jpg",
+          "alt": "Render XXX0007",
+          "label": "Render Detalhado",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/XXX0018.jpg",
+          "alt": "Render XXX0018",
+          "label": "Render Fachada",
+          "size": "tall",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/ZAS.jpg",
+          "alt": "Projeto ZAS",
+          "label": "Stand ZAS",
+          "size": "normal",
+          "category": "stands"
         }
       ]
     },
     "testimonials": {
-      "tag": "Quem já trabalhou com a gente",
-      "title": "Clientes que confiam na Official Brasil.",
+      "tag": "Quem já fez evento com a gente",
+      "title": "Clientes que confiam na gente.",
       "items": [
         {
           "video": "assets/images/DEPIM MAQMUNDI.mp4",
-          "name": "Maqmunda",
+          "name": "MAQMUNDI",
           "role": "Parceira Official Brasil"
         },
         {
           "video": "assets/images/MAQMU INST.mp4",
           "name": "Maqmunda Instalação",
+          "role": "Case de Sucesso"
+        },
+        {
+          "video": "assets/images/ALBREC INST.mp4",
+          "name": "Albrecth",
+          "role": "Parceira Official Brasil"
+        },
+        {
+          "video": "assets/images/DEPOI ALBRE.mp4",
+          "name": "Albrecth Depoimento",
+          "role": "Case de Sucesso"
+        },
+        {
+          "video": "assets/images/ELVI DEPOI.mp4",
+          "name": "Elvi Depoimento",
+          "role": "Parceira Official Brasil"
+        },
+        {
+          "video": "assets/images/ELVI INST.mp4",
+          "name": "Elvi Cozinhas",
           "role": "Case de Sucesso"
         }
       ]
@@ -506,17 +718,17 @@
     "contact": {
       "tag": "Contato",
       "title": "Quer um orçamento? A gente responde em até 24h.",
-      "intro": "Conte o que você precisa. A gente faz o projeto, o orçamento e a montagem. Sem enrolação.",
+      "intro": "Conta o que você precisa. A gente faz o projeto, o orçamento e a montagem. Sem enrolação.",
       "officeAddress": "Guarulhos - SP",
-      "factoryAddress": "Arujá - SP",
+      "factoryAddress": "Poá/SP e Guarulhos/SP",
       "whatsapp": "5511934393753",
       "whatsappDisplay": "(+55 11) 93439-3753",
       "salesEmail": "vendas@officialbrasil.com.br",
       "supportEmail": "atendimento@officialbrasil.com.br"
     },
     "footer": {
-      "text": "Official Brasil desde 1998 · Guarulhos/SP · Arujá/SP · Brasil e América do Sul",
-      "contactLine": "vendas@officialbrasil.com.br | (+55 11) 93439-3753"
+      "text": "Official Brasil desde 1998 · Guarulhos/SP · Poá/SP · Brasil e América do Sul",
+      "contactLine": "atendimento@officialbrasil.com.br | (+55 11) 93439-3753"
     }
   },
   "en": {
@@ -526,20 +738,41 @@
     },
     "hero": {
       "overline": "Official Brasil — since 1998",
-      "title": "We design your stand in 3 days. Assemble in 2. You sell at the event.",
-      "subtitle": "Stages, stands, fairs, catering, furniture and promotion. 54K m² assembled in 3 countries. Free project for assembly contracts.",
+      "title": "Your stand, built in 5 days. You sell at the event.",
+      "subtitle": "",
       "bgImage": "assets/images/stand1.jpg",
-      "bgVideo": "assets/images/hitel.mp4",
+      "bgVideo": "assets/images/MKT FEICON.mp4",
       "buttons": [
         {
           "label": "See Services",
           "href": "#servicos",
           "style": "primary"
+        }
+      ],
+      "stats": [],
+      "scrollText": ""
+    },
+    "about": {
+      "tag": "About Us",
+      "title": "Founded in 1998 in a small production factory. Today, we assemble over 6,000 sqm per year across 3 countries.",
+      "paragraphs": [
+        "<strong>Official Brasil</strong> started in Guarulhos with hard work and limited resources. Today, we operate two production facilities — one in <strong>Poá/SP</strong> and another in <strong>Guarulhos/SP</strong>, with branches in Rio de Janeiro and Belo Horizonte. We have built over 54,000 sqm across three countries — enough field experience to know what actually works in an exhibition hall.",
+        "We handle the heavy lifting. You focus on closing deals."
+      ],
+      "bullets": [
+        "Shows — stages, lighting, structure and tents.",
+        "Customized projects in 3 days and edits in 1 business day.",
+        "Tradeshows, stands, scenography and exhibition assembly.",
+        "Catering, furniture, equipment and event promotion."
+      ],
+      "cards": [
+        {
+          "title": "Founded in 1998",
+          "text": "Over 25 years in the market with projects delivered across Brazil and abroad."
         },
         {
-          "label": "How We Work",
-          "href": "#como-funciona",
-          "style": "secondary"
+          "title": "Guarulhos-SP / Poá-SP",
+          "text": "Commercial headquarters in Guarulhos, production facilities in Poá and Guarulhos — complete infrastructure with branches in Rio de Janeiro and Belo Horizonte to serve the whole country."
         }
       ],
       "stats": [
@@ -558,31 +791,6 @@
           "suffix": "",
           "label": "Countries Served"
         }
-      ],
-      "scrollText": "Scroll to discover"
-    },
-    "about": {
-      "tag": "About Us",
-      "title": "Started in 1998 in Guarulhos. Today we serve 3 countries.",
-      "paragraphs": [
-        "Founded in <strong>1998</strong>, <strong>Official Brasil</strong> was born in Guarulhos-SP. Today we have our commercial headquarters there and a production facility in <strong>Arujá-SP</strong>. We've assembled over 54K m² — the equivalent of 7 football fields. And every square meter had real sweat in it.",
-        "Our team delivers complete solutions:"
-      ],
-      "bullets": [
-        "Shows — stages, lighting, structure and tents.",
-        "Customized projects in 3 days and edits in 1 business day.",
-        "Tradeshows, stands, scenography and exhibition assembly.",
-        "Catering, furniture, equipment and event promotion."
-      ],
-      "cards": [
-        {
-          "title": "Founded in 1998",
-          "text": "Over 25 years in the market with projects delivered across Brazil and abroad."
-        },
-        {
-          "title": "Guarulhos-SP / Arujá-SP",
-          "text": "Commercial headquarters in Guarulhos and a production facility in Arujá — complete infrastructure to serve the whole country."
-        }
       ]
     },
     "services": {
@@ -593,8 +801,8 @@
         {
           "category": "Shows",
           "icon": "fa-solid fa-music",
-          "title": "Stages, Structure & Lighting",
-          "text": "Assembly of professional stages, metal structures, scenic lighting, barriers, backstage, platforms, tents, portable restrooms and containers. Everything for your show or festival.",
+          "title": "Professional Stages, Sound & Lighting",
+          "text": "Assembly of professional stages, metal truss structures, scenic lighting, crowd control barriers, backstage tents, and mobile offices. Certified safety and on-time delivery.",
           "tags": [
             "Stages",
             "Lighting",
@@ -602,7 +810,7 @@
             "Tents"
           ],
           "poster": "assets/images/stand1.jpg",
-          "video": "assets/images/hitel.mp4",
+          "video": "assets/images/inst off.mp4",
           "featured": false,
           "badge": null,
           "highlight": null
@@ -610,7 +818,7 @@
         {
           "category": "Custom Projects",
           "icon": "fa-solid fa-pen-ruler",
-          "title": "Graphic & Architectural Design",
+          "title": "3D Design & Custom Architecture",
           "text": null,
           "tags": [
             "3D Design",
@@ -622,20 +830,20 @@
           "video": "assets/images/stand-desematec-h264.mp4",
           "featured": true,
           "badge": "Featured",
-          "highlight": "The only company to deliver projects within 3 days and revisions in 1 business day. <strong>FREE Stand Designs</strong> for assembly contracts."
+          "highlight": "We deliver custom 3D designs in just 3 days, with a 24-hour turnaround for revisions. <strong>The design is 100% free</strong> when you choose us for assembly."
         },
         {
           "category": "Trade Shows & Events",
           "icon": "fa-solid fa-people-group",
-          "title": "Stand Assembly & Scenery",
-          "text": "Full stand assembly, expositional scenery, corporate showrooms, congresses, promotional displays, factory kiosks and large-scale exhibitions.",
+          "title": "Custom Exhibition Stands & Scenography",
+          "text": "We design and assemble exhibition booths, corporate showrooms, kiosks, and custom sets that draw visitors and generate leads.",
           "tags": [
             "Stands",
             "Trade Shows",
             "Congress"
           ],
           "poster": "assets/images/STAND GCP CONCRETESHOW 2022.JPG",
-          "video": "assets/images/florio.mp4",
+          "video": "assets/images/MKT FEICON.mp4",
           "featured": false,
           "badge": null,
           "highlight": null
@@ -643,8 +851,8 @@
         {
           "category": "Catering",
           "icon": "fa-solid fa-utensils",
-          "title": "Gastronomy & Coffee Break",
-          "text": "Finger foods, customized menus, beverages, complete coffee breaks and specialized staff for corporate events, parties and high-end receptions.",
+          "title": "Premium Event Catering & Coffee Breaks",
+          "text": "Customized menus, finger foods, corporate coffee breaks, beverages, and trained staff to serve your guests well.",
           "tags": [
             "Finger Food",
             "Beverages",
@@ -659,8 +867,8 @@
         {
           "category": "Furniture & Equipment",
           "icon": "fa-solid fa-couch",
-          "title": "Rental of Furniture & Appliances",
-          "text": "Rental of tables, chairs, sofas, armchairs, minibars, air conditioning, bistros, lounges and audio/video equipment for events of all sizes.",
+          "title": "Furniture Rental & Equipment",
+          "text": "Couches, tables, design chairs, minibars, air conditioning units, and LED panels to make your stand feel complete.",
           "tags": [
             "Furniture",
             "Air Conditioning",
@@ -675,15 +883,15 @@
         {
           "category": "Event Promotion",
           "icon": "fa-solid fa-bullhorn",
-          "title": "Creative & National Promotion",
-          "text": "Event creation and promotion throughout Brazil. Marketing strategies for attracting audiences and generating real results for your brand.",
+          "title": "Brand Activations & Live Marketing",
+          "text": "Engage your audience and capture leads with custom promotional campaigns during your exhibitions. We cover the whole country.",
           "tags": [
             "Creative",
             "Promotion",
             "National"
           ],
           "poster": "assets/images/stand2.jpg",
-          "video": "assets/images/stand-periso.mp4",
+          "video": "assets/images/MKT PLASTICO BRASIL.mp4",
           "featured": false,
           "badge": null,
           "highlight": null
@@ -720,15 +928,15 @@
     "galleryCta": {
       "tag": "Project Gallery",
       "title": "See the stands we've delivered.",
-      "text": "Each project is a real case. Brands that trusted us and results we delivered.",
+      "text": "Each project is a real case. Brands that trusted us.",
       "buttonLabel": "View Full Portfolio",
       "buttonHref": "galeria.html"
     },
     "gallery": {
       "pageTitle": "Project Gallery",
-      "pageSubtitle": "Every stand, fair and scenography we build tells the story of a brand that trusts Official Brasil.",
+      "pageSubtitle": "Every stand, fair and scenography we build tells the story of a brand that trusted us.",
       "tag": "Our Work",
-      "title": "Real projects in stands, fairs and scenography.",
+      "title": "Real projects in stands, fairs and events.",
       "items": [
         {
           "image": "assets/images/stand1.jpg",
@@ -974,21 +1182,237 @@
           "label": "Detailed 3D Render",
           "size": "tall",
           "category": "renders"
+        },
+        {
+          "image": "assets/images/0.jpg",
+          "alt": "Projeto 0",
+          "label": "Projeto Arquitetônico",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/00.jpg",
+          "alt": "Projeto 00",
+          "label": "Design de Stand",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/000.jpg",
+          "alt": "Projeto 000",
+          "label": "Render Exclusivo",
+          "size": "tall",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/0302.jpg",
+          "alt": "Projeto 0302",
+          "label": "Projeto 3D",
+          "size": "wide",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/0302010504.jpg",
+          "alt": "Projeto Detalhado",
+          "label": "Projeto Detalhado",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/030205.jpg",
+          "alt": "Render 030205",
+          "label": "Render Premium",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/1.jpg",
+          "alt": "Projeto 1",
+          "label": "Stand Conceito",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/2.jpg",
+          "alt": "Projeto 2",
+          "label": "Projeto Executivo",
+          "size": "wide",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/3.jpg",
+          "alt": "Projeto 3",
+          "label": "Render Corporativo",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/A.jpg",
+          "alt": "Projeto A",
+          "label": "Projeto Albrecth",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/B.jpg",
+          "alt": "Projeto B",
+          "label": "Projeto Elvi",
+          "size": "tall",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/CXZ.jpg",
+          "alt": "Projeto CXZ",
+          "label": "Stand CXZ",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/FD.jpg",
+          "alt": "Projeto FD",
+          "label": "Feira FD",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/FS.jpg",
+          "alt": "Projeto FS",
+          "label": "Evento FS",
+          "size": "wide",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/RENDER0004.jpg",
+          "alt": "Render 0004",
+          "label": "Render Arquitetônico",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/RENDER0007.jpg",
+          "alt": "Render 0007",
+          "label": "Render Detalhado 3D",
+          "size": "tall",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/S.jpg",
+          "alt": "Projeto S",
+          "label": "Stand S",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/SS.jpg",
+          "alt": "Projeto SS",
+          "label": "Exposição SS",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/WDD.jpg",
+          "alt": "Projeto WDD",
+          "label": "Stand WDD",
+          "size": "wide",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/WW.jpg",
+          "alt": "Projeto WW",
+          "label": "Evento WW",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/WWW.jpg",
+          "alt": "Projeto WWW",
+          "label": "Stand WWW",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/WWWW.jpg",
+          "alt": "Projeto WWWW",
+          "label": "Stand WWWW",
+          "size": "tall",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/WWWWWW.jpg",
+          "alt": "Projeto WWWWWW",
+          "label": "Feira WWWWWW",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/XXX0001.jpg",
+          "alt": "Render XXX0001",
+          "label": "Render Exclusivo",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/XXX0002.jpg",
+          "alt": "Render XXX0002",
+          "label": "Render Premium 3D",
+          "size": "wide",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/XXX0007.jpg",
+          "alt": "Render XXX0007",
+          "label": "Render Detalhado",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/XXX0018.jpg",
+          "alt": "Render XXX0018",
+          "label": "Render Fachada",
+          "size": "tall",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/ZAS.jpg",
+          "alt": "Projeto ZAS",
+          "label": "Stand ZAS",
+          "size": "normal",
+          "category": "stands"
         }
       ]
     },
     "testimonials": {
       "tag": "Who has worked with us",
-      "title": "Clients who trust Official Brasil.",
+      "title": "Clients who trust us.",
       "items": [
         {
           "video": "assets/images/DEPIM MAQMUNDI.mp4",
-          "name": "Maqmunda",
+          "name": "MAQMUNDI",
           "role": "Official Brasil Partner"
         },
         {
           "video": "assets/images/MAQMU INST.mp4",
-          "name": "Maqmunda Installation",
+          "name": "MAQMUNDI Instalação",
+          "role": "Success Case"
+        },
+        {
+          "video": "assets/images/ALBREC INST.mp4",
+          "name": "Albrecth",
+          "role": "Official Brasil Partner"
+        },
+        {
+          "video": "assets/images/DEPOI ALBRE.mp4",
+          "name": "Albrecth Testimonial",
+          "role": "Success Case"
+        },
+        {
+          "video": "assets/images/ELVI DEPOI.mp4",
+          "name": "Elvi Testimonial",
+          "role": "Official Brasil Partner"
+        },
+        {
+          "video": "assets/images/ELVI INST.mp4",
+          "name": "Elvi Cozinhas",
           "role": "Success Case"
         }
       ]
@@ -1028,15 +1452,15 @@
       "title": "Need a quote? We reply within 24h.",
       "intro": "Tell us what you need. We handle the project, the budget and the assembly. No fuss.",
       "officeAddress": "Guarulhos - SP",
-      "factoryAddress": "Arujá - SP",
+      "factoryAddress": "Poá/SP e Guarulhos/SP",
       "whatsapp": "5511934393753",
       "whatsappDisplay": "(+55 11) 93439-3753",
       "salesEmail": "vendas@officialbrasil.com.br",
       "supportEmail": "atendimento@officialbrasil.com.br"
     },
     "footer": {
-      "text": "Official Brasil since 1998 · Guarulhos/SP · Arujá/SP · Brazil and South America",
-      "contactLine": "vendas@officialbrasil.com.br | (+55 11) 93439-3753"
+      "text": "Official Brasil since 1998 · Guarulhos/SP · Poá/SP · Brazil and South America",
+      "contactLine": "atendimento@officialbrasil.com.br | (+55 11) 93439-3753"
     }
   },
   "es": {
@@ -1046,20 +1470,41 @@
     },
     "hero": {
       "overline": "Official Brasil — desde 1998",
-      "title": "Proyectamos tu stand en 3 días. Montamos en 2. Vendes en el evento.",
-      "subtitle": "Escenarios, stands, ferias, buffet, mobiliario y promoción. 54K m² montados en 3 países. Proyecto gratuito para contratos de montaje.",
+      "title": "Tu stand montado en 5 días. Vendes en el evento.",
+      "subtitle": "",
       "bgImage": "assets/images/stand1.jpg",
-      "bgVideo": "assets/images/hitel.mp4",
+      "bgVideo": "assets/images/MKT FEICON.mp4",
       "buttons": [
         {
           "label": "Ver Servicios",
           "href": "#servicos",
           "style": "primary"
+        }
+      ],
+      "stats": [],
+      "scrollText": ""
+    },
+    "about": {
+      "tag": "Sobre Nosotros",
+      "title": "Empezamos en 1998 con una pequeña fábrica de producción. Hoy, montamos más de 6.000 metros por año en 3 países.",
+      "paragraphs": [
+        "<strong>Official Brasil</strong> comenzó en Guarulhos con mucho trabajo y pocos recursos. Hoy, tenemos dos parques fabriles — uno en <strong>Poá/SP</strong> y otro en <strong>Guarulhos/SP</strong>, con sucursales en Río de Janeiro y Belo Horizonte. Sumamos más de 54,000 m² montados — experiencia de campo para saber lo que funciona de verdad en un pabellón de feria.",
+        "Nos encargamos del montaje. Tú solo preocúpate de vender."
+      ],
+      "bullets": [
+        "Shows — escenarios, iluminación, estructura y carpas.",
+        "Proyectos personalizados en 3 días y cambios en 1 día hábil.",
+        "Ferias, stands, escenografía y montaje de exposiciones.",
+        "Buffet, mobiliario, equipos y promoción de eventos."
+      ],
+      "cards": [
+        {
+          "title": "Fundada en 1998",
+          "text": "Más de 25 años en el mercado con proyectos entregados en todo Brasil y el exterior."
         },
         {
-          "label": "Cómo Trabajamos",
-          "href": "#como-funciona",
-          "style": "secondary"
+          "title": "Guarulhos-SP / Poá-SP",
+          "text": "Sede comercial en Guarulhos, espacios fabriles en Poá y Guarulhos — estructura completa con sucursales en Río de Janeiro y Belo Horizonte para atender todo el país."
         }
       ],
       "stats": [
@@ -1078,31 +1523,6 @@
           "suffix": "",
           "label": "Países Atendidos"
         }
-      ],
-      "scrollText": "Desplázate para conocer"
-    },
-    "about": {
-      "tag": "Sobre Nosotros",
-      "title": "Empezamos en 1998 en Guarulhos. Hoy atendemos 3 países.",
-      "paragraphs": [
-        "Fundada en <strong>1998</strong>, <strong>Official Brasil</strong> nació en Guarulhos-SP. Hoy tenemos sede comercial allí y espacio fabril en <strong>Arujá-SP</strong>. Hemos montado más de 54 mil m² — el equivalente a 7 campos de fútbol. Y cada metro cuadrado tuvo sudor de verdad.",
-        "Nuestro equipo ofrece soluciones completas:"
-      ],
-      "bullets": [
-        "Shows — escenarios, iluminación, estructura y carpas.",
-        "Proyectos personalizados en 3 días y cambios en 1 día hábil.",
-        "Ferias, stands, escenografía y montaje de exposiciones.",
-        "Buffet, mobiliario, equipos y promoción de eventos."
-      ],
-      "cards": [
-        {
-          "title": "Fundada en 1998",
-          "text": "Más de 25 años en el mercado con proyectos entregados en todo Brasil y el exterior."
-        },
-        {
-          "title": "Guarulhos-SP / Arujá-SP",
-          "text": "Sede comercial en Guarulhos y espacio fabril en Arujá — estructura completa para atender todo el país."
-        }
       ]
     },
     "services": {
@@ -1113,8 +1533,8 @@
         {
           "category": "Shows",
           "icon": "fa-solid fa-music",
-          "title": "Escenarios, Estructura e Iluminación",
-          "text": "Montaje de escenarios profesionales, estructuras metálicas, iluminación escénica, barreras, backstage, plataformas, carpas, baños químicos y contenedores. Todo para tu show o festival.",
+          "title": "Escenarios, Sonido e Iluminación Profesional",
+          "text": "Montaje de escenarios profesionales, estructuras metálicas, iluminación escénica de alto rendimiento, vallas de contención, camerinos y carpas. Seguridad certificada.",
           "tags": [
             "Escenarios",
             "Iluminación",
@@ -1122,7 +1542,7 @@
             "Carpas"
           ],
           "poster": "assets/images/stand1.jpg",
-          "video": "assets/images/hitel.mp4",
+          "video": "assets/images/inst off.mp4",
           "featured": false,
           "badge": null,
           "highlight": null
@@ -1130,7 +1550,7 @@
         {
           "category": "Proyectos Personalizados",
           "icon": "fa-solid fa-pen-ruler",
-          "title": "Diseño Gráfico y Arquitectónico",
+          "title": "Diseños 3D y Arquitectura Efímera",
           "text": null,
           "tags": [
             "Diseño 3D",
@@ -1142,20 +1562,20 @@
           "video": "assets/images/stand-desematec-h264.mp4",
           "featured": true,
           "badge": "Destacado",
-          "highlight": "Única empresa que entrega proyectos en 3 días y cambios en 1 día hábil. <strong>Proyectos de Stands GRATUITOS</strong> para contratos de montaje."
+          "highlight": "Entregamos tu propuesta en 3D en 3 días y realizamos modificaciones en 24 horas. <strong>El diseño es 100% gratuito</strong> al contratar el montaje con nosotros."
         },
         {
           "category": "Ferias y Eventos",
           "icon": "fa-solid fa-people-group",
-          "title": "Montaje de Stands y Escenografía",
-          "text": "Montaje completo de stands, escenarios para ferias, showrooms corporativos, congresos, displays promocionales, quioscos de fábrica y exposiciones de gran porte.",
+          "title": "Stands Personalizados y Escenografías",
+          "text": "Diseñamos y montamos stands, showrooms corporativos, quioscos y exposiciones que atraen visitantes y generan clientes.",
           "tags": [
             "Stands",
             "Ferias",
             "Congresos"
           ],
           "poster": "assets/images/STAND GCP CONCRETESHOW 2022.JPG",
-          "video": "assets/images/florio.mp4",
+          "video": "assets/images/MKT FEICON.mp4",
           "featured": false,
           "badge": null,
           "highlight": null
@@ -1163,8 +1583,8 @@
         {
           "category": "Buffet",
           "icon": "fa-solid fa-utensils",
-          "title": "Gastronomía y Coffee Break",
-          "text": "Finger Foods, menús personalizados, bebidas, coffee break completo y staff especializado para eventos corporativos, fiestas y recepciones de alto nivel.",
+          "title": "Catering Completo y Coffee Breaks",
+          "text": "Finger foods, cócteles de negocios, coffee breaks y personal listo para atender a tus invitados.",
           "tags": [
             "Finger Food",
             "Bebidas",
@@ -1179,8 +1599,8 @@
         {
           "category": "Mobiliario y Equipos",
           "icon": "fa-solid fa-couch",
-          "title": "Alquiler de Muebles y Electro",
-          "text": "Alquiler de mesas, sillas, sofás, sillones, frigobar, aire acondicionado, bistrós, lounges y equipos de audio y vídeo para eventos de todos los tamaños.",
+          "title": "Alquiler de Mobiliario y Climatización",
+          "text": "Sofás, mesas, sillas, frigobares, aire acondicionado y pantallas LED para que tu stand quede listo.",
           "tags": [
             "Muebles",
             "Aire Acondicionado",
@@ -1195,15 +1615,15 @@
         {
           "category": "Promoción de Eventos",
           "icon": "fa-solid fa-bullhorn",
-          "title": "Creación y Promoción Nacional",
-          "text": "Creación y promoción de eventos en todo Brasil. Estrategias de divulgación, marketing presencial y digital para atraer público y generar resultados reales para tu marca.",
+          "title": "Activaciones de Marca y Marketing en Vivo",
+          "text": "Creamos y ejecutamos campañas promocionales interactivas para conectar con tu audiencia y captar prospectos durante el evento.",
           "tags": [
             "Creación",
             "Promoción",
             "Nacional"
           ],
           "poster": "assets/images/stand2.jpg",
-          "video": "assets/images/stand-periso.mp4",
+          "video": "assets/images/MKT PLASTICO BRASIL.mp4",
           "featured": false,
           "badge": null,
           "highlight": null
@@ -1240,15 +1660,15 @@
     "galleryCta": {
       "tag": "Galería de Proyectos",
       "title": "Ve los stands que hemos entregado.",
-      "text": "Cada proyecto es un caso real. Marcas que confiaron en nosotros y resultados que entregamos.",
+      "text": "Cada proyecto es un caso real. Marcas que confiaron en nosotros.",
       "buttonLabel": "Ver Portafolio Completo",
       "buttonHref": "galeria.html"
     },
     "gallery": {
       "pageTitle": "Galería de Proyectos",
-      "pageSubtitle": "Cada stand, feria y escenografía que construimos cuenta la historia de una marca que confía en Official Brasil.",
+      "pageSubtitle": "Cada stand, feria y escenografía que construimos cuenta la historia de una marca que confió en nosotros.",
       "tag": "Nuestros Trabajos",
-      "title": "Proyectos reales en stands, ferias y escenografía.",
+      "title": "Proyectos reales en stands, ferias y eventos.",
       "items": [
         {
           "image": "assets/images/stand1.jpg",
@@ -1494,21 +1914,237 @@
           "label": "Render Detallado 3D",
           "size": "tall",
           "category": "renders"
+        },
+        {
+          "image": "assets/images/0.jpg",
+          "alt": "Projeto 0",
+          "label": "Projeto Arquitetônico",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/00.jpg",
+          "alt": "Projeto 00",
+          "label": "Design de Stand",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/000.jpg",
+          "alt": "Projeto 000",
+          "label": "Render Exclusivo",
+          "size": "tall",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/0302.jpg",
+          "alt": "Projeto 0302",
+          "label": "Projeto 3D",
+          "size": "wide",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/0302010504.jpg",
+          "alt": "Projeto Detalhado",
+          "label": "Projeto Detalhado",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/030205.jpg",
+          "alt": "Render 030205",
+          "label": "Render Premium",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/1.jpg",
+          "alt": "Projeto 1",
+          "label": "Stand Conceito",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/2.jpg",
+          "alt": "Projeto 2",
+          "label": "Projeto Executivo",
+          "size": "wide",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/3.jpg",
+          "alt": "Projeto 3",
+          "label": "Render Corporativo",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/A.jpg",
+          "alt": "Projeto A",
+          "label": "Projeto Albrecth",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/B.jpg",
+          "alt": "Projeto B",
+          "label": "Projeto Elvi",
+          "size": "tall",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/CXZ.jpg",
+          "alt": "Projeto CXZ",
+          "label": "Stand CXZ",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/FD.jpg",
+          "alt": "Projeto FD",
+          "label": "Feira FD",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/FS.jpg",
+          "alt": "Projeto FS",
+          "label": "Evento FS",
+          "size": "wide",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/RENDER0004.jpg",
+          "alt": "Render 0004",
+          "label": "Render Arquitetônico",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/RENDER0007.jpg",
+          "alt": "Render 0007",
+          "label": "Render Detalhado 3D",
+          "size": "tall",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/S.jpg",
+          "alt": "Projeto S",
+          "label": "Stand S",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/SS.jpg",
+          "alt": "Projeto SS",
+          "label": "Exposição SS",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/WDD.jpg",
+          "alt": "Projeto WDD",
+          "label": "Stand WDD",
+          "size": "wide",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/WW.jpg",
+          "alt": "Projeto WW",
+          "label": "Evento WW",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/WWW.jpg",
+          "alt": "Projeto WWW",
+          "label": "Stand WWW",
+          "size": "normal",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/WWWW.jpg",
+          "alt": "Projeto WWWW",
+          "label": "Stand WWWW",
+          "size": "tall",
+          "category": "stands"
+        },
+        {
+          "image": "assets/images/WWWWWW.jpg",
+          "alt": "Projeto WWWWWW",
+          "label": "Feira WWWWWW",
+          "size": "normal",
+          "category": "events"
+        },
+        {
+          "image": "assets/images/XXX0001.jpg",
+          "alt": "Render XXX0001",
+          "label": "Render Exclusivo",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/XXX0002.jpg",
+          "alt": "Render XXX0002",
+          "label": "Render Premium 3D",
+          "size": "wide",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/XXX0007.jpg",
+          "alt": "Render XXX0007",
+          "label": "Render Detalhado",
+          "size": "normal",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/XXX0018.jpg",
+          "alt": "Render XXX0018",
+          "label": "Render Fachada",
+          "size": "tall",
+          "category": "renders"
+        },
+        {
+          "image": "assets/images/ZAS.jpg",
+          "alt": "Projeto ZAS",
+          "label": "Stand ZAS",
+          "size": "normal",
+          "category": "stands"
         }
       ]
     },
     "testimonials": {
       "tag": "Quienes ya trabajaron con nosotros",
-      "title": "Clientes que confían en Official Brasil.",
+      "title": "Clientes que confían en nosotros.",
       "items": [
         {
           "video": "assets/images/DEPIM MAQMUNDI.mp4",
-          "name": "Maqmunda",
+          "name": "MAQMUNDI",
           "role": "Socia Official Brasil"
         },
         {
           "video": "assets/images/MAQMU INST.mp4",
-          "name": "Maqmunda Instalación",
+          "name": "MAQMUNDI Instalación",
+          "role": "Caso de Éxito"
+        },
+        {
+          "video": "assets/images/ALBREC INST.mp4",
+          "name": "Albrecth",
+          "role": "Socia Official Brasil"
+        },
+        {
+          "video": "assets/images/DEPOI ALBRE.mp4",
+          "name": "Albrecth Testimonio",
+          "role": "Caso de Éxito"
+        },
+        {
+          "video": "assets/images/ELVI DEPOI.mp4",
+          "name": "Elvi Testimonio",
+          "role": "Socia Official Brasil"
+        },
+        {
+          "video": "assets/images/ELVI INST.mp4",
+          "name": "Elvi Cozinhas",
           "role": "Caso de Éxito"
         }
       ]
@@ -1548,15 +2184,15 @@
       "title": "¿Necesitas un presupuesto? Respondemos en 24h.",
       "intro": "Cuéntanos lo que necesitas. Nosotros hacemos el proyecto, el presupuesto y el montaje. Sin vueltas.",
       "officeAddress": "Guarulhos - SP",
-      "factoryAddress": "Arujá - SP",
+      "factoryAddress": "Poá/SP e Guarulhos/SP",
       "whatsapp": "5511934393753",
       "whatsappDisplay": "(+55 11) 93439-3753",
       "salesEmail": "vendas@officialbrasil.com.br",
       "supportEmail": "atendimento@officialbrasil.com.br"
     },
     "footer": {
-      "text": "Official Brasil desde 1998 · Guarulhos/SP · Arujá/SP · Brasil y América del Sur",
-      "contactLine": "vendas@officialbrasil.com.br | (+55 11) 93439-3753"
+      "text": "Official Brasil desde 1998 · Guarulhos/SP · Poá/SP · Brasil y América del Sur",
+      "contactLine": "atendimento@officialbrasil.com.br | (+55 11) 93439-3753"
     }
   }
 }

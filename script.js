@@ -20,17 +20,29 @@ function initApp() {
   initSmoothScroll();
   initScrollIndicator();
   initTestimonialsAutoplay();
+  initServiceVideos();
   initChat();
   initLightbox();
   initExitPopup();
+  initParallax();
+}
+
+// Utilitário debounce
+function debounce(fn, ms) {
+  let timer;
+  return function() {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn.apply(this, arguments), ms);
+  };
 }
 
 function initHeader() {
   const header = document.querySelector('.header');
   if (!header) return;
-  window.addEventListener('scroll', () => {
+  const onScroll = debounce(() => {
     header.classList.toggle('scrolled', window.scrollY > 50);
-  });
+  }, 10);
+  window.addEventListener('scroll', onScroll, { passive: true });
 }
 
 function initMobileMenu() {
@@ -66,14 +78,14 @@ function initReveal() {
         obs.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
   els.forEach(el => obs.observe(el));
 }
 
 function staggerChildren(container) {
-  const items = container.querySelectorAll('.service-card, .step-card, .bento-item, .testimonial-card, .feature-card');
+  const items = container.querySelectorAll('.service-card, .step-card, .step-glass, .bento-item, .testimonial-card, .feature-card');
   items.forEach((el, i) => {
-    const delay = el.classList.contains('service-card--featured') ? 0 : i * 0.1;
+    const delay = el.classList.contains('service-card--featured') ? 0 : i * 0.12;
     el.style.setProperty('--stagger-delay', `${delay}s`);
   });
 }
@@ -205,6 +217,23 @@ function initTestimonialsAutoplay() {
   }
 }
 
+function initServiceVideos() {
+  if (!('IntersectionObserver' in window)) return;
+  const videos = document.querySelectorAll('.service-card-visual video');
+  if (!videos.length) return;
+
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.play().catch(() => {});
+      } else {
+        entry.target.pause();
+      }
+    });
+  }, { threshold: 0.3 });
+  videos.forEach(v => obs.observe(v));
+}
+
 function initChat() {
   const chatToggle = document.getElementById('chat-toggle');
   const chatWindow = document.getElementById('chat-window');
@@ -244,6 +273,20 @@ function initChat() {
     if (show) chatMessages.scrollTop = chatMessages.scrollHeight;
   }
 
+  const welcomeMessages = [
+    'Olá! Bem-vindo à Official Brasil. Como posso ajudar seu evento?',
+    'Fala aí! Official Brasil na escuta. Me conta sobre seu evento!',
+    'Opa, tudo bem? Aqui é da Official. Como posso ajudar no seu evento?',
+  ];
+
+  function getRandomWelcome() {
+    return welcomeMessages[Math.floor(Math.random() * welcomeMessages.length)];
+  }
+
+  // Substitui a mensagem inicial por uma variavel
+  const firstMsg = chatMessages.querySelector('.chat-msg--bot .msg-content');
+  if (firstMsg) firstMsg.textContent = getRandomWelcome();
+
   function redirectToWhatsApp(msg) {
     const phone = '5511934393753';
     const text = encodeURIComponent(msg);
@@ -253,30 +296,30 @@ function initChat() {
   function botReply(userText) {
     const lower = userText.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
-    if (lower.includes('show') || lower.includes('palco') || lower.includes('ilumina')) {
+    if (lower.includes('show') || lower.includes('palco') || lower.includes('ilumina') || lower.includes('musica') || lower.includes('banda')) {
       return 'Fechou! Montamos palco, iluminacao, estrutura e tenda. Qual a data do evento?';
     }
-    if (lower.includes('projeto') || lower.includes('stand') || lower.includes('3d')) {
+    if (lower.includes('projeto') || lower.includes('stand') || lower.includes('3d') || lower.includes('render') || lower.includes('cenografia')) {
       return 'Projeto em 3 dias e alteracao em 1 dia util. E de graca se voce fechar a montagem com a gente. Quer solicitar?';
     }
-    if (lower.includes('feira') || lower.includes('evento') || lower.includes('congresso')) {
+    if (lower.includes('feira') || lower.includes('evento') || lower.includes('congresso') || lower.includes('exposicao')) {
       return 'Fazemos stands completos para feiras no Brasil todo. Me conta mais sobre o seu evento!';
     }
-    if (lower.includes('buffet') || lower.includes('comida') || lower.includes('coffee')) {
+    if (lower.includes('buffet') || lower.includes('comida') || lower.includes('coffee') || lower.includes('bebida') || lower.includes('garcom')) {
       return 'Temos buffet completo: finger food, menu personalizado, coffee break e staff. Corporativo ou festa?';
     }
-    if (lower.includes('mobiliario') || lower.includes('movel') || lower.includes('cadeira') || lower.includes('aluguel') || lower.includes('locacao')) {
+    if (lower.includes('mobiliario') || lower.includes('movel') || lower.includes('cadeira') || lower.includes('aluguel') || lower.includes('locacao') || lower.includes('sofa') || lower.includes('mesa')) {
       return 'Locamos mesas, cadeiras, sofa, frigobar, ar condicionado, lounge. Temos estoque pra tudo.';
     }
-    if (lower.includes('orcamento') || lower.includes('quero') || lower.includes('contratar')) {
+    if (lower.includes('orcamento') || lower.includes('quero') || lower.includes('contratar') || lower.includes('preco') || lower.includes('valor') || lower.includes('custo')) {
       return 'Bora! Qual o tipo de evento que voce precisa? A gente responde em ate 24h.';
     }
-    if (lower.includes('whatsapp') || lower.includes('telefone') || lower.includes('falar') || lower.includes('humano')) {
+    if (lower.includes('whatsapp') || lower.includes('telefone') || lower.includes('falar') || lower.includes('humano') || lower.includes('ligar') || lower.includes('consultor')) {
       const msg = 'Ola Lucas! Quero falar com um consultor da Official Brasil sobre meu evento.';
       redirectToWhatsApp(msg);
       return 'Vou te redirecionar pro WhatsApp agora!';
     }
-    if (lower.includes('obrigado') || lower.includes('valeu')) {
+    if (lower.includes('obrigado') || lower.includes('valeu') || lower.includes('obrigada')) {
       return 'Por nada! Se precisar, so chamar. Quer falar com a gente no WhatsApp?';
     }
 
@@ -284,6 +327,7 @@ function initChat() {
       'Pode me contar mais? Show, stand, buffet, mobiliario... o que voce precisa?',
       'Trabalhamos com 6 areas: Shows, Projetos, Feiras, Buffet, Mobiliario e Promocao. Qual te interessa?',
       'Pode deixar seu contato que o time comercial liga hoje ainda?',
+      'Nao entendi direito \u2014 pode explicar melhor? Show, feira, buffet... qual sua ideia?',
     ];
     return fallbacks[Math.floor(Math.random() * fallbacks.length)];
   }
@@ -538,6 +582,32 @@ function initDynamicWhatsApp() {
     const el = document.getElementById(s.id);
     if (el) obs.observe(el);
   });
+}
+
+/* PARALLAX — profundidade sutil no hero */
+function initParallax() {
+  const hero = document.querySelector('.hero--cinematic');
+  if (!hero) return;
+  const video = hero.querySelector('.hero-video-bg');
+  const content = hero.querySelector('.hero-content');
+  if (!video && !content) return;
+
+  window.addEventListener('scroll', () => {
+    requestAnimationFrame(() => {
+      const scrolled = window.scrollY;
+      const heroH = hero.offsetHeight;
+      if (scrolled < heroH) {
+        const p = Math.min(scrolled / heroH, 1);
+        if (video) {
+          video.style.transform = `translateZ(-50px) scale(${1.1 - p * 0.08})`;
+          video.style.opacity = 1 - p * 0.3;
+        }
+        if (content) {
+          content.style.transform = `translateY(${p * 20}px)`;
+        }
+      }
+    });
+  }, { passive: true });
 }
 
 initDynamicWhatsApp();

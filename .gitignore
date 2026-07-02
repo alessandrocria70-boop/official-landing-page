@@ -1,10 +1,15 @@
-# Exclude large video files
-*.mov
-*.mov.mov
-*.mp4
-*.MOV
-*.mp4.mp4
-*.mp4.MOV
-tunnel.txt
+# Dependencies and build
 node_modules/
 dist/
+
+# Sensitive files
+alessandrocria70@gmail.com
+tunnel.txt
+
+# Large raw video files (MOV) — not suitable for git
+*.mov
+*.mov.mov
+*.MOV
+
+# Local Netlify folder
+.netlify

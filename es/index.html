@@ -5,6 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Official Brasil | Arquitectura Promocional y Marketing</title>
     <meta name="description" content="Official Brasil: stands, ferias y eventos con estrategia, calidad e innovación desde 1998.">
+
+    <meta property="og:title" content="Official Brasil | Arquitectura Promocional y Marketing">
+    <meta property="og:description" content="Official Brasil: stands, ferias y eventos con estrategia, calidad e innovación desde 1998.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://officialbrasil.com.br/es/">
+    <meta property="og:image" content="https://officialbrasil.com.br/assets/images/stand1.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="alternate" hreflang="pt" href="https://officialbrasil.com.br/">
+    <link rel="alternate" hreflang="en" href="https://officialbrasil.com.br/en/">
+    <link rel="alternate" hreflang="es" href="https://officialbrasil.com.br/es/">
+    <link rel="alternate" hreflang="x-default" href="https://officialbrasil.com.br/">
+    <link rel="canonical" href="https://officialbrasil.com.br/es/">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Official Brasil",
+      "description": "Arquitectura promocional, escenografía, shows, stands y eventos corporativos.",
+      "foundingDate": "1998",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Guarulhos",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "telephone": "+5511934393753",
+      "email": "vendas@officialbrasil.com.br",
+      "url": "https://officialbrasil.com.br/es/",
+      "areaServed": ["BR", "AR", "UY"]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -40,7 +74,7 @@
                 <span class="lang-sep">|</span>
                 <a href="./" class="lang-link lang-link--active">ES</a>
             </div>
-            <a href="https://api.whatsapp.com/send?phone=5511934393753&text=Hola%2C+quiero+saber+sobre+Official+Brasil" class="header-cta" target="_blank" rel="noreferrer">Contáctanos</a>
+            <a href="https://api.whatsapp.com/send?phone=5511934393753&text=Hola%2C+quiero+saber+sobre+Official+Brasil" class="header-cta" target="_blank" rel="noreferrer">Contacto</a>
             <button class="hamburger" id="hamburger" aria-label="Menú">
                 <span></span>
                 <span></span>
@@ -51,27 +85,17 @@
 
     <main>
         <section class="hero hero--cinematic" id="home">
-            <div class="hero-bg-image" style="background-image: url('../assets/images/stand1.jpg');"></div>
-            <video class="hero-video-bg" autoplay muted loop playsinline poster="../assets/images/stand1.jpg">
+            <div class="hero-bg-image" data-content="hero-bg-image" style="background-image: url('../assets/images/stand1.jpg');"></div>
+            <video class="hero-video-bg" data-content="hero-bg-video" autoplay muted loop playsinline poster="../assets/images/stand1.jpg">
                 <source src="../assets/images/hitel.mp4" type="video/mp4">
             </video>
             <div class="hero-overlay"></div>
             <div class="hero-content reveal" style="--reveal-delay: 0s;">
-                <span class="overline">Official Brasil — Escenografía & Stands</span>
-                <h1 class="hero-title">La arquitectura escenográfica que proyecta el valor de tu marca.</h1>
-                <p class="hero-subtitle">Desde 1998 creamos escenografías inmersivas, stands monumentales y experiencias físicas memorables que atraen, retienen y cierran negocios extraordinarios.</p>
-                <div class="hero-buttons">
+                <span class="overline" data-content="hero-overline">Official Brasil — Escenografía & Stands</span>
+                <h1 class="hero-title" data-content="hero-title">La arquitectura escenográfica que proyecta el valor de tu marca.</h1>
+                <p class="hero-subtitle" data-content="hero-subtitle">Desde 1998 creamos escenografías inmersivas, stands monumentales y experiencias físicas memorables que atraen, retienen y cierran negocios extraordinarios.</p>
+                <div class="hero-buttons" data-content="hero-buttons">
                     <a href="#servicos" class="btn btn-primary">Ver Servicios</a>
-                    <a href="#como-funciona" class="btn btn-secondary">Cómo Trabajamos</a>
-                </div>
-                <div class="hero-stats">
-                    <div><strong class="stat-value" data-target="25">25+</strong><span>Años de Mercado</span></div>
-                    <div><strong class="stat-value" data-target="54">54K</strong><span>m² Montados</span></div>
-                    <div><strong class="stat-value" data-target="3">3</strong><span>Países Atendidos</span></div>
-                </div>
-                <div class="scroll-indicator" aria-hidden="true">
-                    <span class="scroll-text">Desplázate para conocer</span>
-                    <i class="fa-solid fa-chevron-down"></i>
                 </div>
             </div>
         </section>
@@ -81,34 +105,13 @@
 
         <section class="about reveal" id="sobre" style="--reveal-delay: 0.1s;">
             <div class="section-header">
-                <span class="section-tag">Quiénes Somos</span>
-                <h2>Más de 25 años transformando espacios en experiencias.</h2>
+                <span class="section-tag" data-content="about-tag">Quiénes Somos</span>
+                <h2 data-content="about-title">Más de 25 años transformando espacios en experiencias.</h2>
             </div>
             <div class="about-grid">
-                <div class="about-copy">
-                    <p>Fundada en <strong>1998</strong> por Emerson Perlagides, <strong>Official Brasil</strong> es referente nacional en arquitectura promocional, escenografía, shows, stands y eventos corporativos. Con sede comercial en <strong>Guarulhos-SP</strong> y planta de producción en <strong>Arujá-SP</strong>, atendemos proyectos en todo Brasil.</p>
-                    <p>Nuestro equipo ofrece soluciones completas:</p>
-                    <ul>
-                        <li>Shows — escenarios, iluminación, estructura y carpas.</li>
-                        <li>Proyectos personalizados en 3 días y cambios en 1 día hábil.</li>
-                        <li>Ferias, stands, escenografía y montaje de exposiciones.</li>
-                        <li>Catering, mobiliario, equipamiento y promoción de eventos.</li>
-                    </ul>
-                </div>
-                <div class="about-cards">
-                    <div class="feature-card">
-                        <h3>Fundada en 1998</h3>
-                        <p>Más de 25 años en el mercado con proyectos entregados en todo Brasil y el exterior.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>CEO Emerson Perlagides</h3>
-                        <p>Liderazgo con visión estratégica y compromiso con la excelencia en cada entrega.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Guarulhos-SP / Arujá-SP</h3>
-                        <p>Sede comercial en Guarulhos y planta de producción en Arujá — infraestructura completa para atender todo el país.</p>
-                    </div>
-                </div>
+                <div class="about-copy" data-content="about-copy"></div>
+                <div class="about-cards" data-content="about-cards"></div>
+                <div class="about-stats" data-content="about-stats"></div>
             </div>
         </section>
 
@@ -116,184 +119,33 @@
 
         <section class="services-section reveal" id="servicos" style="--reveal-delay: 0.12s;">
             <div class="section-header">
-                <span class="section-tag">Servicios</span>
-                <h2>Soluciones completas en escenografía, eventos y shows.</h2>
+                <span class="section-tag" data-content="services-tag">Servicios</span>
+                <h2 data-content="services-title">Soluciones completas en escenografía, eventos y shows.</h2>
             </div>
             <div class="services-intro">
-                <p class="services-subtitle">De la concepción a la ejecución — ofrecemos infraestructura total para que tu marca brille en cualquier evento.</p>
+                <p class="services-subtitle" data-content="services-subtitle">De la concepción a la ejecución — ofrecemos infraestructura total para que tu marca brille en cualquier evento.</p>
             </div>
-            <div class="services-grid">
-                <article class="service-card">
-                    <div class="service-card-visual service-card-visual--shows">
-                        <video autoplay muted loop playsinline poster="../assets/images/stand1.jpg">
-                            <source src="../assets/images/hitel.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="service-card-body">
-                        <span class="service-category"><i class="fa-solid fa-music"></i> Shows</span>
-                        <h3>Escenarios, Estructura e Iluminación</h3>
-                        <p>Montaje de escenarios profesionales, estructuras metálicas, iluminación escénica, vallas, camerinos, plataformas, carpas, baños químicos y containers. Todo para tu show o festival.</p>
-                        <div class="service-tags">
-                            <span class="service-tag">Escenarios</span>
-                            <span class="service-tag">Iluminación</span>
-                            <span class="service-tag">Estructuras</span>
-                            <span class="service-tag">Carpas</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="service-card service-card--featured">
-                    <div class="service-card-visual service-card-visual--projetos" style="background-image: url('../assets/images/RENDER0014.jpg'); background-size: cover; background-position: center;">
-                        <video autoplay muted loop playsinline poster="../assets/images/RENDER0014.jpg">
-                            <source src="../assets/images/stand-desematec.mp4.MOV" type="video/mp4">
-                        </video>
-                        <div class="service-badge">Destacado</div>
-                    </div>
-                    <div class="service-card-body">
-                        <span class="service-category"><i class="fa-solid fa-pen-ruler"></i> Proyectos Personalizados</span>
-                        <h3>Diseño Gráfico y Arquitectónico</h3>
-                        <p class="service-highlight">La única empresa que entrega proyectos en 3 días y revisiones en 1 día hábil. <strong>Diseños de stands GRATUITOS</strong> para contratos de montaje.</p>
-                        <div class="service-tags">
-                            <span class="service-tag">Diseño 3D</span>
-                            <span class="service-tag">Arquitectura</span>
-                            <span class="service-tag">Diseño</span>
-                            <span class="service-tag">Gratis</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="service-card">
-                    <div class="service-card-visual service-card-visual--feiras" style="background-image: url('../assets/images/STAND GCP CONCRETESHOW 2022.JPG'); background-size: cover; background-position: center;">
-                        <video autoplay muted loop playsinline poster="../assets/images/STAND GCP CONCRETESHOW 2022.JPG">
-                            <source src="../assets/images/florio.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="service-card-body">
-                        <span class="service-category"><i class="fa-solid fa-people-group"></i> Ferias y Eventos</span>
-                        <h3>Montaje de Stands y Escenografía</h3>
-                        <p>Montaje completo de stands, escenografía para ferias, showrooms corporativos, congresos, displays promocionales, quioscos de fábrica y exposiciones a gran escala.</p>
-                        <div class="service-tags">
-                            <span class="service-tag">Stands</span>
-                            <span class="service-tag">Ferias</span>
-                            <span class="service-tag">Congresos</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="service-card">
-                    <div class="service-card-visual service-card-visual--buffet" style="background-image: url('../assets/images/prato fnio 1.jpg'); background-size: cover; background-position: center;">
-                        <video autoplay muted loop playsinline poster="../assets/images/prato fnio 1.jpg">
-                            <source src="../assets/images/stand-expo.mp4.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="service-card-body">
-                        <span class="service-category"><i class="fa-solid fa-utensils"></i> Catering</span>
-                        <h3>Gastronomía y Coffee Break</h3>
-                        <p>Finger foods, menús personalizados, bebidas, coffee break completo y staff especializado para eventos corporativos, fiestas y recepciones de alto nivel.</p>
-                        <div class="service-tags">
-                            <span class="service-tag">Finger Food</span>
-                            <span class="service-tag">Bebidas</span>
-                            <span class="service-tag">Staff</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="service-card">
-                    <div class="service-card-visual service-card-visual--mobiliario" style="background-image: url('../assets/images/POLTRONA FK.jpg'); background-size: cover; background-position: center;">
-                        <video autoplay muted loop playsinline poster="../assets/images/POLTRONA FK.jpg">
-                            <source src="../assets/images/stand-mbl.mp4.MOV" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="service-card-body">
-                        <span class="service-category"><i class="fa-solid fa-couch"></i> Mobiliario y Equipos</span>
-                        <h3>Alquiler de Muebles y Electrodomésticos</h3>
-                        <p>Alquiler de mesas, sillas, sofás, sillones, minibares, aire acondicionado, bistrós, lounges y equipos de audio y video para eventos de todos los tamaños.</p>
-                        <div class="service-tags">
-                            <span class="service-tag">Muebles</span>
-                            <span class="service-tag">Aire Acondicionado</span>
-                            <span class="service-tag">Audio</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="service-card">
-                    <div class="service-card-visual service-card-visual--promocao" style="background-image: url('../assets/images/stand2.jpg'); background-size: cover; background-position: center;">
-                        <video autoplay muted loop playsinline poster="../assets/images/stand2.jpg">
-                            <source src="../assets/images/stand-periso.mp4.MOV" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="service-card-body">
-                        <span class="service-category"><i class="fa-solid fa-bullhorn"></i> Promoción de Eventos</span>
-                        <h3>Creación y Difusión Nacional</h3>
-                        <p>Creación y promoción de eventos en todo Brasil. Estrategias de comunicación presenciales y digitales para atraer público y generar resultados reales para tu marca.</p>
-                        <div class="service-tags">
-                            <span class="service-tag">Creatividad</span>
-                            <span class="service-tag">Difusión</span>
-                            <span class="service-tag">Nacional</span>
-                        </div>
-                    </div>
-                </article>
-            </div>
+            <div class="services-grid" data-content="services-grid"></div>
         </section>
 
         <div class="section-divider section-divider--steps"></div>
 
         <section class="steps reveal" id="como-funciona" style="--reveal-delay: 0.14s;">
             <div class="section-header">
-                <span class="section-tag">Cómo funciona</span>
-                <h2>Tres pasos para que tu evento salga perfecto.</h2>
+                <span class="section-tag" data-content="steps-tag">Cómo funciona</span>
+                <h2 data-content="steps-title">Tres pasos para que tu evento salga perfecto.</h2>
             </div>
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-number">01</div>
-                    <div class="step-glass">
-                        <div class="step-icon"><i class="fa-solid fa-ear-listen"></i></div>
-                        <h3>Nos cuentas lo que necesitas</h3>
-                        <p>Briefing rápido y sin burocracia. Entendemos tu evento, tu presupuesto y el resultado esperado.</p>
-                        <div class="step-result">
-                            <span class="step-label"><i class="fa-regular fa-circle-check"></i> Plazo: 24h para cotización</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="step-connector">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">02</div>
-                    <div class="step-glass">
-                        <div class="step-icon"><i class="fa-solid fa-pen-fancy"></i></div>
-                        <h3>Diseñamos y ajustamos</h3>
-                        <p>Creamos el layout, elegimos materiales y validamos cada detalle contigo hasta que esté perfecto.</p>
-                        <div class="step-result">
-                            <span class="step-label"><i class="fa-regular fa-circle-check"></i> Plazo: 48h para vista 3D</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="step-connector">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">03</div>
-                    <div class="step-glass">
-                        <div class="step-icon"><i class="fa-solid fa-thumbs-up"></i></div>
-                        <h3>Entregamos y activamos</h3>
-                        <p>Montaje a tiempo, soporte durante el evento y desmontaje. Solo necesitas llegar y vender.</p>
-                        <div class="step-result">
-                            <span class="step-label"><i class="fa-regular fa-circle-check"></i> Plazo: 100% en lo acordado</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="steps-grid" data-content="steps-grid"></div>
         </section>
 
         <div class="section-divider section-divider--gallery"></div>
 
         <section class="gallery-cta reveal" id="galeria" style="--reveal-delay: 0.16s;">
             <div class="gallery-cta-content">
-                <span class="section-tag">Galería de Proyectos</span>
-                <h2>Conoce nuestros stands, ferias y escenografías.</h2>
-                <p class="gallery-cta-text">Cada proyecto cuenta una historia. Mira de cerca los trabajos que realizamos para marcas que confían en Official Brasil.</p>
-                <a href="galeria.html" class="btn btn-primary">Ver Portafolio Completo de Stands</a>
+                <span class="section-tag" data-content="gallery-cta-tag">Galería de Proyectos</span>
+                <h2 data-content="gallery-cta-title">Conoce nuestros stands, ferias y escenografías.</h2>
+                <p class="gallery-cta-text" data-content="gallery-cta-text">Cada proyecto cuenta una historia. Mira de cerca los trabajos que realizamos para marcas que confían en Official Brasil.</p>
+                <a href="galeria.html" class="btn btn-primary" data-content="gallery-cta-button">Ver Portafolio Completo de Stands</a>
             </div>
         </section>
 
@@ -301,101 +153,37 @@
 
         <section class="testimonials reveal" id="depoimentos" style="--reveal-delay: 0.17s;">
             <div class="section-header">
-                <span class="section-tag">Testimonios de Éxito</span>
-                <h2>Quienes confían en Official Brasil.</h2>
+                <span class="section-tag" data-content="testimonials-tag">Testimonios de Éxito</span>
+                <h2 data-content="testimonials-title">Quienes confían en Official Brasil.</h2>
             </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-video-wrapper">
-                        <video class="testimonial-video" controls playsinline preload="metadata">
-                            <source src="../assets/images/DEPIM MAQMUNDI.mov.mov" type="video/quicktime">
-                        </video>
-                    </div>
-                    <div class="testimonial-body">
-                        <span class="testimonial-name">Maqmunda</span>
-                        <span class="testimonial-role">Socio de Official Brasil</span>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-video-wrapper">
-                        <video class="testimonial-video" controls playsinline preload="metadata">
-                            <source src="../assets/images/DEPO DESEM.mov.mov" type="video/quicktime">
-                        </video>
-                    </div>
-                    <div class="testimonial-body">
-                        <span class="testimonial-name">Desematec</span>
-                        <span class="testimonial-role">Socio de Official Brasil</span>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-video-wrapper">
-                        <video class="testimonial-video" controls playsinline preload="metadata">
-                            <source src="../assets/images/MAQMU INST.mov.mov" type="video/quicktime">
-                        </video>
-                    </div>
-                    <div class="testimonial-body">
-                        <span class="testimonial-name">Instalación Maqmunda</span>
-                        <span class="testimonial-role">Caso de Éxito</span>
-                    </div>
-                </div>
-            </div>
+            <div class="testimonials-grid" data-content="testimonials-grid"></div>
         </section>
 
         <div class="section-divider section-divider--partners"></div>
 
         <section class="partners reveal" id="parceiros" style="--reveal-delay: 0.18s;">
             <div class="section-header">
-                <span class="section-tag">Nuestros Socios</span>
-                <h2>Empresas que confían en Official Brasil.</h2>
+                <span class="section-tag" data-content="partners-tag">Nuestros Socios</span>
+                <h2 data-content="partners-title">Empresas que confían en Official Brasil.</h2>
             </div>
             <div class="partners-carousel">
-                <div class="partners-track">
-                    <div class="partner-logo"><img src="../assets/clients/maq.png" alt="Maqmundi" loading="lazy"></div>
-                    <div class="partner-logo"><img src="../assets/clients/desema.png" alt="Desematec" loading="lazy"></div>
-                    <div class="partner-logo"><img src="../assets/clients/ambfle.png" alt="Ambflex" loading="lazy"></div>
-                    <div class="partner-logo"><img src="../assets/clients/mene.png" alt="Mene" loading="lazy"></div>
-                    <div class="partner-logo"><img src="../assets/clients/hit.png" alt="Hit" loading="lazy"></div>
-                    <div class="partner-logo"><img src="../assets/clients/albrecth.png" alt="Albrecth" loading="lazy"></div>
-                    <div class="partner-logo"><img src="../assets/images/LOGO NOVO.png" alt="Logo Novo" loading="lazy"></div>
-                    <div class="partner-logo"><img src="../assets/images/logo horizontal png branco.png" alt="Logo Official" loading="lazy"></div>
-                    <div class="partner-logo"><img src="../assets/images/logo alb.jpg" alt="Logo Alb" loading="lazy"></div>
-                    <div class="partner-logo"><img src="../assets/images/nuclep.jpg" alt="Nuclep" loading="lazy"></div>
-                    <div class="partner-logo"><img src="../assets/images/LEISTUNG1.jpg" alt="Leistung" loading="lazy"></div>
-                    <div class="partner-logo"><img src="../assets/images/REALLI.jpg" alt="Realli" loading="lazy"></div>
-                    <div class="partner-logo"><img src="../assets/clients/maq.png" alt="Maqmundi" loading="lazy"></div>
-                    <div class="partner-logo"><img src="../assets/clients/desema.png" alt="Desematec" loading="lazy"></div>
-                    <div class="partner-logo"><img src="../assets/clients/ambfle.png" alt="Ambflex" loading="lazy"></div>
-                    <div class="partner-logo"><img src="../assets/clients/mene.png" alt="Mene" loading="lazy"></div>
-                    <div class="partner-logo"><img src="../assets/clients/hit.png" alt="Hit" loading="lazy"></div>
-                    <div class="partner-logo"><img src="../assets/clients/albrecth.png" alt="Albrecth" loading="lazy"></div>
-                    <div class="partner-logo"><img src="../assets/images/LOGO NOVO.png" alt="Logo Novo" loading="lazy"></div>
-                    <div class="partner-logo"><img src="../assets/images/logo horizontal png branco.png" alt="Logo Official" loading="lazy"></div>
-                    <div class="partner-logo"><img src="../assets/images/logo alb.jpg" alt="Logo Alb" loading="lazy"></div>
-                    <div class="partner-logo"><img src="../assets/images/nuclep.jpg" alt="Nuclep" loading="lazy"></div>
-                    <div class="partner-logo"><img src="../assets/images/LEISTUNG1.jpg" alt="Leistung" loading="lazy"></div>
-                    <div class="partner-logo"><img src="../assets/images/REALLI.jpg" alt="Realli" loading="lazy"></div>
-                </div>
+                <div class="partners-track" data-content="partners-track"></div>
             </div>
         </section>
 
         <section class="contact reveal" id="contato" style="--reveal-delay: 0.2s;">
             <div class="section-header">
-                <span class="section-tag">Contacto</span>
-                <h2>Vamos a crear tu próximo gran evento.</h2>
+                <span class="section-tag" data-content="contact-tag">Contacto</span>
+                <h2 data-content="contact-title">Vamos a crear tu próximo gran evento.</h2>
             </div>
             <div class="contact-grid">
                 <div class="contact-copy">
-                    <p>Solicita una cotización sin compromiso. Nuestro equipo responde en hasta 24 horas con una propuesta personalizada.</p>
-                    <p><strong>CEO:</strong> Emerson Perlagides</p>
-                    <p><strong>Sede Comercial:</strong> Guarulhos - SP</p>
-                    <p><strong>Planta de Producción:</strong> Arujá - SP</p>
-                    <p><strong>WhatsApp:</strong> (+55 11) 93439-3753</p>
-                    <p><strong>Correo:</strong> vendas@officialbrasil.com.br</p>
-                    <p><strong>Atención:</strong> atendimento@officialbrasil.com.br</p>
+                    <p data-content="contact-intro">Solicita una cotización sin compromiso. Nuestro equipo responde en hasta 24 horas con una propuesta personalizada.</p>
+                    <div data-content="contact-details"></div>
                 </div>
                 <div class="contact-actions">
-                    <a href="https://api.whatsapp.com/send?phone=5511934393753&text=Hola%20Official%20Brasil%2C%20quiero%20una%20propuesta%20para%20mi%20evento" target="_blank" rel="noreferrer" class="btn btn-primary">Hablar por WhatsApp</a>
-                    <a href="mailto:vendas@officialbrasil.com.br" class="btn btn-secondary">Enviar correo</a>
+                    <a href="https://api.whatsapp.com/send?phone=5511934393753&text=Hola%20Official%20Brasil%2C%20quiero%20una%20propuesta%20para%20mi%20evento" target="_blank" rel="noreferrer" class="btn btn-primary" data-content="contact-whatsapp-btn">Hablar por WhatsApp</a>
+                    <a href="mailto:vendas@officialbrasil.com.br" class="btn btn-secondary" data-content="contact-email-btn">Enviar correo</a>
                 </div>
             </div>
         </section>
@@ -403,9 +191,9 @@
 
     <footer class="footer reveal" style="--reveal-delay: 0.22s;">
         <div class="footer-logo">
-            <img src="../assets/images/logo horizontal png branco.png" alt="Official Brasil">
+            <img src="../assets/images/logo horizontal png branco.png" alt="Official Brasil" loading="lazy">
         </div>
-        <p>© 2026 Official Brasil — Escenografía, Shows, Stands y Eventos.<br>vendas@officialbrasil.com.br | (+55 11) 93439-3753</p>
+        <p data-content="footer-text">© 2026 Official Brasil — Escenografía, Shows, Stands y Eventos.<br>vendas@officialbrasil.com.br | (+55 11) 93439-3753</p>
     </footer>
 
     <div class="lightbox">
@@ -451,12 +239,13 @@
                 <button class="quick-btn" data-msg="Quiero alquilar mobiliario">Mobiliario</button>
             </div>
             <form id="chat-form" class="chat-form">
-                <input id="chat-input" type="text" placeholder="Escribe tu mensaje..." autocomplete="off">
-                <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                <input id="chat-input" type="text" placeholder="Escribe tu mensaje..." autocomplete="off" aria-label="Mensaje del chat">
+                <button type="submit" aria-label="Enviar mensaje"><i class="fa-solid fa-paper-plane"></i></button>
             </form>
         </div>
     </div>
 
+    <script type="module" src="/content-loader.js"></script>
     <script type="module" src="../script.js"></script>
 </body>
 </html>

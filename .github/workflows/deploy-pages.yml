@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - redesign-v1
   workflow_dispatch:
 
 permissions:
@@ -16,15 +17,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Prepare publish directory
-        run: |
-          mkdir publish
-          cp index.html galeria.html script.js style.css publish/
-          cp -R assets en es publish/
-          touch publish/.nojekyll
-      - name: Upload site artifact
-        uses: actions/upload-pages-artifact@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          path: publish
+          node-version: 20
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Build with Vite
+        run: npm run build
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
