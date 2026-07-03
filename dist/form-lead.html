@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Orçamento | Official Brasil</title>
+    <meta name="description" content="Solicite um orçamento personalizado para stands, feiras, shows e eventos corporativos.">
+
+    <meta property="og:title" content="Solicitar Orçamento | Official Brasil">
+    <meta property="og:description" content="Solicite um orçamento personalizado para stands, feiras, shows e eventos.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://officialbrasil.com.br/form-lead.html">
+    <meta property="og:image" content="https://officialbrasil.com.br/assets/images/stand1.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .form-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 6rem 2rem;
+            background: var(--bg-primary, #0a0a0a);
+        }
+        .form-container {
+            width: 100%;
+            max-width: 600px;
+            background: var(--bg-card, #111);
+            border: 1px solid var(--border-subtle, #222);
+            border-radius: 1.5rem;
+            padding: 3rem;
+        }
+        .form-container h1 {
+            font-family: var(--font-heading, 'Cinzel', serif);
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary, #fff);
+        }
+        .form-container p {
+            color: var(--text-muted, #999);
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 0.35rem;
+            color: var(--text-secondary, #ccc);
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background: var(--bg-primary, #0a0a0a);
+            border: 1px solid var(--border-subtle, #333);
+            border-radius: 0.5rem;
+            color: var(--text-primary, #fff);
+            font-size: 0.95rem;
+            font-family: inherit;
+            transition: border-color 0.2s;
+            box-sizing: border-box;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent, #c9a84c);
+        }
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        .form-group select option {
+            background: #111;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .form-submit {
+            width: 100%;
+            padding: 0.85rem;
+            background: var(--accent, #c9a84c);
+            color: #000;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.2s;
+            font-family: inherit;
+        }
+        .form-submit:hover {
+            opacity: 0.9;
+        }
+        .form-submit:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 3rem 0;
+        }
+        .form-success i {
+            font-size: 3rem;
+            color: #22c55e;
+            margin-bottom: 1rem;
+        }
+        .form-success h2 {
+            font-family: var(--font-heading, 'Cinzel', serif);
+            color: var(--text-primary, #fff);
+        }
+        .form-success p {
+            color: var(--text-muted, #999);
+        }
+        .form-footer {
+            margin-top: 1.5rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted, #666);
+        }
+        .form-footer a {
+            color: var(--accent, #c9a84c);
+            text-decoration: none;
+        }
+        .form-error {
+            color: #ef4444;
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+        @media (max-width: 640px) {
+            .form-container { padding: 1.5rem; }
+            .form-row { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <main class="form-page">
+        <div class="form-container">
+            <div id="form-wrapper">
+                <h1>Solicitar Orçamento</h1>
+                <p>Preencha os dados abaixo e nossa equipe retorna em até 24 horas com uma proposta personalizada.</p>
+
+                <form id="lead-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nome">Nome *</label>
+                            <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+                        </div>
+                        <div class="form-group">
+                            <label for="empresa">Empresa</label>
+                            <input type="text" id="empresa" name="empresa" placeholder="Nome da empresa">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone">Telefone / WhatsApp *</label>
+                            <input type="tel" id="telefone" name="telefone" required placeholder="(11) 99999-9999">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="servico">Tipo de Serviço *</label>
+                        <select id="servico" name="servico" required>
+                            <option value="">Selecione...</option>
+                            <option value="Shows">Shows (palcos, iluminação, estrutura)</option>
+                            <option value="Stands">Stands para Feiras e Eventos</option>
+                            <option value="Projetos">Projetos Arquitetônicos Personalizados</option>
+                            <option value="Buffet">Buffet / Coffee Break</option>
+                            <option value="Mobiliario">Locação de Mobiliário e Equipamentos</option>
+                            <option value="Promocao">Promoção e Divulgação de Eventos</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensagem">Detalhes do Projeto</label>
+                        <textarea id="mensagem" name="mensagem" placeholder="Descreva seu evento, data prevista, local e necessidades específicas..."></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit" id="form-submit-btn">
+                        Enviar Solicitação
+                    </button>
+
+                    <div class="form-footer">
+                        Ou fale direto pelo <a href="https://api.whatsapp.com/send?phone=5511934393753&text=Ol%C3%A1%20Official%20Brasil%2C%20quero%20um%20or%C3%A7amento" target="_blank" rel="noreferrer">WhatsApp</a>
+                    </div>
+                </form>
+            </div>
+
+            <div class="form-success" id="form-success">
+                <i class="fa-regular fa-circle-check"></i>
+                <h2>Recebemos sua solicitação!</h2>
+                <p>Nossa equipe entrará em contato em até 24 horas com uma proposta personalizada.</p>
+                <p style="margin-top: 1.5rem;">
+                    <a href="index.html" class="btn btn-primary">Voltar ao site</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const form = document.getElementById('lead-form');
+        const wrapper = document.getElementById('form-wrapper');
+        const success = document.getElementById('form-success');
+        const btn = document.getElementById('form-submit-btn');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            btn.disabled = true;
+            btn.textContent = 'Enviando...';
+
+            try {
+                const resp = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (resp.ok) {
+                    wrapper.style.display = 'none';
+                    success.style.display = 'block';
+                } else {
+                    alert('Erro ao enviar. Tente novamente ou fale conosco pelo WhatsApp.');
+                }
+            } catch {
+                alert('Erro de conexão. Tente novamente ou fale conosco pelo WhatsApp.');
+            } finally {
+                btn.disabled = false;
+                btn.textContent = 'Enviar Solicitação';
+            }
+        });
+
+        document.getElementById('telefone').addEventListener('input', function () {
+            let v = this.value.replace(/\D/g, '');
+            if (v.length <= 2) { this.value = '(' + v; }
+            else if (v.length <= 7) { this.value = '(' + v.slice(0,2) + ') ' + v.slice(2); }
+            else { this.value = '(' + v.slice(0,2) + ') ' + v.slice(2,7) + '-' + v.slice(7,11); }
+        });
+    </script>
+</body>
+</html>

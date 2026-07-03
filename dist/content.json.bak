@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "title": "Official Brasil | Arquitetura Promocional e Marketing",
+    "description": "Official Brasil: stands, feiras e eventos com estratégia, qualidade e inovação desde 1998."
+  },
+  "hero": {
+    "overline": "Official Brasil — Cenografia & Stands",
+    "title": "A arquitetura cenográfica que projeta o valor da sua marca.",
+    "subtitle": "Desde 1998, criamos cenografias imersivas, stands monumentais e experiências físicas memoráveis que atraem, retêm e fecham negócios extraordinários.",
+    "bgImage": "assets/images/stand1.jpg",
+    "bgVideo": "assets/images/hitel.mp4",
+    "buttons": [
+      { "label": "Ver Serviços", "href": "#servicos", "style": "primary" },
+      { "label": "Como Trabalhamos", "href": "#como-funciona", "style": "secondary" }
+    ],
+    "stats": [
+      { "target": 25, "suffix": "+", "label": "Anos de Mercado" },
+      { "target": 54, "suffix": "K", "label": "m² Montados" },
+      { "target": 3, "suffix": "", "label": "Países Atendidos" }
+    ]
+  },
+  "about": {
+    "tag": "Sobre Nós",
+    "title": "Mais de 25 anos transformando espaços em experiências.",
+    "paragraphs": [
+      "Fundada em <strong>1998</strong> por Emerson Perlagides, a <strong>Official Brasil</strong> é referência nacional em arquitetura promocional, cenografia, shows, stands e eventos corporativos. Com sede comercial em <strong>Guarulhos-SP</strong> e espaço fabril em <strong>Arujá-SP</strong>, atendemos projetos em todo o Brasil.",
+      "Nossa equipe entrega soluções completas:"
+    ],
+    "bullets": [
+      "Shows — palcos, iluminação, estrutura e tendas.",
+      "Projetos personalizados em 3 dias e alterações em 1 dia útil.",
+      "Feiras, stands, cenografia e montagem de exposições.",
+      "Buffet, mobiliário, equipamentos e promoção de eventos."
+    ],
+    "cards": [
+      { "title": "Fundada em 1998", "text": "Mais de 25 anos de mercado com projetos entregues em todo o Brasil e exterior." },
+      { "title": "CEO Emerson Perlagides", "text": "Liderança com visão estratégica e compromisso com a excelência em cada entrega." },
+      { "title": "Guarulhos-SP / Arujá-SP", "text": "Sede comercial em Guarulhos e espaço fabril em Arujá — estrutura completa para atender todo o país." }
+    ]
+  },
+  "services": {
+    "tag": "Serviços",
+    "title": "Soluções completas em cenografia, eventos e shows.",
+    "subtitle": "Da concepção à execução — oferecemos infraestrutura total para sua marca brilhar em qualquer evento.",
+    "items": [
+      {
+        "category": "Shows", "icon": "fa-solid fa-music",
+        "title": "Palcos, Estrutura & Iluminação",
+        "text": "Montagem de palcos profissionais, estruturas metálicas, iluminação cênica, grades de proteção, bastidores, praticáveis, tendas, banheiros químicos e containers. Tudo para seu show ou festival.",
+        "tags": ["Palcos", "Iluminação", "Estruturas", "Tendas"],
+        "poster": "assets/images/stand1.jpg", "video": "assets/images/hitel.mp4",
+        "featured": false, "badge": null, "highlight": null
+      },
+      {
+        "category": "Projetos e Personalizados", "icon": "fa-solid fa-pen-ruler",
+        "title": "Projetos Gráficos & Arquitetônicos",
+        "text": null,
+        "tags": ["Projeto 3D", "Arquitetura", "Design", "Gratuito"],
+        "poster": "assets/images/RENDER0014.jpg", "video": "assets/images/stand-desematec.mp4",
+        "featured": true, "badge": "Destaque",
+        "highlight": "Única empresa a entregar projetos em 3 dias e alterações em 1 dia útil. <strong>Projetos de Stands GRATUITOS</strong> para contratos de montagem."
+      },
+      {
+        "category": "Feiras e Eventos", "icon": "fa-solid fa-people-group",
+        "title": "Montagem de Stands & Cenários",
+        "text": "Montagem completa de stands, cenários para feiras, showrooms corporativos, congressos, displays promocionais, quiosques de fábrica e exposições de grande porte.",
+        "tags": ["Stands", "Feiras", "Congressos"],
+        "poster": "assets/images/STAND GCP CONCRETESHOW 2022.JPG", "video": "assets/images/florio.mp4",
+        "featured": false, "badge": null, "highlight": null
+      },
+      {
+        "category": "Buffet", "icon": "fa-solid fa-utensils",
+        "title": "Gastronomia & Coffee Break",
+        "text": "Finger Foods, menus personalizados, bebidas, coffee break completo e staff especializado para eventos corporativos, festas e recepções de alto padrão.",
+        "tags": ["Finger Food", "Bebidas", "Staff"],
+        "poster": "assets/images/prato fnio 1.jpg", "video": "assets/images/stand-expo.mp4",
+        "featured": false, "badge": null, "highlight": null
+      },
+      {
+        "category": "Mobiliários e Equipamentos", "icon": "fa-solid fa-couch",
+        "title": "Locação de Móveis & Eletro",
+        "text": "Locação de mesas, cadeiras, sofás, poltronas, frigobar, ar condicionado, bistrôs, lounges e equipamentos de áudio e vídeo para eventos de todos os portes.",
+        "tags": ["Móveis", "Ar Condicionado", "Áudio"],
+        "poster": "assets/images/POLTRONA FK.jpg", "video": "assets/images/stand-mbl.mp4",
+        "featured": false, "badge": null, "highlight": null
+      },
+      {
+        "category": "Promoção de Eventos", "icon": "fa-solid fa-bullhorn",
+        "title": "Criação & Divulgação Nacional",
+        "text": "Criação e promoção de eventos em todo o Brasil. Estratégias de divulgação, marketing presencial e digital para atrair público e gerar resultados reais para sua marca.",
+        "tags": ["Criação", "Divulgação", "Nacional"],
+        "poster": "assets/images/stand2.jpg", "video": "assets/images/stand-periso.mp4",
+        "featured": false, "badge": null, "highlight": null
+      }
+    ]
+  },
+  "steps": {
+    "tag": "Como funciona",
+    "title": "Três passos para o seu evento dar certo.",
+    "items": [
+      { "number": "01", "icon": "fa-solid fa-ear-listen", "title": "Você conta o que precisa", "text": "Briefing rápido e sem burocracia. Entendemos seu evento, seu orçamento e o resultado que espera.", "result": "Prazo: 24h para orçamento" },
+      { "number": "02", "icon": "fa-solid fa-pen-fancy", "title": "Projetamos e ajustamos", "text": "Criamos o layout, escolhemos materiais e validamos cada detalhe com você até estar perfeito.", "result": "Prazo: 48h para prévia 3D" },
+      { "number": "03", "icon": "fa-solid fa-thumbs-up", "title": "Entregamos e ativamos", "text": "Montagem no prazo, suporte durante o evento e desmontagem. Você só precisa aparecer e vender.", "result": "Prazo: 100% no combinado" }
+    ]
+  },
+  "galleryCta": {
+    "tag": "Galeria de Projetos",
+    "title": "Conheça nossos stands, feiras e cenografias.",
+    "text": "Cada projeto conta uma história. Veja de perto os trabalhos que realizamos para marcas que confiam na Official Brasil.",
+    "buttonLabel": "Ver Portfólio Completo de Stands",
+    "buttonHref": "galeria.html"
+  },
+  "gallery": {
+    "pageTitle": "Galeria de Projetos",
+    "pageSubtitle": "Cada stand, feira e cenografia que construímos conta a história de uma marca que confia na Official Brasil.",
+    "tag": "Nossos Trabalhos",
+    "title": "Projetos reais em stands, feiras e cenografia.",
+    "items": [
+      { "image": "assets/images/stand1.jpg", "alt": "Stand GCP Concrete Show", "label": "Concrete Show 2022", "size": "wide" },
+      { "image": "assets/images/stand2.jpg", "alt": "Stand GCP", "label": "GCP", "size": "tall" },
+      { "image": "assets/images/stand3.jpg", "alt": "Moerman Higiexpo", "label": "Moerman Higiexpo", "size": "normal" },
+      { "image": "assets/images/stand4.jpg", "alt": "Refrinox Fipan", "label": "Refrinox Fipan", "size": "normal" },
+      { "image": "assets/images/RENDER0014.jpg", "alt": "Render Projeto", "label": "Projeto Arquitetônico", "size": "wide" },
+      { "image": "assets/images/stand5.jpg", "alt": "Stand Oficial", "label": "Stand Official", "size": "normal" },
+      { "image": "assets/images/stand6.jpg", "alt": "Evento Corporativo", "label": "Evento Corporativo", "size": "normal" },
+      { "image": "assets/images/STAND GCP CONCRETESHOW 2022.JPG", "alt": "Stand GCP Concrete Show", "label": "GCP Concrete Show", "size": "tall" },
+      { "image": "assets/images/stand7.jpg", "alt": "Stand Design", "label": "Design de Stand", "size": "normal" },
+      { "image": "assets/images/stand8.jpg", "alt": "Feira", "label": "Feiras e Exposições", "size": "normal" },
+      { "image": "assets/images/REFRINOXS FIPAN 20221.JPG", "alt": "Refrinox Fipan", "label": "Refrinox Fipan", "size": "wide" },
+      { "image": "assets/images/STAND MOERMAN HIGIEXPO 2022.JPG", "alt": "Moerman Higiexpo", "label": "Moerman Higiexpo", "size": "normal" },
+      { "image": "assets/images/REFRINOX FIPAN 2022..JPG", "alt": "Refrinox Fipan 2022", "label": "Refrinox 2022", "size": "normal" },
+      { "image": "assets/images/RENDER0000.jpg", "alt": "Render 3D", "label": "Render 3D", "size": "normal" },
+      { "image": "assets/images/RENDER0001.jpg", "alt": "Render Projeto", "label": "Projeto Render", "size": "normal" },
+      { "image": "assets/images/RENDER0016.jpg", "alt": "Render Detalhado", "label": "Render Detalhado", "size": "tall" },
+      { "image": "assets/images/RENDER0019.jpg", "alt": "Render Fachada", "label": "Render Fachada", "size": "normal" },
+      { "image": "assets/images/DIGIS 0204.JPG", "alt": "DIGIS Evento", "label": "DIGIS Evento", "size": "normal" },
+      { "image": "assets/images/DIGIS 0205.JPG", "alt": "DIGIS Exposição", "label": "DIGIS Exposição", "size": "wide" },
+      { "image": "assets/images/DIGIS 0208.JPG", "alt": "DIGIS Stand", "label": "DIGIS Stand", "size": "normal" },
+      { "image": "assets/images/DIGIS 0449.JPG", "alt": "DIGIS Corporativo", "label": "DIGIS Corporativo", "size": "normal" },
+      { "image": "assets/images/DIGIS 0451.JPG", "alt": "DIGIS Montagem", "label": "DIGIS Montagem", "size": "normal" },
+      { "image": "assets/images/DIGIS 0452.JPG", "alt": "DIGIS Finalização", "label": "DIGIS Finalização", "size": "tall" },
+      { "image": "assets/images/UNIFILA.jpg", "alt": "Unifila", "label": "Unifila", "size": "normal" },
+      { "image": "assets/images/RIOLAX.jpg", "alt": "Riolax", "label": "Riolax", "size": "normal" },
+      { "image": "assets/images/RIOLAX1.jpg", "alt": "Riolax Detalhe", "label": "Riolax Detalhe", "size": "wide" }
+    ]
+  },
+  "testimonials": {
+    "tag": "Depoimentos de Sucesso",
+    "title": "Quem confia na Official Brasil.",
+    "items": [
+      { "video": "assets/images/DEPIM MAQMUNDI.mp4", "name": "Maqmunda", "role": "Parceira Official Brasil" },
+      { "video": "assets/images/DEPO DESEM.mp4", "name": "Desematec", "role": "Parceira Official Brasil" },
+      { "video": "assets/images/MAQMU INST.mp4", "name": "Maqmunda Instalação", "role": "Case de Sucesso" }
+    ]
+  },
+  "partners": {
+    "tag": "Nossos Parceiros",
+    "title": "Empresas que confiam na Official Brasil.",
+    "items": [
+      { "logo": "assets/clients/maq.png", "alt": "Maqmundi" },
+      { "logo": "assets/clients/desema.png", "alt": "Desematec" },
+      { "logo": "assets/clients/ambfle.png", "alt": "Ambflex" },
+      { "logo": "assets/clients/mene.png", "alt": "Mene" },
+      { "logo": "assets/clients/hit.png", "alt": "Hit" },
+      { "logo": "assets/clients/albrecth.png", "alt": "Albrecth" }
+    ]
+  },
+  "contact": {
+    "tag": "Contato",
+    "title": "Vamos criar o seu próximo grande evento.",
+    "intro": "Solicite um orçamento sem compromisso. Nossa equipe retorna em até 24 horas com uma proposta personalizada.",
+    "ceo": "Emerson Perlagides",
+    "officeAddress": "Guarulhos - SP",
+    "factoryAddress": "Arujá - SP",
+    "whatsapp": "5511934393753",
+    "whatsappDisplay": "(+55 11) 93439-3753",
+    "salesEmail": "vendas@officialbrasil.com.br",
+    "supportEmail": "atendimento@officialbrasil.com.br"
+  },
+  "footer": {
+    "text": "© 2026 Official Brasil — Cenografia, Shows, Stands e Eventos.",
+    "contactLine": "vendas@officialbrasil.com.br | (+55 11) 93439-3753"
+  }
+}
