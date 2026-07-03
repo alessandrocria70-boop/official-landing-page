@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 
 export default defineConfig({
-  base: '/',
+  base: '/official-landing-page/',
   server: {
     allowedHosts: ['.loca.lt'],
   },
