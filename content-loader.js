@@ -1,4 +1,14 @@
-const CONTENT_PATH = '/content.json';
+// Detecta caminho base dinâmico para funcionar no GitHub Pages
+function getContentPath() {
+  const parts = window.location.pathname.split('/').filter(Boolean);
+  // Se estiver em subdiretório de idioma (en/, es/), sobe um nível
+  if (parts.length >= 2 && ['en', 'es'].includes(parts[parts.length - 1])) {
+    return '../content.json';
+  }
+  return 'content.json';
+}
+
+const CONTENT_PATH = getContentPath();
 
 function detectLanguage() {
   const path = window.location.pathname;
