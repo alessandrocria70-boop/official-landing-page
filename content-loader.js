@@ -11,6 +11,14 @@ function getContentPath() {
 
 const CONTENT_PATH = getContentPath();
 
+// Resolve caminhos de assets considerando o idioma da página
+// Se estiver em /en/ ou /es/, adiciona ../ na frente para voltar à raiz
+function assetPath(p) {
+  if (!p || p.startsWith('http://') || p.startsWith('https://') || p.startsWith('/')) return p;
+  const lang = detectLanguage();
+  return (lang !== 'pt' ? '../' : '') + p;
+}
+
 function detectLanguage() {
   const path = window.location.pathname;
   if (path.startsWith('/en/')) return 'en';
@@ -46,13 +54,13 @@ function renderHero(data) {
   if (sub) sub.textContent = h.subtitle;
 
   const bg = el('hero-bg-image');
-  if (bg) bg.style.backgroundImage = `url('${h.bgImage}')`;
+  if (bg) bg.style.backgroundImage = `url('${assetPath(h.bgImage)}')`;
 
   const vs = el('hero-bg-video source');
-  if (vs) { vs.src = h.bgVideo; }
+  if (vs) { vs.src = assetPath(h.bgVideo); }
 
   const v = el('hero-bg-video');
-  if (v) { v.setAttribute('poster', h.bgImage); v.load(); }
+  if (v) { v.setAttribute('poster', assetPath(h.bgImage)); v.load(); }
 
   const btns = el('hero-buttons');
   if (btns && Array.isArray(h.buttons)) {
@@ -120,7 +128,7 @@ function renderServices(data) {
       const badge = item.badge ? `<div class="service-badge">${item.badge}</div>` : '';
       const body = item.highlight ? `<p class="service-highlight">${item.highlight}</p>` : item.text ? `<p>${item.text}</p>` : '';
       const tags = item.tags.map(t => `<span class="service-tag">${t}</span>`).join('');
-      return `<article class="service-card${feat}"><div class="service-card-visual ${vs}" style="background-image: url('${item.poster}');background-size:cover;background-position:center;"><video autoplay muted loop playsinline preload="auto" poster="${item.poster}"><source src="${item.video}" type="video/mp4"></video>${badge}</div><div class="service-card-body"><span class="service-category"><i class="${item.icon}"></i> ${item.category}</span><h3>${item.title}</h3>${body}<div class="service-tags">${tags}</div></div></article>`;
+      return `<article class="service-card${feat}"><div class="service-card-visual ${vs}" style="background-image: url('${assetPath(item.poster)}');background-size:cover;background-position:center;"><video autoplay muted loop playsinline preload="auto" poster="${assetPath(item.poster)}"><source src="${assetPath(item.video)}" type="video/mp4"></video>${badge}</div><div class="service-card-body"><span class="service-category"><i class="${item.icon}"></i> ${item.category}</span><h3>${item.title}</h3>${body}<div class="service-tags">${tags}</div></div></article>`;
     }).join('');
     // Forçar play() em todos os vídeos (autoplay via innerHTML é instável)
     Array.from(grid.querySelectorAll('.service-card-visual video')).forEach(function(vid) {
@@ -180,7 +188,7 @@ function renderGalleryPage(data) {
   const grid = el('gallery-bento-grid');
   if (grid && Array.isArray(g.items)) {
     const sizeMap = { wide: ' bento-item--wide', tall: ' bento-item--tall', normal: '' };
-    grid.innerHTML = g.items.map(item => `<div class="bento-item${sizeMap[item.size] || ''}" data-category="${item.category || 'stands'}"><img class="bento-image" src="${item.image}" alt="${item.alt}" loading="lazy"><div class="bento-label">${item.label}</div></div>`).join('');
+    grid.innerHTML = g.items.map(item => `<div class="bento-item${sizeMap[item.size] || ''}" data-category="${item.category || 'stands'}"><img class="bento-image" src="${assetPath(item.image)}" alt="${item.alt}" loading="lazy"><div class="bento-label">${item.label}</div></div>`).join('');
   }
 }
 
@@ -196,7 +204,7 @@ function renderTestimonials(data) {
 
   const grid = el('testimonials-grid');
   if (grid && Array.isArray(t.items)) {
-    grid.innerHTML = t.items.map(item => `<div class="testimonial-card"><div class="testimonial-video-wrapper"><video class="testimonial-video" controls playsinline preload="auto"><source src="${item.video}" type="video/mp4"></video></div><div class="testimonial-body"><span class="testimonial-name">${item.name}</span><span class="testimonial-role">${item.role}</span></div></div>`).join('');
+    grid.innerHTML = t.items.map(item => `<div class="testimonial-card"><div class="testimonial-video-wrapper"><video class="testimonial-video" controls playsinline preload="auto"><source src="${assetPath(item.video)}" type="video/mp4"></video></div><div class="testimonial-body"><span class="testimonial-name">${item.name}</span><span class="testimonial-role">${item.role}</span></div></div>`).join('');
   }
 }
 
@@ -212,7 +220,7 @@ function renderPartners(data) {
 
   const track = el('partners-track');
   if (track && Array.isArray(p.items)) {
-    const single = p.items.map(item => `<div class="partner-logo"><img src="${item.logo}" alt="${item.alt}" loading="lazy"></div>`).join('');
+    const single = p.items.map(item => `<div class="partner-logo"><img src="${assetPath(item.logo)}" alt="${item.alt}" loading="lazy"></div>`).join('');
     track.innerHTML = single + single + single;
   }
 }
