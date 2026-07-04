@@ -9,7 +9,7 @@
       "title": "SEU STAND MONTADO EM 5 DIAS. VOCÊ IMAGINA, NÓS REALIZAMOS!",
       "subtitle": "",
       "bgImage": "assets/images/stand1.jpg",
-          "bgVideo": "assets/images/inst off.mp4",
+          "bgVideo": "assets/images/instalacao-oficial.mp4",
       "buttons": [
         {
           "label": "Ver Serviços",
@@ -78,7 +78,7 @@
             "Tendas"
           ],
           "poster": "assets/images/stand1.jpg",
-          "video": "assets/images/inst off.mp4",
+          "video": "assets/images/instalacao-oficial.mp4",
           "featured": false,
           "badge": null,
           "highlight": null
@@ -95,7 +95,7 @@
             "Grátis"
           ],
           "poster": "assets/images/stand5.jpg",
-          "video": "assets/images/inst off.mp4",
+          "video": "assets/images/instalacao-oficial.mp4",
           "featured": true,
           "badge": "Destaque",
           "highlight": "Entregamos seu projeto em 3D em até 3 dias e fazemos alterações em até 24 horas. <strong>O projeto é 100% grátis</strong> ao fechar a montagem com a gente."
@@ -111,7 +111,7 @@
             "Congressos"
           ],
           "poster": "assets/images/STAND GCP CONCRETESHOW 2022.JPG",
-          "video": "assets/images/inst off.mp4",
+          "video": "assets/images/instalacao-oficial.mp4",
           "featured": false,
           "badge": null,
           "highlight": null
@@ -127,7 +127,7 @@
             "Staff"
           ],
           "poster": "assets/images/prato fnio 1.jpg",
-          "video": "assets/images/inst off.mp4",
+          "video": "assets/images/instalacao-oficial.mp4",
           "featured": false,
           "badge": null,
           "highlight": null
@@ -143,7 +143,7 @@
             "Áudio"
           ],
           "poster": "assets/images/POLTRONA FK.jpg",
-          "video": "assets/images/inst off.mp4",
+          "video": "assets/images/instalacao-oficial.mp4",
           "featured": false,
           "badge": null,
           "highlight": null
@@ -159,7 +159,7 @@
             "Nacional"
           ],
           "poster": "assets/images/stand2.jpg",
-          "video": "assets/images/inst off.mp4",
+          "video": "assets/images/instalacao-oficial.mp4",
           "featured": false,
           "badge": null,
           "highlight": null
@@ -654,32 +654,32 @@
       "title": "Clientes que confiam na gente.",
       "items": [
         {
-          "video": "assets/images/inst off.mp4",
+          "video": "assets/images/DEPIM MAQMUNDI.mp4",
           "name": "MAQMUNDI",
           "role": "Parceira Official Brasil"
         },
         {
-          "video": "assets/images/inst off.mp4",
+          "video": "assets/images/MAQMU INST.mp4",
           "name": "MAQMUNDI Instalação",
           "role": "Case de Sucesso"
         },
         {
-          "video": "assets/images/inst off.mp4",
+          "video": "assets/images/ALBREC INST.mp4",
           "name": "Albrecth",
           "role": "Parceira Official Brasil"
         },
         {
-          "video": "assets/images/inst off.mp4",
+          "video": "assets/images/DEPOI ALBRE.mp4",
           "name": "Albrecth Depoimento",
           "role": "Case de Sucesso"
         },
         {
-          "video": "assets/images/inst off.mp4",
+          "video": "assets/images/ELVI DEPOI.mp4",
           "name": "Elvi Depoimento",
           "role": "Parceira Official Brasil"
         },
         {
-          "video": "assets/images/inst off.mp4",
+          "video": "assets/images/ELVI INST.mp4",
           "name": "Elvi Cozinhas",
           "role": "Case de Sucesso"
         }
@@ -740,7 +740,7 @@
       "title": "Your stand, built in 5 days. You sell at the event.",
       "subtitle": "",
       "bgImage": "assets/images/stand1.jpg",
-      "bgVideo": "assets/images/inst off.mp4",
+      "bgVideo": "assets/images/instalacao-oficial.mp4",
       "buttons": [
         {
           "label": "See Services",
@@ -809,7 +809,7 @@
             "Tents"
           ],
           "poster": "assets/images/stand1.jpg",
-          "video": "assets/images/inst off.mp4",
+          "video": "assets/images/instalacao-oficial.mp4",
           "featured": false,
           "badge": null,
           "highlight": null
@@ -826,7 +826,7 @@
             "Free"
           ],
           "poster": "assets/images/stand5.jpg",
-          "video": "assets/images/inst off.mp4",
+          "video": "assets/images/instalacao-oficial.mp4",
           "featured": true,
           "badge": "Featured",
           "highlight": "We deliver custom 3D designs in just 3 days, with a 24-hour turnaround for revisions. <strong>The design is 100% free</strong> when you choose us for assembly."
@@ -842,7 +842,7 @@
             "Congress"
           ],
           "poster": "assets/images/STAND GCP CONCRETESHOW 2022.JPG",
-          "video": "assets/images/inst off.mp4",
+          "video": "assets/images/instalacao-oficial.mp4",
           "featured": false,
           "badge": null,
           "highlight": null
@@ -858,7 +858,7 @@
             "Staff"
           ],
           "poster": "assets/images/prato fnio 1.jpg",
-          "video": "assets/images/inst off.mp4",
+          "video": "assets/images/instalacao-oficial.mp4",
           "featured": false,
           "badge": null,
           "highlight": null
@@ -874,7 +874,7 @@
             "Audio"
           ],
           "poster": "assets/images/POLTRONA FK.jpg",
-          "video": "assets/images/inst off.mp4",
+          "video": "assets/images/instalacao-oficial.mp4",
           "featured": false,
           "badge": null,
           "highlight": null
@@ -890,7 +890,7 @@
             "National"
           ],
           "poster": "assets/images/stand2.jpg",
-          "video": "assets/images/inst off.mp4",
+          "video": "assets/images/instalacao-oficial.mp4",
           "featured": false,
           "badge": null,
           "highlight": null
@@ -1385,32 +1385,32 @@
       "title": "Clients who trust us.",
       "items": [
         {
-          "video": "assets/images/inst off.mp4",
+          "video": "assets/images/DEPIM MAQMUNDI.mp4",
           "name": "MAQMUNDI",
           "role": "Official Brasil Partner"
         },
         {
-          "video": "assets/images/inst off.mp4",
+          "video": "assets/images/MAQMU INST.mp4",
           "name": "MAQMUNDI Instalação",
           "role": "Success Case"
         },
         {
-          "video": "assets/images/inst off.mp4",
+          "video": "assets/images/ALBREC INST.mp4",
           "name": "Albrecth",
           "role": "Official Brasil Partner"
         },
         {
-          "video": "assets/images/inst off.mp4",
+          "video": "assets/images/DEPOI ALBRE.mp4",
           "name": "Albrecth Testimonial",
           "role": "Success Case"
         },
         {
-          "video": "assets/images/inst off.mp4",
+          "video": "assets/images/ELVI DEPOI.mp4",
           "name": "Elvi Testimonial",
           "role": "Official Brasil Partner"
         },
         {
-          "video": "assets/images/inst off.mp4",
+          "video": "assets/images/ELVI INST.mp4",
           "name": "Elvi Cozinhas",
           "role": "Success Case"
         }
@@ -1471,7 +1471,7 @@
       "title": "Tu stand montado en 5 días. Vendes en el evento.",
       "subtitle": "",
       "bgImage": "assets/images/stand1.jpg",
-          "video": "assets/images/inst off.mp4",
+          "bgVideo": "assets/images/instalacao-oficial.mp4",
       "buttons": [
         {
           "label": "Ver Servicios",
@@ -1539,8 +1539,8 @@
             "Estructuras",
             "Carpas"
           ],
-          "video": "assets/images/inst off.mp4",
-          "video": "assets/images/inst off.mp4",
+          "video": "assets/images/instalacao-oficial.mp4",
+          "poster": "assets/images/stand1.jpg",
           "featured": false,
           "badge": null,
           "highlight": null
