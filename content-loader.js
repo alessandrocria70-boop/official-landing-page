@@ -1,8 +1,9 @@
 // Detecta caminho base dinâmico para funcionar no GitHub Pages
 function getContentPath() {
   const parts = window.location.pathname.split('/').filter(Boolean);
-  // Se estiver em subdiretório de idioma (en/, es/), sobe um nível
-  if (parts.length >= 2 && ['en', 'es'].includes(parts[parts.length - 1])) {
+  // Se houver 'en' ou 'es' no path, está em subdiretório de idioma — sobe um nível
+  // Funciona tanto no GitHub Pages (/official-landing-page/en/) quanto no Netlify (/en/)
+  if (parts.some(p => p === 'en' || p === 'es')) {
     return '../content.json';
   }
   return 'content.json';
